@@ -1,0 +1,1622 @@
+2025-06-16 17:56:24.269 +05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-06-16 17:56:24.565 +05:00 [DBG] Hosting starting
+2025-06-16 17:56:24.853 +05:00 [INF] Now listening on: https://localhost:7249
+2025-06-16 17:56:24.857 +05:00 [INF] Now listening on: http://localhost:5151
+2025-06-16 17:56:24.860 +05:00 [DBG] Loaded hosting startup assembly TaskManagement.API
+2025-06-16 17:56:24.862 +05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-06-16 17:56:24.865 +05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-06-16 17:56:24.868 +05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-06-16 17:56:24.973 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 17:56:24.975 +05:00 [INF] Hosting environment: Development
+2025-06-16 17:56:24.977 +05:00 [INF] Content root path: E:\c# .net\TaskManagement\TaskManagement
+2025-06-16 17:56:24.979 +05:00 [DBG] Hosting started
+2025-06-16 17:56:27.665 +05:00 [DBG] Connection id "0HNDCQKQIQDE7" accepted.
+2025-06-16 17:56:27.669 +05:00 [DBG] Connection id "0HNDCQKQIQDE7" started.
+2025-06-16 17:56:27.809 +05:00 [DBG] Connection 0HNDCQKQIQDE7 established using the following protocol: "Tls13"
+2025-06-16 17:56:27.877 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/ - null null
+2025-06-16 17:56:27.957 +05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-06-16 17:56:27.972 +05:00 [DBG] No candidates found for the request path '/'
+2025-06-16 17:56:27.975 +05:00 [DBG] Request did not match any endpoints
+2025-06-16 17:56:27.996 +05:00 [DBG] The request path  does not match the path filter
+2025-06-16 17:56:28.004 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/ - 404 0 null 133.363ms
+2025-06-16 17:56:28.004 +05:00 [DBG] Connection id "0HNDCQKQIQDE7" received FIN.
+2025-06-16 17:56:28.014 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7249/, Response status code: 404
+2025-06-16 17:56:28.022 +05:00 [DBG] Connection id "0HNDCQKQIQDE7" is closed. The last processed stream ID was 1.
+2025-06-16 17:56:28.024 +05:00 [DBG] The connection queue processing loop for 0HNDCQKQIQDE7 completed.
+2025-06-16 17:56:28.030 +05:00 [DBG] Connection id "0HNDCQKQIQDE7" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-06-16 17:56:28.038 +05:00 [DBG] Connection id "0HNDCQKQIQDE7" stopped.
+2025-06-16 17:56:30.943 +05:00 [DBG] Connection id "0HNDCQKQIQDE8" accepted.
+2025-06-16 17:56:30.946 +05:00 [DBG] Connection id "0HNDCQKQIQDE8" started.
+2025-06-16 17:56:30.952 +05:00 [DBG] Connection 0HNDCQKQIQDE8 established using the following protocol: "Tls13"
+2025-06-16 17:56:30.957 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/_vs/browserLink - null null
+2025-06-16 17:56:30.957 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 17:56:30.986 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 29.2216ms
+2025-06-16 17:56:31.029 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.1988ms
+2025-06-16 17:56:31.746 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/swagger/v1/swagger.json - null null
+2025-06-16 17:56:31.751 +05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2025-06-16 17:56:31.753 +05:00 [DBG] Request did not match any endpoints
+2025-06-16 17:56:31.916 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 169.98ms
+2025-06-16 17:56:34.785 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Archives - null null
+2025-06-16 17:56:34.798 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Archives'
+2025-06-16 17:56:34.806 +05:00 [DBG] Endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)' with route pattern 'api/Archives' is valid for the request path '/api/Archives'
+2025-06-16 17:56:34.811 +05:00 [DBG] Request matched endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:56:34.819 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:56:34.822 +05:00 [INF] Executing endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:56:34.843 +05:00 [INF] Route matched with {action = "GetAll", controller = "Archives"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API).
+2025-06-16 17:56:34.850 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:56:34.854 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:56:34.858 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:56:34.862 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:56:34.866 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:56:34.871 +05:00 [DBG] Executing controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 17:56:34.875 +05:00 [DBG] Executed controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 17:56:35.466 +05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-06-16 17:56:38.351 +05:00 [WRN] Attempting to load types from 'TaskManagement.Persistence, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' resulted in ignored error: 'Unable to load one or more of the requested types.
+Could not load file or assembly 'Microsoft.EntityFrameworkCore.Relational, Version=9.0.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. The system cannot find the file specified.
+Could not load file or assembly 'Microsoft.EntityFrameworkCore.Relational, Version=9.0.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. The system cannot find the file specified.
+Could not load file or assembly 'Microsoft.EntityFrameworkCore.Relational, Version=9.0.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. The system cannot find the file specified.
+Could not load file or assembly 'Microsoft.EntityFrameworkCore.Relational, Version=9.0.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. The system cannot find the file specified.'.
+2025-06-16 17:56:38.558 +05:00 [DBG] Entity Framework Core 9.0.5 initialized 'DataContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: using snake-case naming (culture=)
+2025-06-16 17:56:38.582 +05:00 [DBG] Compiling query expression: 
+'DbSet<TaskItem>()'
+2025-06-16 17:56:38.811 +05:00 [DBG] Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<TaskItem>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TaskItem.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: TaskItem.Category (Category) Required, 1], [Property: TaskItem.CreatedDate (DateTime) Required, 2], [Property: TaskItem.Description (string) Required MaxLength(250), 3], [Property: TaskItem.EXPValue (int) Required, 4], [Property: TaskItem.Title (string) Required MaxLength(100), 5], [Property: TaskItem.UserId (int) Required FK Index, 6] }
+        SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+        FROM tasks AS t) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TaskItem.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: TaskItem.Category (Category) Required, 1], [Property: TaskItem.CreatedDate (DateTime) Required, 2], [Property: TaskItem.Description (string) Required MaxLength(250), 3], [Property: TaskItem.EXPValue (int) Required, 4], [Property: TaskItem.Title (string) Required MaxLength(100), 5], [Property: TaskItem.UserId (int) Required FK Index, 6] }
+        SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+        FROM tasks AS t, 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        TaskItem entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            TaskItem instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(TaskItem);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: TaskItem.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("TaskManagement.Entities.TaskItem").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (TaskItem)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: TaskItem | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("TaskManagement.Entities.TaskItem")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: TaskItem | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("TaskManagement.Entities.TaskItem")]: 
+                        {
+                            return 
+                            {
+                                TaskItem instance;
+                                instance = new TaskItem();
+                                instance.<Id>k__BackingField = dataReader.GetInt32(0);
+                                instance.<Category>k__BackingField = Invoke(((EnumToNumberConverter<Category, int>)((IReadOnlyProperty)[LIFTABLE Constant: Property: TaskItem.Category (Category) Required | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("TaskManagement.Entities.TaskItem").FindProperty("Category")]).GetTypeMapping().Converter).ConvertFromProviderTyped, dataReader.GetInt32(1));
+                                instance.<CreatedDate>k__BackingField = dataReader.GetDateTime(2);
+                                instance.<Description>k__BackingField = dataReader.GetString(3);
+                                instance.<EXPValue>k__BackingField = dataReader.GetInt32(4);
+                                instance.<Title>k__BackingField = dataReader.GetString(5);
+                                instance.<UserId>k__BackingField = dataReader.GetInt32(6);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: TaskItem | Resolver: namelessParameter{3} => namelessParameter{3}.Dependencies.Model.FindEntityType("TaskManagement.Entities.TaskItem")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(TaskItem)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        return entity;
+    }, 
+    contextType: TaskManagement.DataAccess.DataContext, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)'
+2025-06-16 17:56:38.845 +05:00 [DBG] Creating DbConnection.
+2025-06-16 17:56:38.877 +05:00 [DBG] Created DbConnection. (30ms).
+2025-06-16 17:56:38.883 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:39.046 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:39.053 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:56:39.060 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (7ms).
+2025-06-16 17:56:39.065 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (12ms).
+2025-06-16 17:56:39.076 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 17:56:39.106 +05:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 17:56:39.176 +05:00 [DBG] Context 'DataContext' started tracking 'TaskItem' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.200 +05:00 [DBG] Context 'DataContext' started tracking 'TaskItem' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.208 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:39.218 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 102ms reading results.
+2025-06-16 17:56:39.226 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:39.232 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (6ms).
+2025-06-16 17:56:39.257 +05:00 [DBG] 'DataContext' generated a temporary value for the property 'Archive.Id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.276 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.284 +05:00 [DBG] An entity of type 'TaskItem' tracked by 'DataContext' changed state from '"Unchanged"' to '"Deleted"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.290 +05:00 [DBG] 'DataContext' generated a temporary value for the property 'Archive.Id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.293 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.295 +05:00 [DBG] An entity of type 'TaskItem' tracked by 'DataContext' changed state from '"Unchanged"' to '"Deleted"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.301 +05:00 [DBG] SaveChanges starting for 'DataContext'.
+2025-06-16 17:56:39.310 +05:00 [DBG] DetectChanges starting for 'DataContext'.
+2025-06-16 17:56:39.333 +05:00 [DBG] DetectChanges completed for 'DataContext'.
+2025-06-16 17:56:39.390 +05:00 [DBG] Executing 4 update commands as a batch.
+2025-06-16 17:56:39.395 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:39.398 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:39.402 +05:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2025-06-16 17:56:39.407 +05:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2025-06-16 17:56:39.412 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:56:39.414 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2025-06-16 17:56:39.421 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (9ms).
+2025-06-16 17:56:39.427 +05:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = Int32), @p4='?', @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?', @p8='?' (DbType = Int32), @p9='?', @p10='?' (DbType = Int32), @p11='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO archives (category, created_date, description, exp_value, title)
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING id;
+INSERT INTO archives (category, created_date, description, exp_value, title)
+VALUES (@p5, @p6, @p7, @p8, @p9)
+RETURNING id;
+DELETE FROM tasks
+WHERE id = @p10;
+DELETE FROM tasks
+WHERE id = @p11;
+2025-06-16 17:56:39.446 +05:00 [INF] Executed DbCommand (22ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = Int32), @p4='?', @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?', @p8='?' (DbType = Int32), @p9='?', @p10='?' (DbType = Int32), @p11='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO archives (category, created_date, description, exp_value, title)
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING id;
+INSERT INTO archives (category, created_date, description, exp_value, title)
+VALUES (@p5, @p6, @p7, @p8, @p9)
+RETURNING id;
+DELETE FROM tasks
+WHERE id = @p10;
+DELETE FROM tasks
+WHERE id = @p11;
+2025-06-16 17:56:39.462 +05:00 [DBG] The foreign key property 'Archive.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-06-16 17:56:39.469 +05:00 [DBG] The foreign key property 'Archive.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-06-16 17:56:39.473 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:39.477 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 24ms reading results.
+2025-06-16 17:56:39.483 +05:00 [DBG] Committing transaction.
+2025-06-16 17:56:39.490 +05:00 [DBG] Committed transaction.
+2025-06-16 17:56:39.495 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:39.498 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (3ms).
+2025-06-16 17:56:39.502 +05:00 [DBG] Disposing transaction.
+2025-06-16 17:56:39.508 +05:00 [DBG] An entity of type 'Archive' tracked by 'DataContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.513 +05:00 [DBG] An entity of type 'Archive' tracked by 'DataContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.518 +05:00 [DBG] An entity of type 'TaskItem' tracked by 'DataContext' changed state from '"Deleted"' to '"Detached"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.522 +05:00 [DBG] An entity of type 'TaskItem' tracked by 'DataContext' changed state from '"Deleted"' to '"Detached"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.528 +05:00 [DBG] SaveChanges completed for 'DataContext' with 4 entities written to the database.
+2025-06-16 17:56:39.532 +05:00 [DBG] SaveChanges starting for 'DataContext'.
+2025-06-16 17:56:39.535 +05:00 [DBG] DetectChanges starting for 'DataContext'.
+2025-06-16 17:56:39.537 +05:00 [DBG] DetectChanges completed for 'DataContext'.
+2025-06-16 17:56:39.539 +05:00 [DBG] SaveChanges completed for 'DataContext' with 0 entities written to the database.
+2025-06-16 17:56:39.542 +05:00 [DBG] Compiling query expression: 
+'DbSet<Archive>()'
+2025-06-16 17:56:39.548 +05:00 [DBG] Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<Archive>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Archive.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Archive.Category (Category) Required, 1], [Property: Archive.CreatedDate (DateTime) Required, 2], [Property: Archive.Description (string), 3], [Property: Archive.EXPValue (int) Required, 4], [Property: Archive.Title (string), 5] }
+        SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+        FROM archives AS a) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Archive.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Archive.Category (Category) Required, 1], [Property: Archive.CreatedDate (DateTime) Required, 2], [Property: Archive.Description (string), 3], [Property: Archive.EXPValue (int) Required, 4], [Property: Archive.Title (string), 5] }
+        SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+        FROM archives AS a, 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        Archive entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            Archive instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(Archive);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: Archive.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("TaskManagement.Entities.Archive").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (Archive)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: Archive | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("TaskManagement.Entities.Archive")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: Archive | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("TaskManagement.Entities.Archive")]: 
+                        {
+                            return 
+                            {
+                                Archive instance;
+                                instance = new Archive();
+                                instance.<Id>k__BackingField = dataReader.GetInt32(0);
+                                instance.<Category>k__BackingField = Invoke(((EnumToNumberConverter<Category, int>)((IReadOnlyProperty)[LIFTABLE Constant: Property: Archive.Category (Category) Required | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("TaskManagement.Entities.Archive").FindProperty("Category")]).GetTypeMapping().Converter).ConvertFromProviderTyped, dataReader.GetInt32(1));
+                                instance.<CreatedDate>k__BackingField = dataReader.GetDateTime(2);
+                                instance.<Description>k__BackingField = dataReader.IsDBNull(3) ? default(string) : dataReader.GetString(3);
+                                instance.<EXPValue>k__BackingField = dataReader.GetInt32(4);
+                                instance.<Title>k__BackingField = dataReader.IsDBNull(5) ? default(string) : dataReader.GetString(5);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: Archive | Resolver: namelessParameter{3} => namelessParameter{3}.Dependencies.Model.FindEntityType("TaskManagement.Entities.Archive")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(Archive)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        return entity;
+    }, 
+    contextType: TaskManagement.DataAccess.DataContext, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)'
+2025-06-16 17:56:39.555 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:39.558 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:39.560 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:56:39.562 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 17:56:39.564 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 17:56:39.566 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 17:56:39.570 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 17:56:39.574 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.576 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.579 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.582 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.584 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.586 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.589 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:39.591 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:39.593 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 19ms reading results.
+2025-06-16 17:56:39.596 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:39.599 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:56:39.637 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:56:39.645 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:56:39.647 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:56:39.650 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:56:39.652 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:56:39.657 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.ArchiveDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:56:39.668 +05:00 [INF] Executed action TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API) in 4794.0197ms
+2025-06-16 17:56:39.674 +05:00 [INF] Executed endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:56:39.680 +05:00 [DBG] 'DataContext' disposed.
+2025-06-16 17:56:39.687 +05:00 [DBG] Disposing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:39.693 +05:00 [DBG] Disposed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (5ms).
+2025-06-16 17:56:39.698 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Archives - 200 null application/json; charset=utf-8 4913.5244ms
+2025-06-16 17:56:42.341 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Archives - null null
+2025-06-16 17:56:42.349 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Archives'
+2025-06-16 17:56:42.352 +05:00 [DBG] Endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)' with route pattern 'api/Archives' is valid for the request path '/api/Archives'
+2025-06-16 17:56:42.355 +05:00 [DBG] Request matched endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:56:42.357 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:56:42.359 +05:00 [INF] Executing endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:56:42.361 +05:00 [INF] Route matched with {action = "GetAll", controller = "Archives"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API).
+2025-06-16 17:56:42.364 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:56:42.367 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:56:42.369 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:56:42.372 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:56:42.375 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:56:42.378 +05:00 [DBG] Executing controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 17:56:42.380 +05:00 [DBG] Executed controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 17:56:42.413 +05:00 [DBG] Entity Framework Core 9.0.5 initialized 'DataContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: using snake-case naming (culture=)
+2025-06-16 17:56:42.418 +05:00 [DBG] Creating DbConnection.
+2025-06-16 17:56:42.420 +05:00 [DBG] Created DbConnection. (1ms).
+2025-06-16 17:56:42.422 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:42.424 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:42.426 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:56:42.428 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2025-06-16 17:56:42.430 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (4ms).
+2025-06-16 17:56:42.432 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 17:56:42.436 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 17:56:42.440 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:42.442 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 2ms reading results.
+2025-06-16 17:56:42.445 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:42.447 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:56:42.450 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:42.452 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:42.454 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:56:42.456 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 17:56:42.458 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 17:56:42.460 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 17:56:42.465 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 17:56:42.468 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:42.470 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:42.472 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:42.474 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:42.477 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:42.479 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:42.482 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:42.484 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:42.487 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:42.489 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:42.491 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 23ms reading results.
+2025-06-16 17:56:42.494 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:42.496 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:56:42.501 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:56:42.505 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:56:42.506 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:56:42.507 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:56:42.509 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:56:42.511 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.ArchiveDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:56:42.513 +05:00 [INF] Executed action TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API) in 135.4014ms
+2025-06-16 17:56:42.515 +05:00 [INF] Executed endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:56:42.520 +05:00 [DBG] 'DataContext' disposed.
+2025-06-16 17:56:42.522 +05:00 [DBG] Disposing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:42.524 +05:00 [DBG] Disposed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:56:42.527 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Archives - 200 null application/json; charset=utf-8 185.9648ms
+2025-06-16 17:56:56.870 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Archives - null null
+2025-06-16 17:56:56.877 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Archives'
+2025-06-16 17:56:56.880 +05:00 [DBG] Endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)' with route pattern 'api/Archives' is valid for the request path '/api/Archives'
+2025-06-16 17:56:56.884 +05:00 [DBG] Request matched endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:56:56.887 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:56:56.888 +05:00 [INF] Executing endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:56:56.890 +05:00 [INF] Route matched with {action = "GetAll", controller = "Archives"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API).
+2025-06-16 17:56:56.894 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:56:56.897 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:56:56.901 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:56:56.905 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:56:56.907 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:56:56.910 +05:00 [DBG] Executing controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 17:56:56.913 +05:00 [DBG] Executed controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 17:56:56.970 +05:00 [DBG] Entity Framework Core 9.0.5 initialized 'DataContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: using snake-case naming (culture=)
+2025-06-16 17:56:56.975 +05:00 [DBG] Creating DbConnection.
+2025-06-16 17:56:56.976 +05:00 [DBG] Created DbConnection. (1ms).
+2025-06-16 17:56:56.978 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:56.980 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:56.982 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:56:56.984 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 17:56:56.986 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 17:56:56.988 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 17:56:56.992 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 17:56:56.996 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:56.998 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 2ms reading results.
+2025-06-16 17:56:57.001 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.003 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:56:57.006 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.008 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.010 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:56:57.012 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 17:56:57.014 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 17:56:57.016 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 17:56:57.020 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 17:56:57.023 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.025 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.027 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.030 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.032 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.034 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.036 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.038 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.040 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.042 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.045 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 21ms reading results.
+2025-06-16 17:56:57.047 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.049 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:56:57.052 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:56:57.056 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:56:57.057 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:56:57.059 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:56:57.060 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:56:57.062 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.ArchiveDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:56:57.064 +05:00 [INF] Executed action TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API) in 154.7603ms
+2025-06-16 17:56:57.067 +05:00 [INF] Executed endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:56:57.068 +05:00 [DBG] 'DataContext' disposed.
+2025-06-16 17:56:57.070 +05:00 [DBG] Disposing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.072 +05:00 [DBG] Disposed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:56:57.074 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Archives - 200 null application/json; charset=utf-8 204.5082ms
+2025-06-16 17:56:57.769 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Archives - null null
+2025-06-16 17:56:57.776 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Archives'
+2025-06-16 17:56:57.779 +05:00 [DBG] Endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)' with route pattern 'api/Archives' is valid for the request path '/api/Archives'
+2025-06-16 17:56:57.782 +05:00 [DBG] Request matched endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:56:57.784 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:56:57.785 +05:00 [INF] Executing endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:56:57.787 +05:00 [INF] Route matched with {action = "GetAll", controller = "Archives"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API).
+2025-06-16 17:56:57.790 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:56:57.793 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:56:57.795 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:56:57.798 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:56:57.801 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:56:57.803 +05:00 [DBG] Executing controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 17:56:57.806 +05:00 [DBG] Executed controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 17:56:57.811 +05:00 [DBG] Entity Framework Core 9.0.5 initialized 'DataContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: using snake-case naming (culture=)
+2025-06-16 17:56:57.814 +05:00 [DBG] Creating DbConnection.
+2025-06-16 17:56:57.816 +05:00 [DBG] Created DbConnection. (1ms).
+2025-06-16 17:56:57.818 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.820 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.822 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:56:57.824 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 17:56:57.826 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 17:56:57.829 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 17:56:57.834 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 17:56:57.837 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.839 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 2ms reading results.
+2025-06-16 17:56:57.842 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.844 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (1ms).
+2025-06-16 17:56:57.846 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.849 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.851 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:56:57.853 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 17:56:57.856 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (4ms).
+2025-06-16 17:56:57.858 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 17:56:57.861 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 17:56:57.865 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.867 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.870 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.872 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.874 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.877 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.879 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.882 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.885 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:56:57.887 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.889 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 24ms reading results.
+2025-06-16 17:56:57.892 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.894 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:56:57.899 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:56:57.903 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:56:57.905 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:56:57.907 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:56:57.908 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:56:57.910 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.ArchiveDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:56:57.913 +05:00 [INF] Executed action TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API) in 109.466ms
+2025-06-16 17:56:57.916 +05:00 [INF] Executed endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:56:57.918 +05:00 [DBG] 'DataContext' disposed.
+2025-06-16 17:56:57.922 +05:00 [DBG] Disposing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:56:57.924 +05:00 [DBG] Disposed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:56:57.928 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Archives - 200 null application/json; charset=utf-8 159.0242ms
+2025-06-16 17:57:04.443 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Archives - null null
+2025-06-16 17:57:04.449 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Archives'
+2025-06-16 17:57:04.452 +05:00 [DBG] Endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)' with route pattern 'api/Archives' is valid for the request path '/api/Archives'
+2025-06-16 17:57:04.456 +05:00 [DBG] Request matched endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:04.460 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:57:04.462 +05:00 [INF] Executing endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:04.467 +05:00 [INF] Route matched with {action = "GetAll", controller = "Archives"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API).
+2025-06-16 17:57:04.471 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:57:04.476 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:57:04.482 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:57:04.485 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:57:04.487 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:57:04.490 +05:00 [DBG] Executing controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 17:57:04.493 +05:00 [DBG] Executed controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 17:57:04.498 +05:00 [DBG] Entity Framework Core 9.0.5 initialized 'DataContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: using snake-case naming (culture=)
+2025-06-16 17:57:04.501 +05:00 [DBG] Creating DbConnection.
+2025-06-16 17:57:04.502 +05:00 [DBG] Created DbConnection. (1ms).
+2025-06-16 17:57:04.504 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:04.506 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:04.508 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:57:04.510 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 17:57:04.512 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 17:57:04.514 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 17:57:04.517 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 17:57:04.521 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:04.523 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 2ms reading results.
+2025-06-16 17:57:04.525 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:04.528 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:57:04.530 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:04.532 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:04.535 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:57:04.537 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 17:57:04.539 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 17:57:04.541 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 17:57:04.545 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 17:57:04.549 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:04.551 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:04.553 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:04.557 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:04.559 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:04.561 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:04.564 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:04.566 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:04.568 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:04.571 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:04.573 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 23ms reading results.
+2025-06-16 17:57:04.575 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:04.577 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:57:04.580 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:57:04.584 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:57:04.585 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:57:04.587 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:57:04.588 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:57:04.590 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.ArchiveDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:57:04.593 +05:00 [INF] Executed action TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API) in 102.7631ms
+2025-06-16 17:57:04.595 +05:00 [INF] Executed endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:04.597 +05:00 [DBG] 'DataContext' disposed.
+2025-06-16 17:57:04.599 +05:00 [DBG] Disposing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:04.601 +05:00 [DBG] Disposed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:57:04.603 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Archives - 200 null application/json; charset=utf-8 160.0566ms
+2025-06-16 17:57:04.993 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Archives - null null
+2025-06-16 17:57:04.998 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Archives'
+2025-06-16 17:57:05.000 +05:00 [DBG] Endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)' with route pattern 'api/Archives' is valid for the request path '/api/Archives'
+2025-06-16 17:57:05.003 +05:00 [DBG] Request matched endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:05.005 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:57:05.007 +05:00 [INF] Executing endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:05.009 +05:00 [INF] Route matched with {action = "GetAll", controller = "Archives"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API).
+2025-06-16 17:57:05.012 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:57:05.014 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:57:05.016 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:57:05.019 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:57:05.022 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:57:05.025 +05:00 [DBG] Executing controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 17:57:05.027 +05:00 [DBG] Executed controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 17:57:05.032 +05:00 [DBG] Entity Framework Core 9.0.5 initialized 'DataContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: using snake-case naming (culture=)
+2025-06-16 17:57:05.035 +05:00 [DBG] Creating DbConnection.
+2025-06-16 17:57:05.036 +05:00 [DBG] Created DbConnection. (1ms).
+2025-06-16 17:57:05.038 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:05.040 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:05.042 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:57:05.043 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 17:57:05.045 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 17:57:05.048 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 17:57:05.051 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 17:57:05.054 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:05.057 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 2ms reading results.
+2025-06-16 17:57:05.059 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:05.062 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:57:05.064 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:05.066 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:05.068 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:57:05.070 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 17:57:05.072 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 17:57:05.074 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 17:57:05.078 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 17:57:05.081 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:05.083 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:05.085 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:05.087 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:05.089 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:05.091 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:05.093 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:05.096 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:05.098 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:05.100 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:05.103 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 21ms reading results.
+2025-06-16 17:57:05.105 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:05.107 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:57:05.111 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:57:05.115 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:57:05.117 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:57:05.118 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:57:05.120 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:57:05.122 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.ArchiveDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:57:05.124 +05:00 [INF] Executed action TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API) in 99.5531ms
+2025-06-16 17:57:05.126 +05:00 [INF] Executed endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:05.128 +05:00 [DBG] 'DataContext' disposed.
+2025-06-16 17:57:05.130 +05:00 [DBG] Disposing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:05.132 +05:00 [DBG] Disposed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:57:05.135 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Archives - 200 null application/json; charset=utf-8 142.3818ms
+2025-06-16 17:57:20.563 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/CategoryLevels - null null
+2025-06-16 17:57:20.570 +05:00 [DBG] 1 candidate(s) found for the request path '/api/CategoryLevels'
+2025-06-16 17:57:20.572 +05:00 [DBG] Endpoint 'TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API)' with route pattern 'api/CategoryLevels' is valid for the request path '/api/CategoryLevels'
+2025-06-16 17:57:20.575 +05:00 [DBG] Request matched endpoint 'TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:20.577 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:57:20.578 +05:00 [INF] Executing endpoint 'TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:20.584 +05:00 [INF] Route matched with {action = "GetAll", controller = "CategoryLevels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.Controllers.CategoryLevelsController (TaskManagement.API).
+2025-06-16 17:57:20.588 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:57:20.591 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:57:20.594 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:57:20.597 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:57:20.599 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:57:20.602 +05:00 [DBG] Executing controller factory for controller TaskManagement.Controllers.CategoryLevelsController (TaskManagement.API)
+2025-06-16 17:57:20.604 +05:00 [DBG] Executed controller factory for controller TaskManagement.Controllers.CategoryLevelsController (TaskManagement.API)
+2025-06-16 17:57:20.611 +05:00 [DBG] Entity Framework Core 9.0.5 initialized 'DataContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: using snake-case naming (culture=)
+2025-06-16 17:57:20.615 +05:00 [DBG] Compiling query expression: 
+'DbSet<CategoryLevel>()'
+2025-06-16 17:57:20.620 +05:00 [DBG] Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<CategoryLevel>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: CategoryLevel.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: CategoryLevel.Category (Category) Required, 1], [Property: CategoryLevel.CurrentEXP (int) Required, 2], [Property: CategoryLevel.EXPToNextLevel (int) Required, 3], [Property: CategoryLevel.Level (int) Required, 4], [Property: CategoryLevel.NeededEXP (int) Required, 5], [Property: CategoryLevel.UserId (int) Required FK Index, 6] }
+        SELECT c.id, c.category, c.current_exp, c.exp_to_next_level, c.level, c.needed_exp, c.user_id
+        FROM category_levels AS c) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: CategoryLevel.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: CategoryLevel.Category (Category) Required, 1], [Property: CategoryLevel.CurrentEXP (int) Required, 2], [Property: CategoryLevel.EXPToNextLevel (int) Required, 3], [Property: CategoryLevel.Level (int) Required, 4], [Property: CategoryLevel.NeededEXP (int) Required, 5], [Property: CategoryLevel.UserId (int) Required FK Index, 6] }
+        SELECT c.id, c.category, c.current_exp, c.exp_to_next_level, c.level, c.needed_exp, c.user_id
+        FROM category_levels AS c, 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        CategoryLevel entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            CategoryLevel instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(CategoryLevel);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: CategoryLevel.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("TaskManagement.Entities.CategoryLevel").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (CategoryLevel)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: CategoryLevel | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("TaskManagement.Entities.CategoryLevel")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: CategoryLevel | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("TaskManagement.Entities.CategoryLevel")]: 
+                        {
+                            return 
+                            {
+                                CategoryLevel instance;
+                                instance = new CategoryLevel();
+                                instance.<Id>k__BackingField = dataReader.GetInt32(0);
+                                instance.<Category>k__BackingField = Invoke(((EnumToNumberConverter<Category, int>)((IReadOnlyProperty)[LIFTABLE Constant: Property: CategoryLevel.Category (Category) Required | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("TaskManagement.Entities.CategoryLevel").FindProperty("Category")]).GetTypeMapping().Converter).ConvertFromProviderTyped, dataReader.GetInt32(1));
+                                instance.<CurrentEXP>k__BackingField = dataReader.GetInt32(2);
+                                instance.<EXPToNextLevel>k__BackingField = dataReader.GetInt32(3);
+                                instance.<Level>k__BackingField = dataReader.GetInt32(4);
+                                instance.<NeededEXP>k__BackingField = dataReader.GetInt32(5);
+                                instance.<UserId>k__BackingField = dataReader.GetInt32(6);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: CategoryLevel | Resolver: namelessParameter{3} => namelessParameter{3}.Dependencies.Model.FindEntityType("TaskManagement.Entities.CategoryLevel")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(CategoryLevel)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        return entity;
+    }, 
+    contextType: TaskManagement.DataAccess.DataContext, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)'
+2025-06-16 17:57:20.626 +05:00 [DBG] Creating DbConnection.
+2025-06-16 17:57:20.628 +05:00 [DBG] Created DbConnection. (1ms).
+2025-06-16 17:57:20.630 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:20.632 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:20.634 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:57:20.636 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2025-06-16 17:57:20.638 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (4ms).
+2025-06-16 17:57:20.640 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c.id, c.category, c.current_exp, c.exp_to_next_level, c.level, c.needed_exp, c.user_id
+FROM category_levels AS c
+2025-06-16 17:57:20.649 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c.id, c.category, c.current_exp, c.exp_to_next_level, c.level, c.needed_exp, c.user_id
+FROM category_levels AS c
+2025-06-16 17:57:20.655 +05:00 [DBG] Context 'DataContext' started tracking 'CategoryLevel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:20.664 +05:00 [DBG] Context 'DataContext' started tracking 'CategoryLevel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:20.667 +05:00 [DBG] Context 'DataContext' started tracking 'CategoryLevel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:20.669 +05:00 [DBG] Context 'DataContext' started tracking 'CategoryLevel' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:20.671 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:20.673 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 19ms reading results.
+2025-06-16 17:57:20.676 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:20.678 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:57:20.685 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:57:20.689 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:57:20.691 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:57:20.692 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:57:20.694 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:57:20.696 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.CategoryLevelDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:57:20.699 +05:00 [INF] Executed action TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API) in 97.0739ms
+2025-06-16 17:57:20.701 +05:00 [INF] Executed endpoint 'TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:20.703 +05:00 [DBG] 'DataContext' disposed.
+2025-06-16 17:57:20.705 +05:00 [DBG] Disposing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:20.707 +05:00 [DBG] Disposed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:57:20.710 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/CategoryLevels - 200 null application/json; charset=utf-8 146.6485ms
+2025-06-16 17:57:26.912 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/CategoryLevels - null null
+2025-06-16 17:57:26.919 +05:00 [DBG] 1 candidate(s) found for the request path '/api/CategoryLevels'
+2025-06-16 17:57:26.921 +05:00 [DBG] Endpoint 'TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API)' with route pattern 'api/CategoryLevels' is valid for the request path '/api/CategoryLevels'
+2025-06-16 17:57:26.924 +05:00 [DBG] Request matched endpoint 'TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:26.927 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:57:26.928 +05:00 [INF] Executing endpoint 'TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:26.929 +05:00 [INF] Route matched with {action = "GetAll", controller = "CategoryLevels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.Controllers.CategoryLevelsController (TaskManagement.API).
+2025-06-16 17:57:26.933 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:57:26.935 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:57:26.937 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:57:26.940 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:57:26.943 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:57:26.945 +05:00 [DBG] Executing controller factory for controller TaskManagement.Controllers.CategoryLevelsController (TaskManagement.API)
+2025-06-16 17:57:26.947 +05:00 [DBG] Executed controller factory for controller TaskManagement.Controllers.CategoryLevelsController (TaskManagement.API)
+2025-06-16 17:57:26.953 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:57:26.956 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:57:26.957 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:57:26.959 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:57:26.960 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:57:26.962 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.CategoryLevelDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:57:26.964 +05:00 [INF] Executed action TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API) in 19.4579ms
+2025-06-16 17:57:26.967 +05:00 [INF] Executed endpoint 'TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:26.969 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/CategoryLevels - 200 null application/json; charset=utf-8 56.6832ms
+2025-06-16 17:57:34.400 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/CategoryLevels - null null
+2025-06-16 17:57:34.408 +05:00 [DBG] 1 candidate(s) found for the request path '/api/CategoryLevels'
+2025-06-16 17:57:34.410 +05:00 [DBG] Endpoint 'TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API)' with route pattern 'api/CategoryLevels' is valid for the request path '/api/CategoryLevels'
+2025-06-16 17:57:34.413 +05:00 [DBG] Request matched endpoint 'TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:34.416 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:57:34.419 +05:00 [INF] Executing endpoint 'TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:34.421 +05:00 [INF] Route matched with {action = "GetAll", controller = "CategoryLevels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.Controllers.CategoryLevelsController (TaskManagement.API).
+2025-06-16 17:57:34.425 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:57:34.427 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:57:34.430 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:57:34.434 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:57:34.436 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:57:34.440 +05:00 [DBG] Executing controller factory for controller TaskManagement.Controllers.CategoryLevelsController (TaskManagement.API)
+2025-06-16 17:57:34.442 +05:00 [DBG] Executed controller factory for controller TaskManagement.Controllers.CategoryLevelsController (TaskManagement.API)
+2025-06-16 17:57:34.450 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:57:34.454 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:57:34.455 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:57:34.457 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:57:34.459 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:57:34.461 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.CategoryLevelDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:57:34.463 +05:00 [INF] Executed action TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API) in 23.2374ms
+2025-06-16 17:57:34.466 +05:00 [INF] Executed endpoint 'TaskManagement.Controllers.CategoryLevelsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:34.468 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/CategoryLevels - 200 null application/json; charset=utf-8 68.1982ms
+2025-06-16 17:57:40.096 +05:00 [DBG] Connection id "0HNDCQKQIQDE8" received FIN.
+2025-06-16 17:57:40.098 +05:00 [DBG] Connection id "0HNDCQKQIQDE8" is closed. The last processed stream ID was 23.
+2025-06-16 17:57:40.098 +05:00 [DBG] Connection id "0HNDCQKQIQDE8" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-06-16 17:57:40.103 +05:00 [DBG] The connection queue processing loop for 0HNDCQKQIQDE8 completed.
+2025-06-16 17:57:40.105 +05:00 [DBG] Connection id "0HNDCQKQIQDE8" stopped.
+2025-06-16 17:57:44.219 +05:00 [DBG] Connection id "0HNDCQKQIQDE9" accepted.
+2025-06-16 17:57:44.223 +05:00 [DBG] Connection id "0HNDCQKQIQDE9" started.
+2025-06-16 17:57:44.231 +05:00 [DBG] Connection 0HNDCQKQIQDE9 established using the following protocol: "Tls13"
+2025-06-16 17:57:44.234 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/TaskLogs - null null
+2025-06-16 17:57:44.238 +05:00 [DBG] 1 candidate(s) found for the request path '/api/TaskLogs'
+2025-06-16 17:57:44.240 +05:00 [DBG] Endpoint 'TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API)' with route pattern 'api/TaskLogs' is valid for the request path '/api/TaskLogs'
+2025-06-16 17:57:44.243 +05:00 [DBG] Request matched endpoint 'TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:44.245 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:57:44.246 +05:00 [INF] Executing endpoint 'TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:44.250 +05:00 [INF] Route matched with {action = "GetAll", controller = "TaskLogs"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.Controllers.TaskLogsController (TaskManagement.API).
+2025-06-16 17:57:44.254 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:57:44.257 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:57:44.259 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:57:44.263 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:57:44.266 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:57:44.270 +05:00 [DBG] Executing controller factory for controller TaskManagement.Controllers.TaskLogsController (TaskManagement.API)
+2025-06-16 17:57:44.272 +05:00 [DBG] Executed controller factory for controller TaskManagement.Controllers.TaskLogsController (TaskManagement.API)
+2025-06-16 17:57:44.279 +05:00 [DBG] Entity Framework Core 9.0.5 initialized 'DataContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: using snake-case naming (culture=)
+2025-06-16 17:57:44.283 +05:00 [DBG] Compiling query expression: 
+'DbSet<TaskLog>()'
+2025-06-16 17:57:44.289 +05:00 [DBG] Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<TaskLog>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TaskLog.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: TaskLog.Category (Category) Required, 1], [Property: TaskLog.CompletedAt (DateTime) Required, 2], [Property: TaskLog.EXP_Gained (int) Required, 3], [Property: TaskLog.TaskId (int) Required, 4], [Property: TaskLog.TaskTitle (string) Required, 5], [Property: TaskLog.UserId (int) Required FK Index, 6] }
+        SELECT t.id, t.category, t.completed_at, t.exp_gained, t.task_id, t.task_title, t.user_id
+        FROM task_logs AS t) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TaskLog.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: TaskLog.Category (Category) Required, 1], [Property: TaskLog.CompletedAt (DateTime) Required, 2], [Property: TaskLog.EXP_Gained (int) Required, 3], [Property: TaskLog.TaskId (int) Required, 4], [Property: TaskLog.TaskTitle (string) Required, 5], [Property: TaskLog.UserId (int) Required FK Index, 6] }
+        SELECT t.id, t.category, t.completed_at, t.exp_gained, t.task_id, t.task_title, t.user_id
+        FROM task_logs AS t, 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        TaskLog entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            TaskLog instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(TaskLog);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: TaskLog.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("TaskManagement.Entities.TaskLog").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (TaskLog)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: TaskLog | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("TaskManagement.Entities.TaskLog")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: TaskLog | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("TaskManagement.Entities.TaskLog")]: 
+                        {
+                            return 
+                            {
+                                TaskLog instance;
+                                instance = new TaskLog();
+                                instance.<Id>k__BackingField = dataReader.GetInt32(0);
+                                instance.<Category>k__BackingField = Invoke(((EnumToNumberConverter<Category, int>)((IReadOnlyProperty)[LIFTABLE Constant: Property: TaskLog.Category (Category) Required | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("TaskManagement.Entities.TaskLog").FindProperty("Category")]).GetTypeMapping().Converter).ConvertFromProviderTyped, dataReader.GetInt32(1));
+                                instance.<CompletedAt>k__BackingField = dataReader.GetDateTime(2);
+                                instance.<EXP_Gained>k__BackingField = dataReader.GetInt32(3);
+                                instance.<TaskId>k__BackingField = dataReader.GetInt32(4);
+                                instance.<TaskTitle>k__BackingField = dataReader.GetString(5);
+                                instance.<UserId>k__BackingField = dataReader.GetInt32(6);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: TaskLog | Resolver: namelessParameter{3} => namelessParameter{3}.Dependencies.Model.FindEntityType("TaskManagement.Entities.TaskLog")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(TaskLog)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        return entity;
+    }, 
+    contextType: TaskManagement.DataAccess.DataContext, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)'
+2025-06-16 17:57:44.295 +05:00 [DBG] Creating DbConnection.
+2025-06-16 17:57:44.297 +05:00 [DBG] Created DbConnection. (2ms).
+2025-06-16 17:57:44.299 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:44.301 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:44.304 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:57:44.306 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 17:57:44.307 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 17:57:44.309 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.completed_at, t.exp_gained, t.task_id, t.task_title, t.user_id
+FROM task_logs AS t
+2025-06-16 17:57:44.315 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.completed_at, t.exp_gained, t.task_id, t.task_title, t.user_id
+FROM task_logs AS t
+2025-06-16 17:57:44.320 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.329 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.332 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.335 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.337 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.339 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.341 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.343 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.346 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.348 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.351 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.353 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.355 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.357 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.360 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.362 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.364 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.367 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.369 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.371 +05:00 [DBG] Context 'DataContext' started tracking 'TaskLog' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:57:44.373 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:44.375 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 56ms reading results.
+2025-06-16 17:57:44.377 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:44.380 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:57:44.388 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:57:44.392 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:57:44.394 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:57:44.395 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:57:44.396 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:57:44.398 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.TaskLogDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:57:44.401 +05:00 [INF] Executed action TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API) in 131.5047ms
+2025-06-16 17:57:44.404 +05:00 [INF] Executed endpoint 'TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:44.405 +05:00 [DBG] 'DataContext' disposed.
+2025-06-16 17:57:44.407 +05:00 [DBG] Disposing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:57:44.409 +05:00 [DBG] Disposed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:57:44.412 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/TaskLogs - 200 null application/json; charset=utf-8 177.9694ms
+2025-06-16 17:57:46.654 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/TaskLogs - null null
+2025-06-16 17:57:46.660 +05:00 [DBG] 1 candidate(s) found for the request path '/api/TaskLogs'
+2025-06-16 17:57:46.663 +05:00 [DBG] Endpoint 'TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API)' with route pattern 'api/TaskLogs' is valid for the request path '/api/TaskLogs'
+2025-06-16 17:57:46.666 +05:00 [DBG] Request matched endpoint 'TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:46.669 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:57:46.670 +05:00 [INF] Executing endpoint 'TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:46.672 +05:00 [INF] Route matched with {action = "GetAll", controller = "TaskLogs"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.Controllers.TaskLogsController (TaskManagement.API).
+2025-06-16 17:57:46.675 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:57:46.677 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:57:46.680 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:57:46.683 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:57:46.686 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:57:46.688 +05:00 [DBG] Executing controller factory for controller TaskManagement.Controllers.TaskLogsController (TaskManagement.API)
+2025-06-16 17:57:46.690 +05:00 [DBG] Executed controller factory for controller TaskManagement.Controllers.TaskLogsController (TaskManagement.API)
+2025-06-16 17:57:46.696 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:57:46.700 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:57:46.702 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:57:46.703 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:57:46.704 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:57:46.706 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.TaskLogDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:57:46.709 +05:00 [INF] Executed action TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API) in 21.1203ms
+2025-06-16 17:57:46.711 +05:00 [INF] Executed endpoint 'TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:46.713 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/TaskLogs - 200 null application/json; charset=utf-8 59.7296ms
+2025-06-16 17:57:47.157 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/TaskLogs - null null
+2025-06-16 17:57:47.164 +05:00 [DBG] 1 candidate(s) found for the request path '/api/TaskLogs'
+2025-06-16 17:57:47.168 +05:00 [DBG] Endpoint 'TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API)' with route pattern 'api/TaskLogs' is valid for the request path '/api/TaskLogs'
+2025-06-16 17:57:47.172 +05:00 [DBG] Request matched endpoint 'TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:47.174 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:57:47.175 +05:00 [INF] Executing endpoint 'TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:47.177 +05:00 [INF] Route matched with {action = "GetAll", controller = "TaskLogs"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.Controllers.TaskLogsController (TaskManagement.API).
+2025-06-16 17:57:47.180 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:57:47.182 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:57:47.185 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:57:47.189 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:57:47.191 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:57:47.194 +05:00 [DBG] Executing controller factory for controller TaskManagement.Controllers.TaskLogsController (TaskManagement.API)
+2025-06-16 17:57:47.196 +05:00 [DBG] Executed controller factory for controller TaskManagement.Controllers.TaskLogsController (TaskManagement.API)
+2025-06-16 17:57:47.201 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:57:47.205 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:57:47.207 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:57:47.209 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:57:47.210 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:57:47.212 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.TaskLogDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:57:47.214 +05:00 [INF] Executed action TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API) in 20.4581ms
+2025-06-16 17:57:47.217 +05:00 [INF] Executed endpoint 'TaskManagement.Controllers.TaskLogsController.GetAll (TaskManagement.API)'
+2025-06-16 17:57:47.218 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/TaskLogs - 200 null application/json; charset=utf-8 62.1654ms
+2025-06-16 17:58:08.659 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Tasks - null null
+2025-06-16 17:58:08.667 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Tasks'
+2025-06-16 17:58:08.669 +05:00 [DBG] Endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)' with route pattern 'api/Tasks' is valid for the request path '/api/Tasks'
+2025-06-16 17:58:08.672 +05:00 [DBG] Request matched endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:08.675 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:58:08.676 +05:00 [INF] Executing endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:08.680 +05:00 [INF] Route matched with {action = "GetAll", controller = "Tasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.Controllers.TasksController (TaskManagement.API).
+2025-06-16 17:58:08.684 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:58:08.686 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:58:08.689 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:58:08.692 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:58:08.695 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:58:08.697 +05:00 [DBG] Executing controller factory for controller TaskManagement.Controllers.TasksController (TaskManagement.API)
+2025-06-16 17:58:08.699 +05:00 [DBG] Executed controller factory for controller TaskManagement.Controllers.TasksController (TaskManagement.API)
+2025-06-16 17:58:08.707 +05:00 [DBG] Entity Framework Core 9.0.5 initialized 'DataContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: using snake-case naming (culture=)
+2025-06-16 17:58:08.710 +05:00 [DBG] Creating DbConnection.
+2025-06-16 17:58:08.711 +05:00 [DBG] Created DbConnection. (1ms).
+2025-06-16 17:58:08.713 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:58:08.715 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:58:08.717 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:58:08.719 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 17:58:08.721 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 17:58:08.723 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 17:58:08.727 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 17:58:08.731 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:58:08.733 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 2ms reading results.
+2025-06-16 17:58:08.735 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:58:08.738 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:58:08.745 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:58:08.749 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:58:08.751 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:58:08.752 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:58:08.753 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:58:08.755 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.TaskDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:58:08.758 +05:00 [INF] Executed action TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API) in 60.7254ms
+2025-06-16 17:58:08.760 +05:00 [INF] Executed endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:08.762 +05:00 [DBG] 'DataContext' disposed.
+2025-06-16 17:58:08.763 +05:00 [DBG] Disposing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:58:08.765 +05:00 [DBG] Disposed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:58:08.768 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Tasks - 200 null application/json; charset=utf-8 108.8299ms
+2025-06-16 17:58:10.547 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Tasks - null null
+2025-06-16 17:58:10.552 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Tasks'
+2025-06-16 17:58:10.556 +05:00 [DBG] Endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)' with route pattern 'api/Tasks' is valid for the request path '/api/Tasks'
+2025-06-16 17:58:10.561 +05:00 [DBG] Request matched endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:10.564 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:58:10.566 +05:00 [INF] Executing endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:10.568 +05:00 [INF] Route matched with {action = "GetAll", controller = "Tasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.Controllers.TasksController (TaskManagement.API).
+2025-06-16 17:58:10.571 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:58:10.574 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:58:10.576 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:58:10.580 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:58:10.584 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:58:10.586 +05:00 [DBG] Executing controller factory for controller TaskManagement.Controllers.TasksController (TaskManagement.API)
+2025-06-16 17:58:10.588 +05:00 [DBG] Executed controller factory for controller TaskManagement.Controllers.TasksController (TaskManagement.API)
+2025-06-16 17:58:10.666 +05:00 [INF] Executed action TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API) in 79.9047ms
+2025-06-16 17:58:10.670 +05:00 [INF] Executed endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:10.728 +05:00 [WRN] Not Found Exception: There are no tasks yet
+TaskManagement.Application.Exceptions.NotFoundException: There are no tasks yet
+   at TaskManagement.Application.Features.Tasks.Queries.GetAllTasksQueryHandler.Handle(GetAllTasksQuery query, CancellationToken cancellationToken) in E:\c# .net\TaskManagement\TaskManagement.Application\Features\Tasks\Queries\GetAllTasksQuery.cs:line 38
+   at TaskManagement.Controllers.TasksController.GetAll() in E:\c# .net\TaskManagement\TaskManagement\Controllers\TasksController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskManagement.API.Middlawares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in E:\c# .net\TaskManagement\TaskManagement\Middlawares\ExceptionHandlingMiddleware.cs:line 20
+2025-06-16 17:58:10.774 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Tasks - 404 null application/json; charset=utf-8 227.8484ms
+2025-06-16 17:58:11.203 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Tasks - null null
+2025-06-16 17:58:11.210 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Tasks'
+2025-06-16 17:58:11.213 +05:00 [DBG] Endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)' with route pattern 'api/Tasks' is valid for the request path '/api/Tasks'
+2025-06-16 17:58:11.216 +05:00 [DBG] Request matched endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:11.218 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:58:11.220 +05:00 [INF] Executing endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:11.221 +05:00 [INF] Route matched with {action = "GetAll", controller = "Tasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.Controllers.TasksController (TaskManagement.API).
+2025-06-16 17:58:11.224 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:58:11.227 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:58:11.230 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:58:11.233 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:58:11.236 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:58:11.238 +05:00 [DBG] Executing controller factory for controller TaskManagement.Controllers.TasksController (TaskManagement.API)
+2025-06-16 17:58:11.240 +05:00 [DBG] Executed controller factory for controller TaskManagement.Controllers.TasksController (TaskManagement.API)
+2025-06-16 17:58:11.288 +05:00 [INF] Executed action TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API) in 49.3552ms
+2025-06-16 17:58:11.293 +05:00 [INF] Executed endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:11.335 +05:00 [WRN] Not Found Exception: There are no tasks yet
+TaskManagement.Application.Exceptions.NotFoundException: There are no tasks yet
+   at TaskManagement.Application.Features.Tasks.Queries.GetAllTasksQueryHandler.Handle(GetAllTasksQuery query, CancellationToken cancellationToken) in E:\c# .net\TaskManagement\TaskManagement.Application\Features\Tasks\Queries\GetAllTasksQuery.cs:line 38
+   at TaskManagement.Controllers.TasksController.GetAll() in E:\c# .net\TaskManagement\TaskManagement\Controllers\TasksController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskManagement.API.Middlawares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in E:\c# .net\TaskManagement\TaskManagement\Middlawares\ExceptionHandlingMiddleware.cs:line 20
+2025-06-16 17:58:11.343 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Tasks - 404 null application/json; charset=utf-8 141.1062ms
+2025-06-16 17:58:13.578 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Tasks - null null
+2025-06-16 17:58:13.583 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Tasks'
+2025-06-16 17:58:13.585 +05:00 [DBG] Endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)' with route pattern 'api/Tasks' is valid for the request path '/api/Tasks'
+2025-06-16 17:58:13.587 +05:00 [DBG] Request matched endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:13.589 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:58:13.591 +05:00 [INF] Executing endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:13.593 +05:00 [INF] Route matched with {action = "GetAll", controller = "Tasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.Controllers.TasksController (TaskManagement.API).
+2025-06-16 17:58:13.596 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:58:13.599 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:58:13.601 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:58:13.605 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:58:13.607 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:58:13.609 +05:00 [DBG] Executing controller factory for controller TaskManagement.Controllers.TasksController (TaskManagement.API)
+2025-06-16 17:58:13.612 +05:00 [DBG] Executed controller factory for controller TaskManagement.Controllers.TasksController (TaskManagement.API)
+2025-06-16 17:58:13.671 +05:00 [INF] Executed action TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API) in 61.8984ms
+2025-06-16 17:58:13.675 +05:00 [INF] Executed endpoint 'TaskManagement.Controllers.TasksController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:13.719 +05:00 [WRN] Not Found Exception: There are no tasks yet
+TaskManagement.Application.Exceptions.NotFoundException: There are no tasks yet
+   at TaskManagement.Application.Features.Tasks.Queries.GetAllTasksQueryHandler.Handle(GetAllTasksQuery query, CancellationToken cancellationToken) in E:\c# .net\TaskManagement\TaskManagement.Application\Features\Tasks\Queries\GetAllTasksQuery.cs:line 38
+   at TaskManagement.Controllers.TasksController.GetAll() in E:\c# .net\TaskManagement\TaskManagement\Controllers\TasksController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskManagement.API.Middlawares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in E:\c# .net\TaskManagement\TaskManagement\Middlawares\ExceptionHandlingMiddleware.cs:line 20
+2025-06-16 17:58:13.727 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Tasks - 404 null application/json; charset=utf-8 149.4437ms
+2025-06-16 17:58:31.759 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Users - null null
+2025-06-16 17:58:31.765 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Users'
+2025-06-16 17:58:31.767 +05:00 [DBG] Endpoint 'TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API)' with route pattern 'api/Users' is valid for the request path '/api/Users'
+2025-06-16 17:58:31.770 +05:00 [DBG] Request matched endpoint 'TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:31.772 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:58:31.773 +05:00 [INF] Executing endpoint 'TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:31.777 +05:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.API.Controllers.UsersController (TaskManagement.API).
+2025-06-16 17:58:31.781 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:58:31.784 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:58:31.786 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:58:31.789 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:58:31.791 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:58:31.794 +05:00 [DBG] Executing controller factory for controller TaskManagement.API.Controllers.UsersController (TaskManagement.API)
+2025-06-16 17:58:31.796 +05:00 [DBG] Executed controller factory for controller TaskManagement.API.Controllers.UsersController (TaskManagement.API)
+2025-06-16 17:58:31.803 +05:00 [DBG] Entity Framework Core 9.0.5 initialized 'DataContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: using snake-case naming (culture=)
+2025-06-16 17:58:31.806 +05:00 [DBG] Compiling query expression: 
+'DbSet<AppUser>()'
+2025-06-16 17:58:31.812 +05:00 [DBG] Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<AppUser>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: AppUser.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: AppUser.CreatedDate (DateTime) Required, 1], [Property: AppUser.Email (string) Required, 2], [Property: AppUser.MainLevel (int) Required, 3], [Property: AppUser.PasswordHash (string) Required, 4], [Property: AppUser.Username (string) Required MaxLength(250), 5] }
+        SELECT u.id, u.created_date, u.email, u.main_level, u.password_hash, u.username
+        FROM users AS u) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: AppUser.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: AppUser.CreatedDate (DateTime) Required, 1], [Property: AppUser.Email (string) Required, 2], [Property: AppUser.MainLevel (int) Required, 3], [Property: AppUser.PasswordHash (string) Required, 4], [Property: AppUser.Username (string) Required MaxLength(250), 5] }
+        SELECT u.id, u.created_date, u.email, u.main_level, u.password_hash, u.username
+        FROM users AS u, 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        AppUser entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            AppUser instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(AppUser);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: AppUser.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("TaskManagement.Entities.AppUser").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (AppUser)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: AppUser | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("TaskManagement.Entities.AppUser")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: AppUser | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("TaskManagement.Entities.AppUser")]: 
+                        {
+                            return 
+                            {
+                                AppUser instance;
+                                instance = new AppUser();
+                                instance.<Id>k__BackingField = dataReader.GetInt32(0);
+                                instance.<CreatedDate>k__BackingField = dataReader.GetDateTime(1);
+                                instance.<Email>k__BackingField = dataReader.GetString(2);
+                                instance.<MainLevel>k__BackingField = dataReader.GetInt32(3);
+                                instance.<PasswordHash>k__BackingField = dataReader.GetString(4);
+                                instance.<Username>k__BackingField = dataReader.GetString(5);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: AppUser | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("TaskManagement.Entities.AppUser")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(AppUser)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        return entity;
+    }, 
+    contextType: TaskManagement.DataAccess.DataContext, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)'
+2025-06-16 17:58:31.818 +05:00 [DBG] Creating DbConnection.
+2025-06-16 17:58:31.819 +05:00 [DBG] Created DbConnection. (1ms).
+2025-06-16 17:58:31.821 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:58:31.823 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:58:31.825 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 17:58:31.827 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 17:58:31.829 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (4ms).
+2025-06-16 17:58:31.831 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u.id, u.created_date, u.email, u.main_level, u.password_hash, u.username
+FROM users AS u
+2025-06-16 17:58:31.839 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u.id, u.created_date, u.email, u.main_level, u.password_hash, u.username
+FROM users AS u
+2025-06-16 17:58:31.845 +05:00 [DBG] Context 'DataContext' started tracking 'AppUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 17:58:31.855 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:58:31.858 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 16ms reading results.
+2025-06-16 17:58:31.860 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:58:31.862 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (1ms).
+2025-06-16 17:58:31.870 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:58:31.875 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:58:31.876 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:58:31.877 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:58:31.879 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:58:31.881 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.UserDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:58:31.883 +05:00 [INF] Executed action TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API) in 89.4523ms
+2025-06-16 17:58:31.886 +05:00 [INF] Executed endpoint 'TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:31.888 +05:00 [DBG] 'DataContext' disposed.
+2025-06-16 17:58:31.889 +05:00 [DBG] Disposing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 17:58:31.892 +05:00 [DBG] Disposed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 17:58:31.894 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Users - 200 null application/json; charset=utf-8 135.1119ms
+2025-06-16 17:58:33.270 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Users - null null
+2025-06-16 17:58:33.277 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Users'
+2025-06-16 17:58:33.282 +05:00 [DBG] Endpoint 'TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API)' with route pattern 'api/Users' is valid for the request path '/api/Users'
+2025-06-16 17:58:33.286 +05:00 [DBG] Request matched endpoint 'TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:33.288 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:58:33.290 +05:00 [INF] Executing endpoint 'TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:33.292 +05:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.API.Controllers.UsersController (TaskManagement.API).
+2025-06-16 17:58:33.295 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:58:33.297 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:58:33.299 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:58:33.302 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:58:33.304 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:58:33.306 +05:00 [DBG] Executing controller factory for controller TaskManagement.API.Controllers.UsersController (TaskManagement.API)
+2025-06-16 17:58:33.309 +05:00 [DBG] Executed controller factory for controller TaskManagement.API.Controllers.UsersController (TaskManagement.API)
+2025-06-16 17:58:33.314 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:58:33.317 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:58:33.318 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:58:33.320 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:58:33.321 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:58:33.323 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.UserDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:58:33.325 +05:00 [INF] Executed action TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API) in 19.0766ms
+2025-06-16 17:58:33.328 +05:00 [INF] Executed endpoint 'TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:33.330 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Users - 200 null application/json; charset=utf-8 59.9694ms
+2025-06-16 17:58:39.214 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Users - null null
+2025-06-16 17:58:39.220 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Users'
+2025-06-16 17:58:39.223 +05:00 [DBG] Endpoint 'TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API)' with route pattern 'api/Users' is valid for the request path '/api/Users'
+2025-06-16 17:58:39.226 +05:00 [DBG] Request matched endpoint 'TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:39.229 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 17:58:39.230 +05:00 [INF] Executing endpoint 'TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:39.232 +05:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.API.Controllers.UsersController (TaskManagement.API).
+2025-06-16 17:58:39.235 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 17:58:39.237 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 17:58:39.240 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 17:58:39.242 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 17:58:39.245 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 17:58:39.247 +05:00 [DBG] Executing controller factory for controller TaskManagement.API.Controllers.UsersController (TaskManagement.API)
+2025-06-16 17:58:39.249 +05:00 [DBG] Executed controller factory for controller TaskManagement.API.Controllers.UsersController (TaskManagement.API)
+2025-06-16 17:58:39.254 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 17:58:39.257 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 17:58:39.258 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 17:58:39.259 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 17:58:39.261 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 17:58:39.263 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.UserDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 17:58:39.265 +05:00 [INF] Executed action TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API) in 18.0112ms
+2025-06-16 17:58:39.268 +05:00 [INF] Executed endpoint 'TaskManagement.API.Controllers.UsersController.GetAll (TaskManagement.API)'
+2025-06-16 17:58:39.270 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Users - 200 null application/json; charset=utf-8 56.736ms
+2025-06-16 18:00:00.990 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Archives - null null
+2025-06-16 18:00:00.998 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Archives'
+2025-06-16 18:00:01.000 +05:00 [DBG] Endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)' with route pattern 'api/Archives' is valid for the request path '/api/Archives'
+2025-06-16 18:00:01.003 +05:00 [DBG] Request matched endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 18:00:01.004 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 18:00:01.006 +05:00 [INF] Executing endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 18:00:01.008 +05:00 [INF] Route matched with {action = "GetAll", controller = "Archives"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API).
+2025-06-16 18:00:01.010 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 18:00:01.013 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 18:00:01.015 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 18:00:01.018 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 18:00:01.021 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 18:00:01.023 +05:00 [DBG] Executing controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 18:00:01.025 +05:00 [DBG] Executed controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 18:00:01.030 +05:00 [DBG] Entity Framework Core 9.0.5 initialized 'DataContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: using snake-case naming (culture=)
+2025-06-16 18:00:01.033 +05:00 [DBG] Creating DbConnection.
+2025-06-16 18:00:01.034 +05:00 [DBG] Created DbConnection. (1ms).
+2025-06-16 18:00:01.036 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:01.038 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:01.040 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 18:00:01.042 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 18:00:01.044 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 18:00:01.046 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 18:00:01.049 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 18:00:01.052 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:01.055 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 2ms reading results.
+2025-06-16 18:00:01.057 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:01.059 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 18:00:01.062 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:01.064 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:01.066 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 18:00:01.068 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 18:00:01.070 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 18:00:01.072 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 18:00:01.075 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 18:00:01.080 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:01.082 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:01.084 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:01.086 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:01.088 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:01.090 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:01.092 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:01.094 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:01.097 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:01.099 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:01.101 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 21ms reading results.
+2025-06-16 18:00:01.104 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:01.106 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (1ms).
+2025-06-16 18:00:01.109 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 18:00:01.113 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 18:00:01.114 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 18:00:01.115 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 18:00:01.116 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 18:00:01.119 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.ArchiveDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 18:00:01.121 +05:00 [INF] Executed action TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API) in 98.0702ms
+2025-06-16 18:00:01.123 +05:00 [INF] Executed endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 18:00:01.125 +05:00 [DBG] 'DataContext' disposed.
+2025-06-16 18:00:01.127 +05:00 [DBG] Disposing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:01.129 +05:00 [DBG] Disposed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 18:00:01.132 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Archives - 200 null application/json; charset=utf-8 142.639ms
+2025-06-16 18:00:04.373 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Archives - null null
+2025-06-16 18:00:04.380 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Archives'
+2025-06-16 18:00:04.382 +05:00 [DBG] Endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)' with route pattern 'api/Archives' is valid for the request path '/api/Archives'
+2025-06-16 18:00:04.386 +05:00 [DBG] Request matched endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 18:00:04.388 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 18:00:04.390 +05:00 [INF] Executing endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 18:00:04.392 +05:00 [INF] Route matched with {action = "GetAll", controller = "Archives"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API).
+2025-06-16 18:00:04.395 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 18:00:04.397 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 18:00:04.399 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 18:00:04.403 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 18:00:04.405 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 18:00:04.407 +05:00 [DBG] Executing controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 18:00:04.410 +05:00 [DBG] Executed controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 18:00:04.414 +05:00 [DBG] Entity Framework Core 9.0.5 initialized 'DataContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: using snake-case naming (culture=)
+2025-06-16 18:00:04.417 +05:00 [DBG] Creating DbConnection.
+2025-06-16 18:00:04.419 +05:00 [DBG] Created DbConnection. (1ms).
+2025-06-16 18:00:04.420 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:04.423 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:04.425 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 18:00:04.427 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 18:00:04.429 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (4ms).
+2025-06-16 18:00:04.432 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 18:00:04.435 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 18:00:04.439 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:04.441 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 2ms reading results.
+2025-06-16 18:00:04.443 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:04.445 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 18:00:04.448 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:04.450 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:04.452 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 18:00:04.454 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 18:00:04.456 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 18:00:04.459 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 18:00:04.463 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 18:00:04.466 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:04.468 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:04.470 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:04.473 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:04.475 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:04.477 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:04.479 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:04.481 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:04.483 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:04.486 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:04.488 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 21ms reading results.
+2025-06-16 18:00:04.490 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:04.494 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (3ms).
+2025-06-16 18:00:04.496 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 18:00:04.500 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 18:00:04.502 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 18:00:04.503 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 18:00:04.504 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 18:00:04.507 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.ArchiveDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 18:00:04.509 +05:00 [INF] Executed action TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API) in 101.9825ms
+2025-06-16 18:00:04.511 +05:00 [INF] Executed endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 18:00:04.513 +05:00 [DBG] 'DataContext' disposed.
+2025-06-16 18:00:04.515 +05:00 [DBG] Disposing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:04.517 +05:00 [DBG] Disposed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 18:00:04.520 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Archives - 200 null application/json; charset=utf-8 147.3234ms
+2025-06-16 18:00:07.240 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/Archives - null null
+2025-06-16 18:00:07.246 +05:00 [DBG] 1 candidate(s) found for the request path '/api/Archives'
+2025-06-16 18:00:07.248 +05:00 [DBG] Endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)' with route pattern 'api/Archives' is valid for the request path '/api/Archives'
+2025-06-16 18:00:07.251 +05:00 [DBG] Request matched endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 18:00:07.253 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-16 18:00:07.255 +05:00 [INF] Executing endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 18:00:07.257 +05:00 [INF] Route matched with {action = "GetAll", controller = "Archives"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API).
+2025-06-16 18:00:07.259 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-16 18:00:07.262 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-16 18:00:07.264 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-16 18:00:07.267 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-16 18:00:07.270 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-16 18:00:07.272 +05:00 [DBG] Executing controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 18:00:07.274 +05:00 [DBG] Executed controller factory for controller TaskManagement.API.Controllers.ArchivesController (TaskManagement.API)
+2025-06-16 18:00:07.279 +05:00 [DBG] Entity Framework Core 9.0.5 initialized 'DataContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: using snake-case naming (culture=)
+2025-06-16 18:00:07.283 +05:00 [DBG] Creating DbConnection.
+2025-06-16 18:00:07.284 +05:00 [DBG] Created DbConnection. (1ms).
+2025-06-16 18:00:07.286 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:07.288 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:07.290 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 18:00:07.292 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 18:00:07.294 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-06-16 18:00:07.297 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 18:00:07.300 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id, t.category, t.created_date, t.description, t.exp_value, t.title, t.user_id
+FROM tasks AS t
+2025-06-16 18:00:07.304 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:07.307 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 3ms reading results.
+2025-06-16 18:00:07.310 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:07.313 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (3ms).
+2025-06-16 18:00:07.316 +05:00 [DBG] Opening connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:07.319 +05:00 [DBG] Opened connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:07.321 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-06-16 18:00:07.323 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-06-16 18:00:07.326 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (4ms).
+2025-06-16 18:00:07.329 +05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 18:00:07.332 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a.id, a.category, a.created_date, a.description, a.exp_value, a.title
+FROM archives AS a
+2025-06-16 18:00:07.336 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:07.338 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:07.340 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:07.342 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:07.344 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:07.347 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:07.349 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:07.351 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:07.353 +05:00 [DBG] Context 'DataContext' started tracking 'Archive' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-16 18:00:07.355 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:07.357 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 21ms reading results.
+2025-06-16 18:00:07.359 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:07.362 +05:00 [DBG] Closed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (2ms).
+2025-06-16 18:00:07.365 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-06-16 18:00:07.369 +05:00 [DBG] No information found on request to perform content negotiation.
+2025-06-16 18:00:07.370 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-06-16 18:00:07.371 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-06-16 18:00:07.373 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-06-16 18:00:07.375 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskManagement.Dtos.ArchiveDto, TaskManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-16 18:00:07.377 +05:00 [INF] Executed action TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API) in 104.9694ms
+2025-06-16 18:00:07.380 +05:00 [INF] Executed endpoint 'TaskManagement.API.Controllers.ArchivesController.GetAll (TaskManagement.API)'
+2025-06-16 18:00:07.382 +05:00 [DBG] 'DataContext' disposed.
+2025-06-16 18:00:07.384 +05:00 [DBG] Disposing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.
+2025-06-16 18:00:07.386 +05:00 [DBG] Disposed connection to database 'real_life_rpg' on server 'tcp://localhost:5432' (1ms).
+2025-06-16 18:00:07.389 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/Archives - 200 null application/json; charset=utf-8 148.7815ms

@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\c# .net\\TaskManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4DB35E89-05B2-4B8C-8110-EC58C53D941D}|TaskManagement\\TaskManagement.API.csproj|e:\\c# .net\\taskmanagement\\taskmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DB35E89-05B2-4B8C-8110-EC58C53D941D}|TaskManagement\\TaskManagement.API.csproj|solutionrelative:taskmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.application\\dtos\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|solutionrelative:taskmanagement.application\\dtos\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FD6DE6A-580A-4F92-A646-B679E5B075EC}|TaskManagement.Tests\\TaskManagement.Tests.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.tests\\gettaskstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FD6DE6A-580A-4F92-A646-B679E5B075EC}|TaskManagement.Tests\\TaskManagement.Tests.csproj|solutionrelative:taskmanagement.tests\\gettaskstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.application\\features\\tasks\\commands\\updatetaskcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|solutionrelative:taskmanagement.application\\features\\tasks\\commands\\updatetaskcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement\\Program.cs",
+              "RelativeDocumentMoniker": "TaskManagement\\Program.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement\\Program.cs",
+              "RelativeToolTip": "TaskManagement\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T12:41:18.436Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaskDto.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Dtos\\TaskDto.cs",
+              "RelativeDocumentMoniker": "TaskManagement.Application\\Dtos\\TaskDto.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Dtos\\TaskDto.cs",
+              "RelativeToolTip": "TaskManagement.Application\\Dtos\\TaskDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T11:13:01.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetTasksTest.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Tests\\GetTasksTest.cs",
+              "RelativeDocumentMoniker": "TaskManagement.Tests\\GetTasksTest.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Tests\\GetTasksTest.cs",
+              "RelativeToolTip": "TaskManagement.Tests\\GetTasksTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T13:17:56.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateTaskCommand.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Features\\Tasks\\Commands\\UpdateTaskCommand.cs",
+              "RelativeDocumentMoniker": "TaskManagement.Application\\Features\\Tasks\\Commands\\UpdateTaskCommand.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Features\\Tasks\\Commands\\UpdateTaskCommand.cs",
+              "RelativeToolTip": "TaskManagement.Application\\Features\\Tasks\\Commands\\UpdateTaskCommand.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwB8AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T12:55:08.726Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
