@@ -3,7 +3,7 @@ using MediatR;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
 using TaskManagement.Application.Exceptions;
-using TaskManagement.Domain.Interfaces;
+using TaskManagement.Persistence.RepositoryInterfaces;
 using TaskManagement.Dtos;
 using TaskManagement.Entities;
 

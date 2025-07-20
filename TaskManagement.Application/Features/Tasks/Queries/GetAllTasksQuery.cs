@@ -4,7 +4,7 @@ using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Memory;
 using System.Text.Json;
 using TaskManagement.Application.Exceptions;
-using TaskManagement.Domain.Interfaces;
+using TaskManagement.Persistence.RepositoryInterfaces;
 using TaskManagement.Dtos;
 using TaskManagement.Entities;
 

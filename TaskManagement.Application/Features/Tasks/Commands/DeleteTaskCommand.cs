@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Caching.Distributed;
 using TaskManagement.Application.Exceptions;
-using TaskManagement.Domain.Interfaces;
+using TaskManagement.Persistence.RepositoryInterfaces;
 
 namespace TaskManagement.Application.Features.Tasks.Commands
 {

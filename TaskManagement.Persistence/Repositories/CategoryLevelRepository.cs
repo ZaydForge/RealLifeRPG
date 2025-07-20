@@ -2,7 +2,7 @@
 using System;
 using TaskManagement.DataAccess;
 using TaskManagement.Domain.Enums;
-using TaskManagement.Domain.Interfaces;
+using TaskManagement.Persistence.RepositoryInterfaces;
 using TaskManagement.Entities;
 
 namespace TaskManagement.Repositories;

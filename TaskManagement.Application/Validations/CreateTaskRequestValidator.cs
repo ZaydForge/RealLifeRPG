@@ -15,7 +15,6 @@ public class CreateTaskRequestValidator : AbstractValidator<CreateTaskDto>
             .MaximumLength(255);
 
         RuleFor(r => r.Category)
-            .NotEmpty()
             .IsInEnum();
 
         RuleFor(r => r.EXPValue)

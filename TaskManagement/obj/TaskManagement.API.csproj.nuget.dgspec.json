@@ -31,6 +31,9 @@
             "projectReferences": {
               "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\TaskManagement.Domain.csproj": {
                 "projectPath": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\TaskManagement.Domain.csproj"
+              },
+              "E:\\c# .net\\TaskManagement\\TaskManagement.Persistence\\TaskManagement.Persistence.csproj": {
+                "projectPath": "E:\\c# .net\\TaskManagement\\TaskManagement.Persistence\\TaskManagement.Persistence.csproj"
               }
             }
           }
@@ -66,6 +69,14 @@
               "target": "Package",
               "version": "[12.5.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.Extensions.Caching.Abstractions": {
               "target": "Package",
               "version": "[9.0.6, )"
@@ -73,6 +84,22 @@
             "Microsoft.Extensions.Caching.StackExchangeRedis": {
               "target": "Package",
               "version": "[9.0.6, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.12.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.12.1, )"
             }
           },
           "imports": [
@@ -278,9 +305,6 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\TaskManagement.Application.csproj": {
-                "projectPath": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\TaskManagement.Application.csproj"
-              },
               "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\TaskManagement.Domain.csproj": {
                 "projectPath": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\TaskManagement.Domain.csproj"
               }
@@ -307,6 +331,10 @@
               "version": "[9.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
               "version": "[9.0.5, )"
             },
@@ -398,6 +426,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.21.0, )"
+            },
             "Scrutor": {
               "target": "Package",
               "version": "[6.0.1, )"

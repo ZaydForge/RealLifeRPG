@@ -3,20 +3,56 @@
   "WorkspaceRootPath": "E:\\c# .net\\TaskManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.application\\helpers\\generatejwt\\jwttokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|solutionrelative:taskmanagement.application\\helpers\\generatejwt\\jwttokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.application\\models\\users\\registerusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|solutionrelative:taskmanagement.application\\models\\users\\registerusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61AF3F2F-98A9-4D2C-A914-07BD50213F05}|TaskManagement.Persistence\\TaskManagement.Persistence.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.persistence\\dataaccess\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61AF3F2F-98A9-4D2C-A914-07BD50213F05}|TaskManagement.Persistence\\TaskManagement.Persistence.csproj|solutionrelative:taskmanagement.persistence\\dataaccess\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61AF3F2F-98A9-4D2C-A914-07BD50213F05}|TaskManagement.Persistence\\TaskManagement.Persistence.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.persistence\\configurations\\userconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61AF3F2F-98A9-4D2C-A914-07BD50213F05}|TaskManagement.Persistence\\TaskManagement.Persistence.csproj|solutionrelative:taskmanagement.persistence\\configurations\\userconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.application\\services\\impl\\otpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|solutionrelative:taskmanagement.application\\services\\impl\\otpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.application\\services\\impl\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|solutionrelative:taskmanagement.application\\services\\impl\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F025EAE6-31A6-4AC6-8D9C-B79C7765B282}|TaskManagement.Domain\\TaskManagement.Domain.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F025EAE6-31A6-4AC6-8D9C-B79C7765B282}|TaskManagement.Domain\\TaskManagement.Domain.csproj|solutionrelative:taskmanagement.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F025EAE6-31A6-4AC6-8D9C-B79C7765B282}|TaskManagement.Domain\\TaskManagement.Domain.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F025EAE6-31A6-4AC6-8D9C-B79C7765B282}|TaskManagement.Domain\\TaskManagement.Domain.csproj|solutionrelative:taskmanagement.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F025EAE6-31A6-4AC6-8D9C-B79C7765B282}|TaskManagement.Domain\\TaskManagement.Domain.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F025EAE6-31A6-4AC6-8D9C-B79C7765B282}|TaskManagement.Domain\\TaskManagement.Domain.csproj|solutionrelative:taskmanagement.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F025EAE6-31A6-4AC6-8D9C-B79C7765B282}|TaskManagement.Domain\\TaskManagement.Domain.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.domain\\entities\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F025EAE6-31A6-4AC6-8D9C-B79C7765B282}|TaskManagement.Domain\\TaskManagement.Domain.csproj|solutionrelative:taskmanagement.domain\\entities\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F025EAE6-31A6-4AC6-8D9C-B79C7765B282}|TaskManagement.Domain\\TaskManagement.Domain.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.domain\\entities\\userotps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F025EAE6-31A6-4AC6-8D9C-B79C7765B282}|TaskManagement.Domain\\TaskManagement.Domain.csproj|solutionrelative:taskmanagement.domain\\entities\\userotps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4DB35E89-05B2-4B8C-8110-EC58C53D941D}|TaskManagement\\TaskManagement.API.csproj|e:\\c# .net\\taskmanagement\\taskmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DB35E89-05B2-4B8C-8110-EC58C53D941D}|TaskManagement\\TaskManagement.API.csproj|solutionrelative:taskmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.application\\dtos\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|solutionrelative:taskmanagement.application\\dtos\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FD6DE6A-580A-4F92-A646-B679E5B075EC}|TaskManagement.Tests\\TaskManagement.Tests.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.tests\\gettaskstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FD6DE6A-580A-4F92-A646-B679E5B075EC}|TaskManagement.Tests\\TaskManagement.Tests.csproj|solutionrelative:taskmanagement.tests\\gettaskstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.application\\features\\tasks\\commands\\updatetaskcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|solutionrelative:taskmanagement.application\\features\\tasks\\commands\\updatetaskcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DB35E89-05B2-4B8C-8110-EC58C53D941D}|TaskManagement\\TaskManagement.API.csproj|e:\\c# .net\\taskmanagement\\taskmanagement\\apidependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DB35E89-05B2-4B8C-8110-EC58C53D941D}|TaskManagement\\TaskManagement.API.csproj|solutionrelative:taskmanagement\\apidependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,22 +62,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement\\Program.cs",
-              "RelativeDocumentMoniker": "TaskManagement\\Program.cs",
-              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement\\Program.cs",
-              "RelativeToolTip": "TaskManagement\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T12:41:18.436Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -49,38 +71,159 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TaskDto.cs",
-              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Dtos\\TaskDto.cs",
-              "RelativeDocumentMoniker": "TaskManagement.Application\\Dtos\\TaskDto.cs",
-              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Dtos\\TaskDto.cs",
-              "RelativeToolTip": "TaskManagement.Application\\Dtos\\TaskDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Title": "RegisterUserModel.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Models\\Users\\RegisterUserModel.cs",
+              "RelativeDocumentMoniker": "TaskManagement.Application\\Models\\Users\\RegisterUserModel.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Models\\Users\\RegisterUserModel.cs",
+              "RelativeToolTip": "TaskManagement.Application\\Models\\Users\\RegisterUserModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T11:13:01.112Z"
+              "WhenOpened": "2025-07-19T12:05:47.44Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GetTasksTest.cs",
-              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Tests\\GetTasksTest.cs",
-              "RelativeDocumentMoniker": "TaskManagement.Tests\\GetTasksTest.cs",
-              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Tests\\GetTasksTest.cs",
-              "RelativeToolTip": "TaskManagement.Tests\\GetTasksTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA6AAAAAAAAAA==",
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Persistence\\DataAccess\\DataContext.cs",
+              "RelativeDocumentMoniker": "TaskManagement.Persistence\\DataAccess\\DataContext.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Persistence\\DataAccess\\DataContext.cs",
+              "RelativeToolTip": "TaskManagement.Persistence\\DataAccess\\DataContext.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAxwCQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T13:17:56.37Z"
+              "WhenOpened": "2025-07-19T12:04:11.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JwtTokenHandler.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Helpers\\GenerateJwt\\JwtTokenHandler.cs",
+              "RelativeDocumentMoniker": "TaskManagement.Application\\Helpers\\GenerateJwt\\JwtTokenHandler.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Helpers\\GenerateJwt\\JwtTokenHandler.cs",
+              "RelativeToolTip": "TaskManagement.Application\\Helpers\\GenerateJwt\\JwtTokenHandler.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T12:00:51.152Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UpdateTaskCommand.cs",
-              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Features\\Tasks\\Commands\\UpdateTaskCommand.cs",
-              "RelativeDocumentMoniker": "TaskManagement.Application\\Features\\Tasks\\Commands\\UpdateTaskCommand.cs",
-              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Features\\Tasks\\Commands\\UpdateTaskCommand.cs",
-              "RelativeToolTip": "TaskManagement.Application\\Features\\Tasks\\Commands\\UpdateTaskCommand.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAgwB8AAAA5AAAAAAAAAA==",
+              "Title": "UserConfigurations.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Persistence\\Configurations\\UserConfigurations.cs",
+              "RelativeDocumentMoniker": "TaskManagement.Persistence\\Configurations\\UserConfigurations.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Persistence\\Configurations\\UserConfigurations.cs",
+              "RelativeToolTip": "TaskManagement.Persistence\\Configurations\\UserConfigurations.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAjwEoAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T12:55:08.726Z"
+              "WhenOpened": "2025-07-19T11:50:25.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Services\\Impl\\UserService.cs",
+              "RelativeDocumentMoniker": "TaskManagement.Application\\Services\\Impl\\UserService.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Services\\Impl\\UserService.cs",
+              "RelativeToolTip": "TaskManagement.Application\\Services\\Impl\\UserService.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwDgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T11:45:45.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OtpService.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Services\\Impl\\OtpService.cs",
+              "RelativeDocumentMoniker": "TaskManagement.Application\\Services\\Impl\\OtpService.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Services\\Impl\\OtpService.cs",
+              "RelativeToolTip": "TaskManagement.Application\\Services\\Impl\\OtpService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwB0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T11:45:03.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Role.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\Role.cs",
+              "RelativeDocumentMoniker": "TaskManagement.Domain\\Entities\\Role.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\Role.cs",
+              "RelativeToolTip": "TaskManagement.Domain\\Entities\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T11:19:30.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Permission.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\Permission.cs",
+              "RelativeDocumentMoniker": "TaskManagement.Domain\\Entities\\Permission.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\Permission.cs",
+              "RelativeToolTip": "TaskManagement.Domain\\Entities\\Permission.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T11:19:17.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserOTPs.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\UserOTPs.cs",
+              "RelativeDocumentMoniker": "TaskManagement.Domain\\Entities\\UserOTPs.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\UserOTPs.cs",
+              "RelativeToolTip": "TaskManagement.Domain\\Entities\\UserOTPs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T11:19:01.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Order.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "TaskManagement.Domain\\Entities\\Order.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\Order.cs",
+              "RelativeToolTip": "TaskManagement.Domain\\Entities\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T11:18:55.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "TaskManagement.Domain\\Entities\\User.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "TaskManagement.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T11:17:59.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApiDependencyInjection.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement\\ApiDependencyInjection.cs",
+              "RelativeDocumentMoniker": "TaskManagement\\ApiDependencyInjection.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement\\ApiDependencyInjection.cs",
+              "RelativeToolTip": "TaskManagement\\ApiDependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T11:15:50.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement\\Program.cs",
+              "RelativeDocumentMoniker": "TaskManagement\\Program.cs",
+              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement\\Program.cs",
+              "RelativeToolTip": "TaskManagement\\Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T11:15:26.132Z"
             }
           ]
         }

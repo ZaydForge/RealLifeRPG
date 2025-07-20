@@ -2,12 +2,10 @@
 using MediatR;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Threading;
 using TaskManagement.Application.Exceptions;
-using TaskManagement.Domain.Interfaces;
 using TaskManagement.Dtos;
 using TaskManagement.Entities;
+using TaskManagement.Persistence.RepositoryInterfaces;
 
 namespace TaskManagement.Application.Features.Tasks.Queries
 {

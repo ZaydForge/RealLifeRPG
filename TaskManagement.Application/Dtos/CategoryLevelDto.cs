@@ -8,4 +8,5 @@ public class CategoryLevelDto
     public int Level { get; set; }
     public int CurrentEXP { get; set; }
     public int EXPToNextLevel { get; set; }
+    public int NeededEXP { get; set; }
 }

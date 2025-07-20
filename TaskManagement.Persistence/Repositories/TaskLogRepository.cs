@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TaskManagement.Application.RepositoryInterfaces;
 using TaskManagement.DataAccess;
-using TaskManagement.Dtos;
 using TaskManagement.Entities;
+using TaskManagement.Persistence.RepositoryInterfaces;
 
 namespace TaskManagement.Persistence.Repositories
 {

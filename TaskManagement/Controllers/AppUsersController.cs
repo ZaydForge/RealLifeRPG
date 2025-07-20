@@ -7,12 +7,18 @@ namespace TaskManagement.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController(IMediator mediator) : ControllerBase
+    public class AppUsersController(IMediator mediator) : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             return Ok(await mediator.Send(new GetAllUsersQuery()));
+        }
+
+        [HttpGet("me")]
+        public async Task<IActionResult> GetCurrent()
+        {
+            return Ok(await mediator.Send(new GetCurrentUserQuery()));
         }
     }
 }

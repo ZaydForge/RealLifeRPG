@@ -19,9 +19,9 @@ namespace TaskManagement.Application.Validations
             RuleFor(r => r.Description)
                 .MaximumLength(255);
 
-            RuleFor(r => r.Category)
-                .NotEmpty()
-                .IsInEnum();
+            //RuleFor(r => r.Category)
+            //    .NotEmpty()
+            //    .IsInEnum();
 
             RuleFor(r => r.EXPValue)
                 .GreaterThan(0);

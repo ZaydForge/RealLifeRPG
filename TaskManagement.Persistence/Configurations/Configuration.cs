@@ -28,6 +28,16 @@ public class UserConfiguration : IEntityTypeConfiguration<AppUser>
 {
     public void Configure(EntityTypeBuilder<AppUser> builder)
     {
+        builder.HasData(
+            new AppUser
+            {
+                Id = 1,
+                Username = "Zayd",
+                Email = "zaydabduxamidov2008@gmail.com",
+                PasswordHash = "Password",
+                MainLevel = 1,
+                CreatedDate = new DateTime(2025, 7, 19, 0, 0, 0, DateTimeKind.Utc) // ✅ explicitly UTC
+            });
         builder.HasKey(x => x.Id);
 
         builder.Property(r => r.Username)

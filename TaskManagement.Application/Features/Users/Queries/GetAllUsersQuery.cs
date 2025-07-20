@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using TaskManagement.Application.Exceptions;
-using TaskManagement.Application.RepositoryInterfaces;
+using TaskManagement.Persistence.RepositoryInterfaces;
 using TaskManagement.Dtos;
 
 namespace TaskManagement.Application.Features.Users.Queries

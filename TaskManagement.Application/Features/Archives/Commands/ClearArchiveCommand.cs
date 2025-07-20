@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using TaskManagement.Application.Exceptions;
-using TaskManagement.Domain.Interfaces;
+using TaskManagement.Persistence.RepositoryInterfaces;
 using TaskManagement.Dtos;
 
 namespace TaskManagement.Application.Features.Archives.Commands

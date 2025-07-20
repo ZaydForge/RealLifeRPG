@@ -12,6 +12,6 @@ public class CreateTaskDto
 
     public Category Category { get; set; }
 
-    public int UserId { get; set; }
+    public int UserId { get; set; } = 1;
 
 }

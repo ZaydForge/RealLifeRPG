@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Infrastructu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Persistence", "TaskManagement.Persistence\TaskManagement.Persistence.csproj", "{61AF3F2F-98A9-4D2C-A914-07BD50213F05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.Tests", "TaskManagement.Tests\TaskManagement.Tests.csproj", "{0FD6DE6A-580A-4F92-A646-B679E5B075EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Tests", "TaskManagement.Tests\TaskManagement.Tests.csproj", "{0FD6DE6A-580A-4F92-A646-B679E5B075EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{05FEDF62-E483-4A90-A161-0BF0D7E094F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{71DC3726-072A-4CD5-8380-9EABB0E7D326}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +52,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4DB35E89-05B2-4B8C-8110-EC58C53D941D} = {05FEDF62-E483-4A90-A161-0BF0D7E094F7}
+		{DA70198F-78D1-40C2-91AB-A78E2D50AEF1} = {05FEDF62-E483-4A90-A161-0BF0D7E094F7}
+		{F025EAE6-31A6-4AC6-8D9C-B79C7765B282} = {05FEDF62-E483-4A90-A161-0BF0D7E094F7}
+		{6C34B3F4-D073-415B-BE5B-2A375CF29808} = {05FEDF62-E483-4A90-A161-0BF0D7E094F7}
+		{61AF3F2F-98A9-4D2C-A914-07BD50213F05} = {05FEDF62-E483-4A90-A161-0BF0D7E094F7}
+		{0FD6DE6A-580A-4F92-A646-B679E5B075EC} = {71DC3726-072A-4CD5-8380-9EABB0E7D326}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68D5B635-EBD7-47DB-A1ED-2935F2B8ADDC}

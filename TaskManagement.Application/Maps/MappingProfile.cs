@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using TaskManagement.Application.Dtos;
+using TaskManagement.Domain.Entities;
 using TaskManagement.Dtos;
 using TaskManagement.Entities;
 
@@ -23,5 +25,20 @@ public class MappingProfile : Profile
 
         CreateMap<CreateTaskDto, TaskItem>();
         CreateMap<UpdateTaskDto, TaskItem>();
+
+        CreateMap<Achievement, AchievementDto>();
+        CreateMap<Title, TitleDto>();
+
+        CreateMap<UserAchievement, UserAchievementDto>()
+            .ForMember(dest => dest.UserName,
+                       opt => opt.MapFrom(src => src.User.Username))
+            .ForMember(dest => dest.Name,
+                       opt => opt.MapFrom(src => src.Achievement.Name));
+
+        CreateMap<UserTitle, UserTitleDto>()
+            .ForMember(dest => dest.UserName,
+                       opt => opt.MapFrom(src => src.User.Username))
+            .ForMember(dest => dest.Name,
+                       opt => opt.MapFrom(src => src.Title.Name));
     }
 }

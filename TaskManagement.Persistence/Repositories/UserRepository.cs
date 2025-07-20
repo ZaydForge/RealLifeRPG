@@ -1,12 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TaskManagement.Application.RepositoryInterfaces;
 using TaskManagement.DataAccess;
 using TaskManagement.Entities;
+using TaskManagement.Persistence.RepositoryInterfaces;
 
 namespace TaskManagement.Persistence.Repositories
 {
@@ -19,27 +14,27 @@ namespace TaskManagement.Persistence.Repositories
         }
         public async Task<AppUser> GetUserByIdAsync(int userId)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            return await _context.AppUsers.FirstOrDefaultAsync(u => u.Id == userId);
         }
 
         public async Task<IEnumerable<AppUser>> GetAllUsersAsync()
         {
-            return await _context.Users.ToListAsync();
+            return await _context.AppUsers.ToListAsync();
         }
 
         public async Task AddUserAsync(AppUser user)
         {
-            await _context.Users.AddAsync(user);
+            await _context.AppUsers.AddAsync(user);
         }
 
         public async Task UpdateUserAsync(AppUser user)
         {
-            _context.Users.Update(user);
+            _context.AppUsers.Update(user);
         }
 
         public async Task DeleteUserAsync(AppUser user)
         {
-            _context.Users.Remove(user);
+            _context.AppUsers.Remove(user);
         }
 
         public async Task SaveChangesAsync()
