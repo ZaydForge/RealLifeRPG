@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "E:\\c# .net\\TaskManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4DB35E89-05B2-4B8C-8110-EC58C53D941D}|TaskManagement\\TaskManagement.API.csproj|e:\\c# .net\\taskmanagement\\taskmanagement\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{4DB35E89-05B2-4B8C-8110-EC58C53D941D}|TaskManagement\\TaskManagement.API.csproj|solutionrelative:taskmanagement\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|e:\\c# .net\\taskmanagement\\taskmanagement.application\\helpers\\generatejwt\\jwttokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA70198F-78D1-40C2-91AB-A78E2D50AEF1}|TaskManagement.Application\\TaskManagement.Application.csproj|solutionrelative:taskmanagement.application\\helpers\\generatejwt\\jwttokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -66,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,20 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement\\Dockerfile",
-              "RelativeDocumentMoniker": "TaskManagement\\Dockerfile",
-              "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement\\Dockerfile",
-              "RelativeToolTip": "TaskManagement\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-07-19T14:33:03.734Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "RegisterUserModel.cs",
               "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Models\\Users\\RegisterUserModel.cs",
               "RelativeDocumentMoniker": "TaskManagement.Application\\Models\\Users\\RegisterUserModel.cs",
@@ -95,12 +78,11 @@
               "RelativeToolTip": "TaskManagement.Application\\Models\\Users\\RegisterUserModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T12:05:47.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-19T12:05:47.44Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "DataContext.cs",
               "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Persistence\\DataAccess\\DataContext.cs",
               "RelativeDocumentMoniker": "TaskManagement.Persistence\\DataAccess\\DataContext.cs",
@@ -108,25 +90,24 @@
               "RelativeToolTip": "TaskManagement.Persistence\\DataAccess\\DataContext.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAxwCQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T12:04:11.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-19T12:04:11.329Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "JwtTokenHandler.cs",
               "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Helpers\\GenerateJwt\\JwtTokenHandler.cs",
               "RelativeDocumentMoniker": "TaskManagement.Application\\Helpers\\GenerateJwt\\JwtTokenHandler.cs",
               "ToolTip": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Helpers\\GenerateJwt\\JwtTokenHandler.cs",
               "RelativeToolTip": "TaskManagement.Application\\Helpers\\GenerateJwt\\JwtTokenHandler.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBIAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBwAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-19T12:00:51.152Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "UserConfigurations.cs",
               "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Persistence\\Configurations\\UserConfigurations.cs",
               "RelativeDocumentMoniker": "TaskManagement.Persistence\\Configurations\\UserConfigurations.cs",
@@ -134,12 +115,11 @@
               "RelativeToolTip": "TaskManagement.Persistence\\Configurations\\UserConfigurations.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAjwEoAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T11:50:25.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-19T11:50:25.471Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "UserService.cs",
               "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Services\\Impl\\UserService.cs",
               "RelativeDocumentMoniker": "TaskManagement.Application\\Services\\Impl\\UserService.cs",
@@ -151,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "OtpService.cs",
               "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Application\\Services\\Impl\\OtpService.cs",
               "RelativeDocumentMoniker": "TaskManagement.Application\\Services\\Impl\\OtpService.cs",
@@ -159,12 +139,11 @@
               "RelativeToolTip": "TaskManagement.Application\\Services\\Impl\\OtpService.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwB0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T11:45:03.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-19T11:45:03.897Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Role.cs",
               "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\Role.cs",
               "RelativeDocumentMoniker": "TaskManagement.Domain\\Entities\\Role.cs",
@@ -176,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Permission.cs",
               "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\Permission.cs",
               "RelativeDocumentMoniker": "TaskManagement.Domain\\Entities\\Permission.cs",
@@ -188,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "UserOTPs.cs",
               "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\UserOTPs.cs",
               "RelativeDocumentMoniker": "TaskManagement.Domain\\Entities\\UserOTPs.cs",
@@ -200,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Order.cs",
               "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\Order.cs",
               "RelativeDocumentMoniker": "TaskManagement.Domain\\Entities\\Order.cs",
@@ -212,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement.Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "TaskManagement.Domain\\Entities\\User.cs",
@@ -224,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "ApiDependencyInjection.cs",
               "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement\\ApiDependencyInjection.cs",
               "RelativeDocumentMoniker": "TaskManagement\\ApiDependencyInjection.cs",
@@ -236,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\c# .net\\TaskManagement\\TaskManagement\\Program.cs",
               "RelativeDocumentMoniker": "TaskManagement\\Program.cs",
