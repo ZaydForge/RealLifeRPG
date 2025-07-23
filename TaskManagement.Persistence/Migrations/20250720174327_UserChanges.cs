@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace TaskManagement.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class UserChanges : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -304,6 +304,9 @@ namespace TaskManagement.Persistence.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     fullname = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     email = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    username = table.Column<string>(type: "character varying(15)", maxLength: 15, nullable: false),
+                    phone_number = table.Column<string>(type: "character varying(15)", maxLength: 15, nullable: false),
+                    date_of_birth = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     password_hash = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: false),
                     salt = table.Column<string>(type: "character varying(128)", maxLength: 128, nullable: false),
                     created_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
@@ -391,8 +394,8 @@ namespace TaskManagement.Persistence.Migrations
 
             migrationBuilder.InsertData(
                 table: "users",
-                columns: new[] { "id", "created_at", "email", "fullname", "is_verified", "password_hash", "role_permission_id", "salt", "updated_at" },
-                values: new object[] { 1, new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), "superadmin@example.com", "Adminjon", true, "D42P7vktaO2foK9yXdm141IJE8Z8z3auswXfDhyzKCM=", null, "9f7d6dc5-34b4-4b66-a65e-0dc2fc17c0db", null });
+                columns: new[] { "id", "created_at", "date_of_birth", "email", "fullname", "is_verified", "password_hash", "phone_number", "role_permission_id", "salt", "updated_at", "username" },
+                values: new object[] { 1, new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), "superadmin@example.com", "Adminjon", true, "D42P7vktaO2foK9yXdm141IJE8Z8z3auswXfDhyzKCM=", "+998901234567", null, "9f7d6dc5-34b4-4b66-a65e-0dc2fc17c0db", new DateTime(2025, 7, 20, 17, 43, 27, 373, DateTimeKind.Utc).AddTicks(5485), "superadmin" });
 
             migrationBuilder.InsertData(
                 table: "category_levels",

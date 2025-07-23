@@ -34,19 +34,22 @@ public class UserService : IUserService
         _authService = authService;
     }
 
-    public async Task<ApiResult<string>> RegisterAsync(string fullname, string email, string password, bool isAdminSite)
+    public async Task<ApiResult<string>> RegisterAsync(RegisterUserModel model)
     {
-        var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == model.Email);
         if (existingUser != null)
-            return ApiResult<string>.Failure(new[] { "Email allaqachon mavjud" });
+            return ApiResult<string>.Failure(new[] { "Email already exists" }, "Email already exists");
 
         var salt = Guid.NewGuid().ToString();
-        var hash = _passwordHasher.Encrypt(password, salt);
+        var hash = _passwordHasher.Encrypt(model.Password, salt);
 
         var user = new User
         {
-            Fullname = fullname,
-            Email = email,
+            Fullname = model.Fullname,
+            Email = model.Email,
+            PhoneNumber = model.PhoneNumber,
+            Username = model.Username,
+            DateOfBirth = model.DateOfBirth,
             PasswordHash = hash,
             Salt = salt,
             CreatedAt = DateTime.UtcNow,
@@ -57,13 +60,13 @@ public class UserService : IUserService
         await _context.SaveChangesAsync();
 
         // --- Rolni isAdminSite ga qarab belgilash ---
-        string roleName = isAdminSite ? "Admin" : "User";
+        string roleName = model.isAdminSite ? "Admin" : "User";
         var defaultRole = await _context.Roles.FirstOrDefaultAsync(r => r.Name == roleName);
 
         if (defaultRole == null)
         {
             // Agar kerakli rol topilmasa, xato qaytaramiz
-            return ApiResult<string>.Failure(new[] { $"Tizimda '{roleName}' roli topilmadi. Admin bilan bog'laning." });
+            return ApiResult<string>.Failure(new[] { $"The role '{roleName}' was not found in the system. Please contact the administrator." }, $"The role '{roleName}' was not found in the system. Please contact the administrator.");
         }
 
         _context.UserRoles.Add(new UserRole
@@ -75,9 +78,9 @@ public class UserService : IUserService
         // --- Rolni belgilash qismi tugadi ---
 
         var otp = await _otpService.GenerateAndSaveOtpAsync(user.Id);
-        await _emailService.SendOtpAsync(email, otp);
+        await _emailService.SendOtpAsync(model.Email, otp);
 
-        return ApiResult<string>.Success("Ro'yxatdan o'tdingiz. Email orqali tasdiqlang.");
+        return ApiResult<string>.Success("You have registered. Please verify via email", "You have registered. Please verify via email");
     }
 
     public async Task<ApiResult<LoginResponseModel>> LoginAsync(LoginUserModel model)
@@ -88,13 +91,13 @@ public class UserService : IUserService
             .FirstOrDefaultAsync(u => u.Email == model.Email);
 
         if (user is null)
-            return ApiResult<LoginResponseModel>.Failure(new[] { "Foydalanuvchi topilmadi" });
+            return ApiResult<LoginResponseModel>.Failure(new[] { "User not found" }, "User not found");
 
         if (!_passwordHasher.Verify(user.PasswordHash, model.Password, user.Salt))
-            return ApiResult<LoginResponseModel>.Failure(new[] { "Parol noto‘g‘ri" });
+            return ApiResult<LoginResponseModel>.Failure(new[] { "Incorrect password" }, "Incorrect password");
 
         if (!user.IsVerified)
-            return ApiResult<LoginResponseModel>.Failure(new[] { "Email tasdiqlanmagan" });
+            return ApiResult<LoginResponseModel>.Failure(new[] { "Email is not verified" }, "Email is not verified");
 
         var accessToken = _jwtTokenHandler.GenerateAccessToken(user, Guid.NewGuid().ToString());
         var refreshToken = _jwtTokenHandler.GenerateRefreshToken();
@@ -103,6 +106,9 @@ public class UserService : IUserService
         {
             Email = user.Email,
             Fullname = user.Fullname,
+            Username = user.Username ?? "",
+            PhoneNumber = user.PhoneNumber ?? "",
+            DateOfBirth = user.DateOfBirth,
             AccessToken = accessToken,
             RefreshToken = refreshToken,
             Roles = user.UserRoles.Select(ur => ur.Role.Name).ToList(),
@@ -111,30 +117,30 @@ public class UserService : IUserService
                  .Select(p => p.Permission.ShortName)
                  .Distinct()
                  .ToList()
-        });
+        }, "Successfully logged in");
     }
 
     public async Task<ApiResult<string>> VerifyOtpAsync(OtpVerificationModel model)
     {
         var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == model.Email);
         if (user is null)
-            return ApiResult<string>.Failure(new[] { "Foydalanuvchi topilmadi." });
+            return ApiResult<string>.Failure(new[] { "User not found" }, "User not found");   
 
         var otp = await _otpService.GetLatestOtpAsync(user.Id, model.Code);
-        if (otp is null || otp.ExpiredAt < DateTime.Now)
-            return ApiResult<string>.Failure(new[] { "Kod noto‘g‘ri yoki muddati tugagan." });
+        if (otp is null)
+            return ApiResult<string>.Failure(new[] { "The code is incorrect or has expired" }, "The code is incorrect or has expired");
 
         user.IsVerified = true;
         await _context.SaveChangesAsync();
 
-        return ApiResult<string>.Success("OTP muvaffaqiyatli tasdiqlandi.");
+        return ApiResult<string>.Success("Successfully verified", "Successfully verified");
     }
 
     public async Task<ApiResult<UserAuthResponseModel>> GetUserAuth()
     {
         if (_authService.User == null)
         {
-            return ApiResult<UserAuthResponseModel>.Failure(new List<string> { "User not found" });
+            return ApiResult<UserAuthResponseModel>.Failure(new List<string> { "User not found" }, "User not found");
         }
 
         UserAuthResponseModel userPermissions = new UserAuthResponseModel
@@ -144,8 +150,67 @@ public class UserService : IUserService
             Permissions = _authService.User.Permissions
         };
 
-        return ApiResult<UserAuthResponseModel>.Success(userPermissions);
+        return ApiResult<UserAuthResponseModel>.Success(userPermissions, "You have successfully registered!");
     }
 
+    public async Task<ApiResult<string>> ForgotPasswordAsync(string email)
+    {
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        if (user is null)
+            return ApiResult<string>.Failure(["User not found"], "User not found");
+
+        var otp = await _otpService.GenerateAndSaveOtpAsync(user.Id);
+        await _emailService.SendOtpAsync(email, otp);
+
+        return ApiResult<string>.Success("OTP has been sent to your email.", "OTP has been sent to your email.");
+    }
+
+    public async Task<ApiResult<string>> ResetPasswordAsync(string email, string code, string newPassword)
+    {
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        if (user is null)
+            return ApiResult<string>.Failure(["User not found"], "User not found");
+
+        var otp = await _otpService.GetLatestOtpAsync(user.Id, code);
+        if (otp == null || otp.ExpiredAt < DateTime.UtcNow)
+            return ApiResult<string>.Failure(["Invalid or expired code"], "Invalid or expired code");
+
+        var salt = Guid.NewGuid().ToString();
+        var hashedPassword = _passwordHasher.Encrypt(newPassword, salt);
+
+        user.PasswordHash = hashedPassword;
+        user.Salt = salt;
+        await _context.SaveChangesAsync();
+
+        return ApiResult<string>.Success("Password has been reset successfully", "Password has been reset successfully");
+    }
+
+    public async Task<ApiResult<string>> ResendOtpAsync(string email)
+    {
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        if (user is null)
+            return ApiResult<string>.Failure(new[] { "User not found" }, "User not found");
+
+        if (user.IsVerified)
+            return ApiResult<string>.Failure(new[] { "This email is already verified" }, "This email is already verified");
+
+        var otp = await _otpService.GenerateAndSaveOtpAsync(user.Id); // generate new OTP
+        await _emailService.SendOtpAsync(email, otp); // send it again
+
+        return ApiResult<string>.Success("OTP has been resent to your email", "OTP has been resent to your email");
+    }
+
+
+    public async Task<ApiResult<string>> DeleteUserAsync(string email)
+    {
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        if (user is null)
+            return ApiResult<string>.Failure(new[] { "User not found" }, "User not found");
+
+        _context.Users.Remove(user);
+        await _context.SaveChangesAsync();
+
+        return ApiResult<string>.Success("User deleted successfully", "User deleted successfully");
+    }
 
 }

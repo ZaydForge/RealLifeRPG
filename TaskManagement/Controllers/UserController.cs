@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity.Data;
+using Microsoft.AspNetCore.Mvc;
 using TaskManagement.API.Attributes;
 using TaskManagement.Application.Models;
 using TaskManagement.Application.Models.Users;
@@ -19,24 +20,24 @@ namespace TaskManagement.API.Controllers
 
         [HttpPost("register")]
 
-        public async Task<ApiResult<string>> RegisterAsync([FromBody] RegisterUserModel model)
+        public async Task<IActionResult> RegisterAsync([FromBody] RegisterUserModel model)
         {
-            var result = await _userService.RegisterAsync(model.Fullname, model.Email, model.Password, model.isAdminSite);
-            return result;
+            var result = await _userService.RegisterAsync(model);
+            return Ok(result);
         }
 
         [HttpPost("login")]
-        public async Task<ApiResult<LoginResponseModel>> LoginAsync([FromBody] LoginUserModel model)
+        public async Task<IActionResult> LoginAsync([FromBody] LoginUserModel model)
         {
             var result = await _userService.LoginAsync(model);
-            return result;
+            return Ok(result);
         }
 
         [HttpPost("verify-otp")]
-        public async Task<ApiResult<string>> VerifyOtpAsync([FromBody] OtpVerificationModel model)
+        public async Task<IActionResult> VerifyOtpAsync([FromBody] OtpVerificationModel model)
         {
             var result = await _userService.VerifyOtpAsync(model);
-            return result;
+            return Ok(result);
         }
 
         [Authorize]
@@ -44,11 +45,47 @@ namespace TaskManagement.API.Controllers
         public async Task<IActionResult> GetUserAuth()
         {
             var result = await _userService.GetUserAuth();
-            if (result.Succeeded)
+            if (result.IsSuccess)
             {
                 return Ok(result);
             }
             return BadRequest(result);
+        }
+
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody] Application.Models.Users.ForgotPasswordRequest request)
+        {
+            var result = await _userService.ForgotPasswordAsync(request.Email);
+            return Ok(result);
+        }
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] Application.Models.Users.ResetPasswordRequest request)
+        {
+            var result = await _userService.ResetPasswordAsync(request.Email, request.Code, request.NewPassword);
+            return Ok(result);
+        }
+
+        [HttpDelete("by-email")]
+        public async Task<IActionResult> DeleteUserByEmail([FromQuery] string email)
+        {
+            var result = await _userService.DeleteUserAsync(email);
+            if (result.IsSuccess)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+
+        }
+
+        [HttpPost("resend-code/{email}")]
+        public async Task<IActionResult> ResendCode([FromRoute] string email)
+        {
+            var result = await _userService.ResendOtpAsync(email);
+            if (!result.IsSuccess)
+                return BadRequest(result);
+
+            return Ok(result);
         }
 
     }

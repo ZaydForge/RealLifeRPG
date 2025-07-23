@@ -255,6 +255,10 @@ namespace TaskManagement.Persistence.Migrations
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("created_at");
 
+                    b.Property<DateTime?>("DateOfBirth")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("date_of_birth");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -279,6 +283,12 @@ namespace TaskManagement.Persistence.Migrations
                         .HasColumnType("character varying(256)")
                         .HasColumnName("password_hash");
 
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("character varying(15)")
+                        .HasColumnName("phone_number");
+
                     b.Property<int?>("RolePermissionId")
                         .HasColumnType("integer")
                         .HasColumnName("role_permission_id");
@@ -292,6 +302,12 @@ namespace TaskManagement.Persistence.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("updated_at");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("character varying(15)")
+                        .HasColumnName("username");
 
                     b.HasKey("Id")
                         .HasName("pk_users");
@@ -310,11 +326,15 @@ namespace TaskManagement.Persistence.Migrations
                         {
                             Id = 1,
                             CreatedAt = new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            DateOfBirth = new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Email = "superadmin@example.com",
                             Fullname = "Adminjon",
                             IsVerified = true,
                             PasswordHash = "D42P7vktaO2foK9yXdm141IJE8Z8z3auswXfDhyzKCM=",
-                            Salt = "9f7d6dc5-34b4-4b66-a65e-0dc2fc17c0db"
+                            PhoneNumber = "+998901234567",
+                            Salt = "9f7d6dc5-34b4-4b66-a65e-0dc2fc17c0db",
+                            UpdatedAt = new DateTime(2025, 7, 20, 17, 43, 27, 373, DateTimeKind.Utc).AddTicks(5485),
+                            Username = "superadmin"
                         });
                 });
 

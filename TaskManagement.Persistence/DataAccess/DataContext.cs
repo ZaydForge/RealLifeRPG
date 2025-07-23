@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using TaskManagement.Domain.Entities;
 using TaskManagement.Entities;
 
@@ -85,5 +86,8 @@ public class DataContext(DbContextOptions options) : DbContext(options)
             .OnDelete(DeleteBehavior.Cascade);
     }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){ }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
+        optionsBuilder.ConfigureWarnings(warnings =>
+        warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
+    }
 }

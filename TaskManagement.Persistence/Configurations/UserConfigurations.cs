@@ -21,6 +21,14 @@ namespace SecureLoginApp.DataAccess.Persistence.Configurations
             builder.HasIndex(u => u.Email)
                 .IsUnique(); // Email noyob bo'lishi kerak
 
+            builder.Property(u => u.PhoneNumber)
+                 .HasMaxLength(15)
+                 .IsRequired();
+
+            builder.Property(u => u.Username)
+                .HasMaxLength(15)
+                .IsRequired();
+          
             builder.Property(u => u.PasswordHash)
                 .HasMaxLength(256) // Hash uzunligi odatda 256 belgidan oshmaydi (Base64 kodlanganda ham)
                 .IsRequired();
@@ -70,6 +78,9 @@ namespace SecureLoginApp.DataAccess.Persistence.Configurations
                 Id = seedUserId, // IdConst.IdUserConst.SuperAdminId ni shu int qiymatiga moslang
                 Fullname = "Adminjon", // Sizning User entity'ngizda 'Fullname'
                 Email = "superadmin@example.com",
+                PhoneNumber = "+998901234567",
+                Username = "superadmin",
+                DateOfBirth = new DateTime(1990, 1, 1, 0, 0, 0, DateTimeKind.Utc), // SuperAdminning tug'ilgan kuni
                 Salt = seedSalt,
                 PasswordHash = Encrypt(seedPassword, seedSalt),
                 CreatedAt = new DateTime(2023, 1, 1, 0, 0, 0, DateTimeKind.Utc),

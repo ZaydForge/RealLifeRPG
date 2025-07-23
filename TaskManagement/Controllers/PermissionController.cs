@@ -30,7 +30,7 @@ namespace TaskManagement.API.Controllers
         public async Task<IActionResult> GetGroupedPermissionsFromDb()
         {
             var result = await _permissionService.GetPermissionsFromDbAsync();
-            if (result.Succeeded)
+            if (result.IsSuccess)
             {
                 return Ok(result);
             }

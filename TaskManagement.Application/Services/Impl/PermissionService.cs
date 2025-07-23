@@ -81,7 +81,7 @@ namespace TaskManagement.Application.Services.Impl
                 .OrderBy(pg => pg.GroupName)
                 .ToList();
 
-            return ApiResult<List<PermissionGroupListModel>>.Success(groupedPermissions);
+            return ApiResult<List<PermissionGroupListModel>>.Success(groupedPermissions, "Success");
         }
     }
 }
