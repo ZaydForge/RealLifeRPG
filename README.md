@@ -1,2 +1,2 @@
 # RealLifeRPG
-Level up by completing daily tasks. 
+Level up by completing daily tasks.
