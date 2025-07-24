@@ -870,20 +870,20 @@ FROM tasks AS t
 2025-06-17 15:58:50.720 +05:00 [DBG] Executed controller factory for controller TaskManagement.API.Controllers.UsersController (TaskManagement.API)
 2025-06-17 15:58:50.727 +05:00 [DBG] Entity Framework Core 9.0.5 initialized 'DataContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: using snake-case naming (culture=)
 2025-06-17 15:58:50.730 +05:00 [DBG] Compiling query expression: 
-'DbSet<AppUser>()'
+'DbSet<UserProfile>()'
 2025-06-17 15:58:50.737 +05:00 [DBG] Generated query execution expression: 
-'queryContext => SingleQueryingEnumerable.Create<AppUser>(
+'queryContext => SingleQueryingEnumerable.Create<UserProfile>(
     relationalQueryContext: (RelationalQueryContext)queryContext, 
     relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
         Projection Mapping:
-            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: AppUser.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: AppUser.CreatedDate (DateTime) Required, 1], [Property: AppUser.Email (string) Required, 2], [Property: AppUser.MainLevel (int) Required, 3], [Property: AppUser.PasswordHash (string) Required, 4], [Property: AppUser.Username (string) Required MaxLength(250), 5] }
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: UserProfile.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: UserProfile.CreatedDate (DateTime) Required, 1], [Property: UserProfile.Email (string) Required, 2], [Property: UserProfile.MainLevel (int) Required, 3], [Property: UserProfile.PasswordHash (string) Required, 4], [Property: UserProfile.Username (string) Required MaxLength(250), 5] }
         SELECT u.id, u.created_date, u.email, u.main_level, u.password_hash, u.username
         FROM users AS u) | Resolver: c => new RelationalCommandCache(
         c.Dependencies.MemoryCache, 
         c.RelationalDependencies.QuerySqlGeneratorFactory, 
         c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
         Projection Mapping:
-            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: AppUser.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: AppUser.CreatedDate (DateTime) Required, 1], [Property: AppUser.Email (string) Required, 2], [Property: AppUser.MainLevel (int) Required, 3], [Property: AppUser.PasswordHash (string) Required, 4], [Property: AppUser.Username (string) Required MaxLength(250), 5] }
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: UserProfile.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: UserProfile.CreatedDate (DateTime) Required, 1], [Property: UserProfile.Email (string) Required, 2], [Property: UserProfile.MainLevel (int) Required, 3], [Property: UserProfile.PasswordHash (string) Required, 4], [Property: UserProfile.Username (string) Required MaxLength(250), 5] }
         SELECT u.id, u.created_date, u.email, u.main_level, u.password_hash, u.username
         FROM users AS u, 
         False, 
@@ -895,41 +895,41 @@ FROM tasks AS t
     readerColumns: null, 
     shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
     {
-        AppUser entity;
+        UserProfile entity;
         entity = 
         {
             MaterializationContext materializationContext1;
             IEntityType entityType1;
-            AppUser instance1;
+            UserProfile instance1;
             InternalEntityEntry entry1;
             bool hasNullKey1;
             materializationContext1 = new MaterializationContext(
                 [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
                 queryContext.Context
             );
-            instance1 = default(AppUser);
+            instance1 = default(UserProfile);
             entry1 = queryContext.TryGetEntry(
-                key: [LIFTABLE Constant: Key: AppUser.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("TaskManagement.Entities.AppUser").FindPrimaryKey()], 
+                key: [LIFTABLE Constant: Key: UserProfile.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("TaskManagement.Entities.UserProfile").FindPrimaryKey()], 
                 keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
                 throwOnNullKey: True, 
                 hasNullKey: hasNullKey1);
             !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
             {
                 entityType1 = entry1.EntityType;
-                return instance1 = (AppUser)entry1.Entity;
+                return instance1 = (UserProfile)entry1.Entity;
             } : 
             {
                 ISnapshot shadowSnapshot1;
                 shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
-                entityType1 = [LIFTABLE Constant: EntityType: AppUser | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("TaskManagement.Entities.AppUser")];
+                entityType1 = [LIFTABLE Constant: EntityType: UserProfile | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("TaskManagement.Entities.UserProfile")];
                 instance1 = switch (entityType1)
                 {
-                    case [LIFTABLE Constant: EntityType: AppUser | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("TaskManagement.Entities.AppUser")]: 
+                    case [LIFTABLE Constant: EntityType: UserProfile | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("TaskManagement.Entities.UserProfile")]: 
                         {
                             return 
                             {
-                                AppUser instance;
-                                instance = new AppUser();
+                                UserProfile instance;
+                                instance = new UserProfile();
                                 instance.<Id>k__BackingField = dataReader.GetInt32(0);
                                 instance.<CreatedDate>k__BackingField = dataReader.GetDateTime(1);
                                 instance.<Email>k__BackingField = dataReader.GetString(2);
@@ -940,11 +940,11 @@ FROM tasks AS t
                                     context: materializationContext1.Context, 
                                     entity: instance, 
                                     queryTrackingBehavior: TrackAll, 
-                                    structuralType: [LIFTABLE Constant: EntityType: AppUser | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("TaskManagement.Entities.AppUser")]) : default(void);
+                                    structuralType: [LIFTABLE Constant: EntityType: UserProfile | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("TaskManagement.Entities.UserProfile")]) : default(void);
                                 return instance;
                             }}
                     default: 
-                        default(AppUser)
+                        default(UserProfile)
                 }
                 ;
                 entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
@@ -974,7 +974,7 @@ FROM users AS u
 2025-06-17 15:58:50.761 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 SELECT u.id, u.created_date, u.email, u.main_level, u.password_hash, u.username
 FROM users AS u
-2025-06-17 15:58:50.767 +05:00 [DBG] Context 'DataContext' started tracking 'AppUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-06-17 15:58:50.767 +05:00 [DBG] Context 'DataContext' started tracking 'UserProfile' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
 2025-06-17 15:58:50.777 +05:00 [DBG] Closing data reader to 'real_life_rpg' on server 'tcp://localhost:5432'.
 2025-06-17 15:58:50.780 +05:00 [DBG] A data reader for 'real_life_rpg' on server 'tcp://localhost:5432' is being disposed after spending 15ms reading results.
 2025-06-17 15:58:50.783 +05:00 [DBG] Closing connection to database 'real_life_rpg' on server 'tcp://localhost:5432'.

@@ -9,9 +9,9 @@ namespace TaskManagement.Persistence.RepositoryInterfaces;
 
 public interface IUserRepository
 {
-    Task<AppUser> GetUserByIdAsync(int userId);
-    Task<IEnumerable<AppUser>> GetAllUsersAsync();
-    Task AddUserAsync(AppUser user);
-    Task UpdateUserAsync(AppUser user);
-    Task DeleteUserAsync(AppUser user);
+    Task<UserProfile> GetUserByIdAsync(int userId);
+    Task<IEnumerable<UserProfile>> GetAllUsersAsync();
+    Task AddUserAsync(UserProfile user);
+    Task UpdateUserAsync(UserProfile user);
+    Task DeleteUserAsync(UserProfile user);
 }

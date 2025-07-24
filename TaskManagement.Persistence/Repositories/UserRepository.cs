@@ -12,27 +12,27 @@ namespace TaskManagement.Persistence.Repositories
         {
             _context = context;
         }
-        public async Task<AppUser> GetUserByIdAsync(int userId)
+        public async Task<UserProfile> GetUserByIdAsync(int userId)
         {
             return await _context.AppUsers.FirstOrDefaultAsync(u => u.Id == userId);
         }
 
-        public async Task<IEnumerable<AppUser>> GetAllUsersAsync()
+        public async Task<IEnumerable<UserProfile>> GetAllUsersAsync()
         {
             return await _context.AppUsers.ToListAsync();
         }
 
-        public async Task AddUserAsync(AppUser user)
+        public async Task AddUserAsync(UserProfile user)
         {
             await _context.AppUsers.AddAsync(user);
         }
 
-        public async Task UpdateUserAsync(AppUser user)
+        public async Task UpdateUserAsync(UserProfile user)
         {
             _context.AppUsers.Update(user);
         }
 
-        public async Task DeleteUserAsync(AppUser user)
+        public async Task DeleteUserAsync(UserProfile user)
         {
             _context.AppUsers.Remove(user);
         }

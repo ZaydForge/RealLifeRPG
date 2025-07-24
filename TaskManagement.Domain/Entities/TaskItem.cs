@@ -15,5 +15,5 @@ public class TaskItem
     public Category Category { get; set; }
 
     public int UserId { get; set; }
-    public AppUser User { get; set; }
+    public UserProfile User { get; set; }
 }

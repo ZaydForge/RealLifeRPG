@@ -9,7 +9,7 @@ public class DataContext(DbContextOptions options) : DbContext(options)
 {
     public DbSet<TaskItem> Tasks { get; set; }
 
-    public DbSet<AppUser> AppUsers { get; set; }
+    public DbSet<UserProfile> UserProfiles { get; set; }
 
     public DbSet<TaskLog> TaskLogs { get; set; }
 

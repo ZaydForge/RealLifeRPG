@@ -13,5 +13,5 @@ public class CategoryLevel
     public int NeededEXP { get; set; } = 100;
 
     public int UserId { get; set; }
-    public AppUser User { get; set; }
+    public UserProfile User { get; set; }
 }

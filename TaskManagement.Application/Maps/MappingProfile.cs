@@ -13,7 +13,7 @@ public class MappingProfile : Profile
         CreateMap<TaskItem, TaskDto>()
             .ForMember(dest => dest.Category,
                        opt => opt.MapFrom(src => src.Category.ToString()));
-        CreateMap<AppUser, UserDto>();
+        CreateMap<UserProfile, UserDto>();
         CreateMap<TaskLog, TaskLogDto>()
             .ForMember(dest => dest.Category,
                        opt => opt.MapFrom(src => src.Category.ToString()));

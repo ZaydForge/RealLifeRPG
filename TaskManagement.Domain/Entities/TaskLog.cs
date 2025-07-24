@@ -11,7 +11,7 @@ public class TaskLog
     public string TaskTitle { get; set; }
 
     public int UserId { get; set; }
-    public AppUser User { get; set; }
+    public UserProfile User { get; set; }
 
     public Category Category { get; set; }
 

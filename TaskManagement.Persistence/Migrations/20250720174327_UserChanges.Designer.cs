@@ -490,7 +490,7 @@ namespace TaskManagement.Persistence.Migrations
                     b.ToTable("user_titles", (string)null);
                 });
 
-            modelBuilder.Entity("TaskManagement.Entities.AppUser", b =>
+            modelBuilder.Entity("TaskManagement.Entities.UserProfile", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -798,7 +798,7 @@ namespace TaskManagement.Persistence.Migrations
                         .IsRequired()
                         .HasConstraintName("fk_user_achievements_achievements_achievement_id");
 
-                    b.HasOne("TaskManagement.Entities.AppUser", "User")
+                    b.HasOne("TaskManagement.Entities.UserProfile", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -857,7 +857,7 @@ namespace TaskManagement.Persistence.Migrations
                         .IsRequired()
                         .HasConstraintName("fk_user_titles_titles_title_id");
 
-                    b.HasOne("TaskManagement.Entities.AppUser", "User")
+                    b.HasOne("TaskManagement.Entities.UserProfile", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -871,7 +871,7 @@ namespace TaskManagement.Persistence.Migrations
 
             modelBuilder.Entity("TaskManagement.Entities.CategoryLevel", b =>
                 {
-                    b.HasOne("TaskManagement.Entities.AppUser", "User")
+                    b.HasOne("TaskManagement.Entities.UserProfile", "User")
                         .WithMany("CategoryLevels")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -883,7 +883,7 @@ namespace TaskManagement.Persistence.Migrations
 
             modelBuilder.Entity("TaskManagement.Entities.TaskItem", b =>
                 {
-                    b.HasOne("TaskManagement.Entities.AppUser", "User")
+                    b.HasOne("TaskManagement.Entities.UserProfile", "User")
                         .WithMany("Tasks")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -895,7 +895,7 @@ namespace TaskManagement.Persistence.Migrations
 
             modelBuilder.Entity("TaskManagement.Entities.TaskLog", b =>
                 {
-                    b.HasOne("TaskManagement.Entities.AppUser", "User")
+                    b.HasOne("TaskManagement.Entities.UserProfile", "User")
                         .WithMany("TaskLogs")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -937,7 +937,7 @@ namespace TaskManagement.Persistence.Migrations
                     b.Navigation("OtpCodes");
                 });
 
-            modelBuilder.Entity("TaskManagement.Entities.AppUser", b =>
+            modelBuilder.Entity("TaskManagement.Entities.UserProfile", b =>
                 {
                     b.Navigation("CategoryLevels");
 

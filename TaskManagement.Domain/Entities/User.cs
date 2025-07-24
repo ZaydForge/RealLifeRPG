@@ -1,4 +1,6 @@
-﻿namespace TaskManagement.Domain.Entities;
+﻿using TaskManagement.Entities;
+
+namespace TaskManagement.Domain.Entities;
 
 public class User
 {
@@ -13,6 +15,9 @@ public class User
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime? UpdatedAt { get; set; } = DateTime.UtcNow;
     public bool IsVerified { get; set; } = false;
+
+    public int ProfileId { get; set; }
+    public UserProfile Profile { get; set; } = null!;
 
     public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 }

@@ -24,12 +24,12 @@ public class TaskConfiguration : IEntityTypeConfiguration<TaskItem>
 
 }
 
-public class UserConfiguration : IEntityTypeConfiguration<AppUser>
+public class UserConfiguration : IEntityTypeConfiguration<UserProfile>
 {
-    public void Configure(EntityTypeBuilder<AppUser> builder)
+    public void Configure(EntityTypeBuilder<UserProfile> builder)
     {
         builder.HasData(
-            new AppUser
+            new UserProfile
             {
                 Id = 1,
                 Username = "Zayd",
