@@ -13,24 +13,24 @@ using TaskManagement.Dtos;
 
 namespace TaskManagement.Application.Features.Users.Queries
 {
-    public class GetAllUsersQuery : IRequest<IEnumerable<UserDto>>
+    public class GetAllUsersQuery : IRequest<IEnumerable<UserProfileDto>>
     {
 
     }
 
     public class GetAllUsersQueryHandler(
-        IUserRepository userRepo,
+        IUserProfileRepository userRepo,
         IMapper mapper,
         IDistributedCache cache) 
-        : IRequestHandler<GetAllUsersQuery, IEnumerable<UserDto>>
+        : IRequestHandler<GetAllUsersQuery, IEnumerable<UserProfileDto>>
     {
         public readonly string _cacheKey = "users_list";
-        public async Task<IEnumerable<UserDto>> Handle(GetAllUsersQuery query, CancellationToken token)
+        public async Task<IEnumerable<UserProfileDto>> Handle(GetAllUsersQuery query, CancellationToken token)
         {
             var cachedUsers = await cache.GetStringAsync(_cacheKey);
             if (!string.IsNullOrEmpty(cachedUsers))
             {
-                var deserialized = JsonSerializer.Deserialize<IEnumerable<UserDto>>(cachedUsers, new JsonSerializerOptions
+                var deserialized = JsonSerializer.Deserialize<IEnumerable<UserProfileDto>>(cachedUsers, new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true
                 });
@@ -41,7 +41,7 @@ namespace TaskManagement.Application.Features.Users.Queries
 
                 return deserialized;
             }
-            var users = mapper.Map<IEnumerable<UserDto>>(await userRepo.GetAllUsersAsync());
+            var users = mapper.Map<IEnumerable<UserProfileDto>>(await userRepo.GetAllUsersAsync());
 
             var serialized = JsonSerializer.Serialize(users);
             var options = new DistributedCacheEntryOptions

@@ -17,7 +17,7 @@ namespace TaskManagement.Application.Features.Tasks.Commands
         ITaskRepository taskRepo,
         ITaskLogRepository taskLogRepo,
         ICategoryLevelRepository categoryRepo,
-        IUserRepository userRepo,
+        IUserProfileRepository userRepo,
         IDistributedCache cache) : IRequestHandler<CompleteTaskCommand, string>
     {
         public async Task<string> Handle(CompleteTaskCommand command, CancellationToken token)

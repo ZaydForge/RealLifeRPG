@@ -13,24 +13,24 @@ using TaskManagement.Dtos;
 
 namespace TaskManagement.Application.Features.Users.Queries
 {
-    public class GetCurrentUserQuery : IRequest<UserDto>
+    public class GetCurrentUserQuery : IRequest<UserProfileDto>
     {
 
     }
 
     public class GetCurrentUserQueryHandler(
-       IUserRepository userRepo,
+       IUserProfileRepository userRepo,
        IMapper mapper,
        IDistributedCache cache)
-       : IRequestHandler<GetCurrentUserQuery, UserDto>
+       : IRequestHandler<GetCurrentUserQuery, UserProfileDto>
     {
         public readonly string _cacheKey = "current_user";
-        public async Task<UserDto> Handle(GetCurrentUserQuery query, CancellationToken token)
+        public async Task<UserProfileDto> Handle(GetCurrentUserQuery query, CancellationToken token)
         {
             var cachedUser = await cache.GetStringAsync(_cacheKey);
             if (!string.IsNullOrEmpty(cachedUser))
             {
-                var deserialized = JsonSerializer.Deserialize<UserDto>(cachedUser, new JsonSerializerOptions
+                var deserialized = JsonSerializer.Deserialize<UserProfileDto>(cachedUser, new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true
                 });
@@ -41,7 +41,7 @@ namespace TaskManagement.Application.Features.Users.Queries
 
                 return deserialized;
             }
-            var user = mapper.Map<UserDto>(await userRepo.GetUserByIdAsync(1));
+            var user = mapper.Map<UserProfileDto>(await userRepo.GetUserByIdAsync(1));
 
             var serialized = JsonSerializer.Serialize(user);
             var options = new DistributedCacheEntryOptions

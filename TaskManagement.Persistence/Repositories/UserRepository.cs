@@ -5,7 +5,7 @@ using TaskManagement.Persistence.RepositoryInterfaces;
 
 namespace TaskManagement.Persistence.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository : IUserProfileRepository
     {
         private readonly DataContext _context;
         public UserRepository(DataContext context)
@@ -14,27 +14,27 @@ namespace TaskManagement.Persistence.Repositories
         }
         public async Task<UserProfile> GetUserByIdAsync(int userId)
         {
-            return await _context.AppUsers.FirstOrDefaultAsync(u => u.Id == userId);
+            return await _context.UserProfiles.FirstOrDefaultAsync(u => u.Id == userId);
         }
 
         public async Task<IEnumerable<UserProfile>> GetAllUsersAsync()
         {
-            return await _context.AppUsers.ToListAsync();
+            return await _context.UserProfiles.ToListAsync();
         }
 
         public async Task AddUserAsync(UserProfile user)
         {
-            await _context.AppUsers.AddAsync(user);
+            await _context.UserProfiles.AddAsync(user);
         }
 
-        public async Task UpdateUserAsync(UserProfile user)
+        public void UpdateUser(UserProfile user)
         {
-            _context.AppUsers.Update(user);
+            _context.UserProfiles.Update(user);
         }
 
-        public async Task DeleteUserAsync(UserProfile user)
+        public void DeleteUser(UserProfile user)
         {
-            _context.AppUsers.Remove(user);
+            _context.UserProfiles.Remove(user);
         }
 
         public async Task SaveChangesAsync()

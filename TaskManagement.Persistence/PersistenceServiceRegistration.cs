@@ -23,7 +23,7 @@ namespace TaskManagement.Persistence
             services.AddScoped<ITaskLogRepository, TaskLogRepository>();
             services.AddScoped<IArchiveRepository, ArchiveRepository>();
             services.AddScoped<ICategoryLevelRepository, CategoryLevelRepository>();
-            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserProfileRepository, UserRepository>();
             services.AddScoped<IAchievementRepository, AchievementRepository>();
             
 

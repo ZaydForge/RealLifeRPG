@@ -7,11 +7,12 @@ using TaskManagement.Entities;
 
 namespace TaskManagement.Persistence.RepositoryInterfaces;
 
-public interface IUserRepository
+public interface IUserProfileRepository
 {
     Task<UserProfile> GetUserByIdAsync(int userId);
     Task<IEnumerable<UserProfile>> GetAllUsersAsync();
     Task AddUserAsync(UserProfile user);
-    Task UpdateUserAsync(UserProfile user);
-    Task DeleteUserAsync(UserProfile user);
+    void UpdateUser(UserProfile user);
+    void DeleteUser(UserProfile user);
+    Task SaveChangesAsync();
 }
