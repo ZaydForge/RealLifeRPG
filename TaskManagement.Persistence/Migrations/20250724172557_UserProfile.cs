@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace TaskManagement.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class UserChanges : Migration
+    public partial class UserProfile : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -27,23 +27,6 @@ namespace TaskManagement.Persistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("pk_achievements", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "app_users",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    username = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
-                    email = table.Column<string>(type: "text", nullable: false),
-                    password_hash = table.Column<string>(type: "text", nullable: false),
-                    main_level = table.Column<int>(type: "integer", nullable: false),
-                    created_date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_app_users", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -121,105 +104,6 @@ namespace TaskManagement.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "category_levels",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    category = table.Column<int>(type: "integer", nullable: false),
-                    level = table.Column<int>(type: "integer", nullable: false),
-                    current_exp = table.Column<int>(type: "integer", nullable: false),
-                    exp_to_next_level = table.Column<int>(type: "integer", nullable: false),
-                    needed_exp = table.Column<int>(type: "integer", nullable: false),
-                    user_id = table.Column<int>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_category_levels", x => x.id);
-                    table.ForeignKey(
-                        name: "fk_category_levels_app_users_user_id",
-                        column: x => x.user_id,
-                        principalTable: "app_users",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "task_logs",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    task_id = table.Column<int>(type: "integer", nullable: false),
-                    task_title = table.Column<string>(type: "text", nullable: false),
-                    user_id = table.Column<int>(type: "integer", nullable: false),
-                    category = table.Column<int>(type: "integer", nullable: false),
-                    completed_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    exp_gained = table.Column<int>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_task_logs", x => x.id);
-                    table.ForeignKey(
-                        name: "fk_task_logs_app_users_user_id",
-                        column: x => x.user_id,
-                        principalTable: "app_users",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "tasks",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    title = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
-                    description = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
-                    created_date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    exp_value = table.Column<int>(type: "integer", nullable: false),
-                    category = table.Column<int>(type: "integer", nullable: false),
-                    user_id = table.Column<int>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_tasks", x => x.id);
-                    table.ForeignKey(
-                        name: "fk_tasks_app_users_user_id",
-                        column: x => x.user_id,
-                        principalTable: "app_users",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "user_achievements",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    user_id = table.Column<int>(type: "integer", nullable: false),
-                    achievement_id = table.Column<int>(type: "integer", nullable: false),
-                    unlocked_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_user_achievements", x => x.id);
-                    table.ForeignKey(
-                        name: "fk_user_achievements_achievements_achievement_id",
-                        column: x => x.achievement_id,
-                        principalTable: "achievements",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "fk_user_achievements_app_users_user_id",
-                        column: x => x.user_id,
-                        principalTable: "app_users",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "permissions",
                 columns: table => new
                 {
@@ -238,34 +122,6 @@ namespace TaskManagement.Persistence.Migrations
                         name: "fk_permissions_permission_groups_permission_group_id",
                         column: x => x.permission_group_id,
                         principalTable: "permission_groups",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "user_titles",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    user_id = table.Column<int>(type: "integer", nullable: false),
-                    title_id = table.Column<int>(type: "integer", nullable: false),
-                    is_active = table.Column<bool>(type: "boolean", nullable: false),
-                    unlocked_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_user_titles", x => x.id);
-                    table.ForeignKey(
-                        name: "fk_user_titles_app_users_user_id",
-                        column: x => x.user_id,
-                        principalTable: "app_users",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "fk_user_titles_titles_title_id",
-                        column: x => x.title_id,
-                        principalTable: "titles",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -312,6 +168,7 @@ namespace TaskManagement.Persistence.Migrations
                     created_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     updated_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     is_verified = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false),
+                    profile_id = table.Column<int>(type: "integer", nullable: false),
                     role_permission_id = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
@@ -353,6 +210,35 @@ namespace TaskManagement.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "user_profiles",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    user_id = table.Column<int>(type: "integer", nullable: false),
+                    username = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
+                    bio = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    profile_picture_url = table.Column<string>(type: "text", nullable: true),
+                    current_streak = table.Column<int>(type: "integer", nullable: false),
+                    longest_streak = table.Column<int>(type: "integer", nullable: false),
+                    current_title = table.Column<string>(type: "text", nullable: false),
+                    main_level = table.Column<int>(type: "integer", nullable: false),
+                    total_exp = table.Column<int>(type: "integer", nullable: false),
+                    last_level_up = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    created_date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("pk_user_profiles", x => x.id);
+                    table.ForeignKey(
+                        name: "fk_user_profiles_users_user_id",
+                        column: x => x.user_id,
+                        principalTable: "users",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "user_roles",
                 columns: table => new
                 {
@@ -378,10 +264,132 @@ namespace TaskManagement.Persistence.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.InsertData(
-                table: "app_users",
-                columns: new[] { "id", "created_date", "email", "main_level", "password_hash", "username" },
-                values: new object[] { 1, new DateTime(2025, 7, 19, 0, 0, 0, 0, DateTimeKind.Utc), "zaydabduxamidov2008@gmail.com", 1, "Password", "Zayd" });
+            migrationBuilder.CreateTable(
+                name: "category_levels",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    category = table.Column<int>(type: "integer", nullable: false),
+                    level = table.Column<int>(type: "integer", nullable: false),
+                    current_exp = table.Column<int>(type: "integer", nullable: false),
+                    exp_to_next_level = table.Column<int>(type: "integer", nullable: false),
+                    needed_exp = table.Column<int>(type: "integer", nullable: false),
+                    user_id = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("pk_category_levels", x => x.id);
+                    table.ForeignKey(
+                        name: "fk_category_levels_user_profiles_user_id",
+                        column: x => x.user_id,
+                        principalTable: "user_profiles",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "task_logs",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    task_id = table.Column<int>(type: "integer", nullable: false),
+                    task_title = table.Column<string>(type: "text", nullable: false),
+                    user_id = table.Column<int>(type: "integer", nullable: false),
+                    category = table.Column<int>(type: "integer", nullable: false),
+                    completed_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    exp_gained = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("pk_task_logs", x => x.id);
+                    table.ForeignKey(
+                        name: "fk_task_logs_user_profiles_user_id",
+                        column: x => x.user_id,
+                        principalTable: "user_profiles",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "tasks",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    title = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    description = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
+                    created_date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    exp_value = table.Column<int>(type: "integer", nullable: false),
+                    category = table.Column<int>(type: "integer", nullable: false),
+                    user_id = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("pk_tasks", x => x.id);
+                    table.ForeignKey(
+                        name: "fk_tasks_user_profiles_user_id",
+                        column: x => x.user_id,
+                        principalTable: "user_profiles",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "user_achievements",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    user_id = table.Column<int>(type: "integer", nullable: false),
+                    achievement_id = table.Column<int>(type: "integer", nullable: false),
+                    unlocked_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("pk_user_achievements", x => x.id);
+                    table.ForeignKey(
+                        name: "fk_user_achievements_achievements_achievement_id",
+                        column: x => x.achievement_id,
+                        principalTable: "achievements",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "fk_user_achievements_user_profiles_user_id",
+                        column: x => x.user_id,
+                        principalTable: "user_profiles",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "user_titles",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    user_id = table.Column<int>(type: "integer", nullable: false),
+                    title_id = table.Column<int>(type: "integer", nullable: false),
+                    is_active = table.Column<bool>(type: "boolean", nullable: false),
+                    unlocked_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("pk_user_titles", x => x.id);
+                    table.ForeignKey(
+                        name: "fk_user_titles_titles_title_id",
+                        column: x => x.title_id,
+                        principalTable: "titles",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "fk_user_titles_user_profiles_user_id",
+                        column: x => x.user_id,
+                        principalTable: "user_profiles",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
 
             migrationBuilder.InsertData(
                 table: "roles",
@@ -394,8 +402,18 @@ namespace TaskManagement.Persistence.Migrations
 
             migrationBuilder.InsertData(
                 table: "users",
-                columns: new[] { "id", "created_at", "date_of_birth", "email", "fullname", "is_verified", "password_hash", "phone_number", "role_permission_id", "salt", "updated_at", "username" },
-                values: new object[] { 1, new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), "superadmin@example.com", "Adminjon", true, "D42P7vktaO2foK9yXdm141IJE8Z8z3auswXfDhyzKCM=", "+998901234567", null, "9f7d6dc5-34b4-4b66-a65e-0dc2fc17c0db", new DateTime(2025, 7, 20, 17, 43, 27, 373, DateTimeKind.Utc).AddTicks(5485), "superadmin" });
+                columns: new[] { "id", "created_at", "date_of_birth", "email", "fullname", "is_verified", "password_hash", "phone_number", "profile_id", "role_permission_id", "salt", "updated_at", "username" },
+                values: new object[] { 1, new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), "superadmin@example.com", "Adminjon", true, "D42P7vktaO2foK9yXdm141IJE8Z8z3auswXfDhyzKCM=", "+998901234567", 1, null, "9f7d6dc5-34b4-4b66-a65e-0dc2fc17c0db", new DateTime(2025, 7, 24, 17, 25, 57, 289, DateTimeKind.Utc).AddTicks(3458), "superadmin" });
+
+            migrationBuilder.InsertData(
+                table: "user_profiles",
+                columns: new[] { "id", "bio", "created_date", "current_streak", "current_title", "last_level_up", "longest_streak", "main_level", "profile_picture_url", "total_exp", "user_id", "username" },
+                values: new object[] { 1, "Persistence, consistency and gratitude - key to success", new DateTime(2025, 7, 24, 0, 0, 0, 0, DateTimeKind.Utc), 0, "The Beginning", new DateTime(2025, 7, 24, 0, 0, 0, 0, DateTimeKind.Utc), 0, 1, "https://example.com/profile.jpg", 0, 1, "Zayd" });
+
+            migrationBuilder.InsertData(
+                table: "user_roles",
+                columns: new[] { "id", "role_id", "user_id" },
+                values: new object[] { 1, 1, 1 });
 
             migrationBuilder.InsertData(
                 table: "category_levels",
@@ -407,11 +425,6 @@ namespace TaskManagement.Persistence.Migrations
                     { 3, 1, 0, 100, 1, 100, 1 },
                     { 4, 0, 0, 100, 1, 100, 1 }
                 });
-
-            migrationBuilder.InsertData(
-                table: "user_roles",
-                columns: new[] { "id", "role_id", "user_id" },
-                values: new object[] { 1, 1, 1 });
 
             migrationBuilder.CreateIndex(
                 name: "ix_category_levels_user_id",
@@ -468,6 +481,12 @@ namespace TaskManagement.Persistence.Migrations
                 name: "ix_user_ot_ps_user_ot_ps_id",
                 table: "user_ot_ps",
                 column: "user_ot_ps_id");
+
+            migrationBuilder.CreateIndex(
+                name: "ix_user_profiles_user_id",
+                table: "user_profiles",
+                column: "user_id",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "ix_user_roles_role_id",
@@ -535,13 +554,13 @@ namespace TaskManagement.Persistence.Migrations
                 name: "achievements");
 
             migrationBuilder.DropTable(
-                name: "users");
-
-            migrationBuilder.DropTable(
-                name: "app_users");
-
-            migrationBuilder.DropTable(
                 name: "titles");
+
+            migrationBuilder.DropTable(
+                name: "user_profiles");
+
+            migrationBuilder.DropTable(
+                name: "users");
 
             migrationBuilder.DropTable(
                 name: "role_permissions");

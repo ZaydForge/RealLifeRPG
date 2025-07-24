@@ -32,23 +32,31 @@ public class UserConfiguration : IEntityTypeConfiguration<UserProfile>
             new UserProfile
             {
                 Id = 1,
+                UserId = 1,
                 Username = "Zayd",
-                Email = "zaydabduxamidov2008@gmail.com",
-                PasswordHash = "Password",
+                Bio = "Persistence, consistency and gratitude - key to success",
+                ProfilePictureUrl = "https://example.com/profile.jpg",
+                CurrentStreak = 0,
+                LongestStreak = 0,
+                CurrentTitle = "The Beginning",
+                TotalExp = 0,
+                LastLevelUp = new DateTime(2025, 7, 24, 0, 0, 0, DateTimeKind.Utc), // ✅ explicitly UTC
                 MainLevel = 1,
-                CreatedDate = new DateTime(2025, 7, 19, 0, 0, 0, DateTimeKind.Utc) // ✅ explicitly UTC
+                CreatedDate = new DateTime(2025, 7, 24, 0, 0, 0, DateTimeKind.Utc) // ✅ explicitly UTC
             });
         builder.HasKey(x => x.Id);
+
+        builder.HasOne(r => r.User)
+            .WithOne(r => r.Profile)
+            .HasForeignKey<UserProfile>(p => p.UserId);
 
         builder.Property(r => r.Username)
             .IsRequired()
             .HasMaxLength(250);
 
-        builder.Property(r => r.Email)
-            .IsRequired();
+        builder.Property(r => r.Bio)
+            .HasMaxLength(100);
 
-        builder.Property(r => r.PasswordHash)
-            .IsRequired();
     }
 
 }

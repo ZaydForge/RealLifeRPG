@@ -84,7 +84,8 @@ namespace SecureLoginApp.DataAccess.Persistence.Configurations
                 Salt = seedSalt,
                 PasswordHash = Encrypt(seedPassword, seedSalt),
                 CreatedAt = new DateTime(2023, 1, 1, 0, 0, 0, DateTimeKind.Utc),
-                IsVerified = true // SuperAdmin odatda tasdiqlangan bo'ladi
+                IsVerified = true,
+                ProfileId = 1
             };
         }
     }

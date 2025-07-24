@@ -12,15 +12,15 @@ using TaskManagement.DataAccess;
 namespace TaskManagement.Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250720174327_UserChanges")]
-    partial class UserChanges
+    [Migration("20250724172557_UserProfile")]
+    partial class UserProfile
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.5")
+                .HasAnnotation("ProductVersion", "9.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -292,6 +292,10 @@ namespace TaskManagement.Persistence.Migrations
                         .HasColumnType("character varying(15)")
                         .HasColumnName("phone_number");
 
+                    b.Property<int>("ProfileId")
+                        .HasColumnType("integer")
+                        .HasColumnName("profile_id");
+
                     b.Property<int?>("RolePermissionId")
                         .HasColumnType("integer")
                         .HasColumnName("role_permission_id");
@@ -335,8 +339,9 @@ namespace TaskManagement.Persistence.Migrations
                             IsVerified = true,
                             PasswordHash = "D42P7vktaO2foK9yXdm141IJE8Z8z3auswXfDhyzKCM=",
                             PhoneNumber = "+998901234567",
+                            ProfileId = 1,
                             Salt = "9f7d6dc5-34b4-4b66-a65e-0dc2fc17c0db",
-                            UpdatedAt = new DateTime(2025, 7, 20, 17, 43, 27, 373, DateTimeKind.Utc).AddTicks(5485),
+                            UpdatedAt = new DateTime(2025, 7, 24, 17, 25, 57, 289, DateTimeKind.Utc).AddTicks(3458),
                             Username = "superadmin"
                         });
                 });
@@ -488,56 +493,6 @@ namespace TaskManagement.Persistence.Migrations
                         .HasDatabaseName("ix_user_titles_user_id");
 
                     b.ToTable("user_titles", (string)null);
-                });
-
-            modelBuilder.Entity("TaskManagement.Entities.UserProfile", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("id");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("timestamp with time zone")
-                        .HasColumnName("created_date");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("email");
-
-                    b.Property<int>("MainLevel")
-                        .HasColumnType("integer")
-                        .HasColumnName("main_level");
-
-                    b.Property<string>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("password_hash");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("character varying(250)")
-                        .HasColumnName("username");
-
-                    b.HasKey("Id")
-                        .HasName("pk_app_users");
-
-                    b.ToTable("app_users", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedDate = new DateTime(2025, 7, 19, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "zaydabduxamidov2008@gmail.com",
-                            MainLevel = 1,
-                            PasswordHash = "Password",
-                            Username = "Zayd"
-                        });
                 });
 
             modelBuilder.Entity("TaskManagement.Entities.Archive", b =>
@@ -748,6 +703,90 @@ namespace TaskManagement.Persistence.Migrations
                     b.ToTable("task_logs", (string)null);
                 });
 
+            modelBuilder.Entity("TaskManagement.Entities.UserProfile", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Bio")
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("bio");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("created_date");
+
+                    b.Property<int>("CurrentStreak")
+                        .HasColumnType("integer")
+                        .HasColumnName("current_streak");
+
+                    b.Property<string>("CurrentTitle")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("current_title");
+
+                    b.Property<DateTime>("LastLevelUp")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("last_level_up");
+
+                    b.Property<int>("LongestStreak")
+                        .HasColumnType("integer")
+                        .HasColumnName("longest_streak");
+
+                    b.Property<int>("MainLevel")
+                        .HasColumnType("integer")
+                        .HasColumnName("main_level");
+
+                    b.Property<string>("ProfilePictureUrl")
+                        .HasColumnType("text")
+                        .HasColumnName("profile_picture_url");
+
+                    b.Property<int>("TotalExp")
+                        .HasColumnType("integer")
+                        .HasColumnName("total_exp");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer")
+                        .HasColumnName("user_id");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("character varying(250)")
+                        .HasColumnName("username");
+
+                    b.HasKey("Id")
+                        .HasName("pk_user_profiles");
+
+                    b.HasIndex("UserId")
+                        .IsUnique()
+                        .HasDatabaseName("ix_user_profiles_user_id");
+
+                    b.ToTable("user_profiles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Bio = "Persistence, consistency and gratitude - key to success",
+                            CreatedDate = new DateTime(2025, 7, 24, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CurrentStreak = 0,
+                            CurrentTitle = "The Beginning",
+                            LastLevelUp = new DateTime(2025, 7, 24, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LongestStreak = 0,
+                            MainLevel = 1,
+                            ProfilePictureUrl = "https://example.com/profile.jpg",
+                            TotalExp = 0,
+                            UserId = 1,
+                            Username = "Zayd"
+                        });
+                });
+
             modelBuilder.Entity("TaskManagement.Domain.Entities.Permission", b =>
                 {
                     b.HasOne("TaskManagement.Domain.Entities.PermissionGroup", "PermissionGroup")
@@ -799,11 +838,11 @@ namespace TaskManagement.Persistence.Migrations
                         .HasConstraintName("fk_user_achievements_achievements_achievement_id");
 
                     b.HasOne("TaskManagement.Entities.UserProfile", "User")
-                        .WithMany()
+                        .WithMany("Achievements")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("fk_user_achievements_app_users_user_id");
+                        .HasConstraintName("fk_user_achievements_user_profiles_user_id");
 
                     b.Navigation("Achievement");
 
@@ -858,11 +897,11 @@ namespace TaskManagement.Persistence.Migrations
                         .HasConstraintName("fk_user_titles_titles_title_id");
 
                     b.HasOne("TaskManagement.Entities.UserProfile", "User")
-                        .WithMany()
+                        .WithMany("Titles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("fk_user_titles_app_users_user_id");
+                        .HasConstraintName("fk_user_titles_user_profiles_user_id");
 
                     b.Navigation("Title");
 
@@ -876,7 +915,7 @@ namespace TaskManagement.Persistence.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("fk_category_levels_app_users_user_id");
+                        .HasConstraintName("fk_category_levels_user_profiles_user_id");
 
                     b.Navigation("User");
                 });
@@ -888,7 +927,7 @@ namespace TaskManagement.Persistence.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("fk_tasks_app_users_user_id");
+                        .HasConstraintName("fk_tasks_user_profiles_user_id");
 
                     b.Navigation("User");
                 });
@@ -900,7 +939,19 @@ namespace TaskManagement.Persistence.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("fk_task_logs_app_users_user_id");
+                        .HasConstraintName("fk_task_logs_user_profiles_user_id");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("TaskManagement.Entities.UserProfile", b =>
+                {
+                    b.HasOne("TaskManagement.Domain.Entities.User", "User")
+                        .WithOne("Profile")
+                        .HasForeignKey("TaskManagement.Entities.UserProfile", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_user_profiles_users_user_id");
 
                     b.Navigation("User");
                 });
@@ -929,6 +980,9 @@ namespace TaskManagement.Persistence.Migrations
 
             modelBuilder.Entity("TaskManagement.Domain.Entities.User", b =>
                 {
+                    b.Navigation("Profile")
+                        .IsRequired();
+
                     b.Navigation("UserRoles");
                 });
 
@@ -939,11 +993,15 @@ namespace TaskManagement.Persistence.Migrations
 
             modelBuilder.Entity("TaskManagement.Entities.UserProfile", b =>
                 {
+                    b.Navigation("Achievements");
+
                     b.Navigation("CategoryLevels");
 
                     b.Navigation("TaskLogs");
 
                     b.Navigation("Tasks");
+
+                    b.Navigation("Titles");
                 });
 #pragma warning restore 612, 618
         }
