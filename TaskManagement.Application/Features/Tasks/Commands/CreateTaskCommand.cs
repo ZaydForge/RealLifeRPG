@@ -4,6 +4,7 @@ using Microsoft.Extensions.Caching.Distributed;
 using TaskManagement.Persistence.RepositoryInterfaces;
 using TaskManagement.Dtos;
 using TaskManagement.Entities;
+using TaskManagement.Domain.Enums;
 
 namespace TaskManagement.Application.Features.Tasks.Commands
 {
@@ -19,8 +20,15 @@ namespace TaskManagement.Application.Features.Tasks.Commands
     {
         public async Task<string> Handle(CreateTaskCommand createTaskCommand, CancellationToken token)
         {
-
-            var task = mapper.Map<TaskItem>(createTaskCommand.Request);
+            var request = createTaskCommand.Request;
+            var task = mapper.Map<TaskItem>(request);
+            task.ExpiresAt = request.ExpirationType switch
+            {
+                ExpirationType.Urgent => DateTime.UtcNow.AddDays(1),
+                ExpirationType.Pending => DateTime.UtcNow.AddDays(2),
+                ExpirationType.Destined => request.CustomExpirationDate,
+                _ => DateTime.UtcNow.AddDays(1)
+            };
 
             await taskRepo.AddAsync(task);
             await taskRepo.SaveChangesAsync();

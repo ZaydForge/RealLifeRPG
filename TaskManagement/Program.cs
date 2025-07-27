@@ -1,4 +1,6 @@
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
+using Minio;
 using Serilog;
 using TaskManagement.API;
 using TaskManagement.API.Middlawares;
@@ -7,6 +9,8 @@ using TaskManagement.Application.Common;
 using TaskManagement.Application.Features.Tasks.Queries;
 using TaskManagement.Application.Helpers;
 using TaskManagement.Application.Helpers.GenerateJwt;
+using TaskManagement.Application.Services.Impl;
+using TaskManagement.Application.Services;
 using TaskManagement.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,7 +27,6 @@ builder.Services.Configure<EmailConfiguration>(config.GetSection("EmailConfigura
 builder.Services.Configure<JwtOption>(config.GetSection("JwtOption"));
 
 builder.Services.AddAuth(config);
-
 
 Log.Logger = new LoggerConfiguration()
             .ReadFrom.Configuration(config)
@@ -42,6 +45,27 @@ builder.Services.AddMediatR(cfg =>
 
 builder.Services.AddApplicationServices(config);
 builder.Services.AddPersistenceServices(config);
+
+builder.Services.AddSingleton<IFileStorageService, MinioFileStorageService>();
+builder.Services.Configure<MinioSettings>(config.GetSection("MinioSettings"));
+
+builder.Services.AddSingleton<IMinioClient>(sp =>
+{
+    var minioSettings = sp.GetRequiredService<IOptions<MinioSettings>>().Value;
+
+    // MinioClient obyektini yaratish
+    var client = new MinioClient()
+      .WithEndpoint(minioSettings.Endpoint)
+      .WithCredentials(minioSettings.AccessKey, minioSettings.SecretKey);
+
+    // Agar SSL yoqilgan bo'lsa
+    if (minioSettings.UseSsl)
+    {
+        client = client.WithSSL();
+    }
+
+    return client.Build(); // MinioClient ni qurish
+});
 
 builder.Services.AddCors(options =>
 {

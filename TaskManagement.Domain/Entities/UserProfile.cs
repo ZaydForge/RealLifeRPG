@@ -20,7 +20,7 @@ public class UserProfile
 
 
     public string CurrentTitle { get; set; } = "The Beginning"; 
-    public ICollection<UserTitle> Titles { get; set; } = new List<UserTitle>(); 
+    public ICollection<UserTitle> Titles { get; set; } = new List<UserTitle>();
     public ICollection<UserAchievement> Achievements { get; set; } = new List<UserAchievement>(); 
 
     public int MainLevel { get; set; } = 1;

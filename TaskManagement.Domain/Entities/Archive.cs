@@ -16,4 +16,6 @@ public class Archive
     public int EXPValue { get; set; }
 
     public Category Category { get; set; }
+
+    public DateTime ExpiredAt { get; set; } = DateTime.UtcNow;
 }

@@ -1,43 +1,72 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.Extensions.Caching.Distributed;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TaskManagement.Application.Dtos;
-using TaskManagement.Domain.Entities;
-using TaskManagement.Dtos;
+using TaskManagement.Application.Services;
 using TaskManagement.Persistence.RepositoryInterfaces;
 
 namespace TaskManagement.Application.Features.Users.Commands
 {
-    public class UpdateUserProfileCommand(int id, UpdateUserProfileDto userDto) : IRequest<string>
+    public class UpdateUserProfileCommand : IRequest<string>
     {
-        public int Id { get; } = id;
-        public UpdateUserProfileDto Request { get; } = userDto;
+        public int Id { get; }
+        public UpdateUserProfileDto Request { get; }
+
+        public UpdateUserProfileCommand(int id, UpdateUserProfileDto userDto)
+        {
+            Id = id;
+            Request = userDto;
+        }
     }
 
-    public class UpdateUserProfileCommandHandler(
-        IUserProfileRepository userRepo,
-        IMapper mapper,
-        IDistributedCache cache) : IRequestHandler<UpdateUserProfileCommand, string>
+    public class UpdateUserProfileCommandHandler : IRequestHandler<UpdateUserProfileCommand, string>
     {
+        private readonly IUserProfileRepository _userRepo;
+        private readonly IMapper _mapper;
+        private readonly IFileStorageService _fileStorage;
+        private readonly IDistributedCache _cache;
+
+        public UpdateUserProfileCommandHandler(
+            IUserProfileRepository userRepo,
+            IMapper mapper,
+            IFileStorageService fileStorage,
+            IDistributedCache cache)
+        {
+            _userRepo = userRepo;
+            _mapper = mapper;
+            _fileStorage = fileStorage;
+            _cache = cache;
+        }
+
         public async Task<string> Handle(UpdateUserProfileCommand command, CancellationToken token)
         {
-            var user = await userRepo.GetUserByIdAsync(command.Id);
+            var user = await _userRepo.GetUserByIdAsync(command.Id);
             if (user == null)
-            {
                 throw new Exception("Profile not found");
+
+            // Map simple fields (Bio, etc.)
+            _mapper.Map(command.Request, user);
+
+            // Handle profile picture upload
+            if (command.Request.ProfilePicture != null)
+            {
+                var file = command.Request.ProfilePicture;
+
+                // Set bucket and object name (e.g. "profiles/user-5.jpg")
+                var bucketName = "profile-photo";
+                var objectName = $"{Guid.NewGuid()}_{file.FileName}";
+
+                using var stream = file.OpenReadStream();
+                await _fileStorage.UploadFileAsync(bucketName, objectName, stream, file.ContentType);
+
+                user.ProfilePictureUrl = objectName;
             }
 
-            mapper.Map(command.Request, user);
-            userRepo.UpdateUser(user);
-            await userRepo.SaveChangesAsync();
+            _userRepo.UpdateUser(user);
+            await _userRepo.SaveChangesAsync();
 
-            await cache.RemoveAsync("users_list", token);
-            await cache.RemoveAsync($"user_{user.Id}", token);
+            await _cache.RemoveAsync("users_list", token);
+            await _cache.RemoveAsync("current_user", token);
 
             return "Profile updated successfully";
         }

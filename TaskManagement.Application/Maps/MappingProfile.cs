@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using System.Diagnostics;
 using TaskManagement.Application.Dtos;
+using TaskManagement.Application.Services;
 using TaskManagement.Domain.Entities;
 using TaskManagement.Dtos;
 using TaskManagement.Entities;
@@ -12,8 +14,18 @@ public class MappingProfile : Profile
     {
         CreateMap<TaskItem, TaskDto>()
             .ForMember(dest => dest.Category,
-                       opt => opt.MapFrom(src => src.Category.ToString()));
+                       opt => opt.MapFrom(src => src.Category.ToString()))
+           .ForMember(dest => dest.Status,
+                       opt => opt.MapFrom(src => src.Status.ToString()))
+           .ForMember(dest => dest.ExpiresAt,
+                       opt => opt.MapFrom(src => src.ExpiresAt.Date))
+           .ForMember(dest => dest.ExpirationType,
+                       opt => opt.MapFrom(src => src.ExpirationType.ToString()));
+
         CreateMap<UserProfile, UserProfileDto>();
+        CreateMap<UpdateUserProfileDto, UserProfile>()
+    .ForMember(dest => dest.ProfilePictureUrl, opt => opt.Ignore());
+
         CreateMap<TaskLog, TaskLogDto>()
             .ForMember(dest => dest.Category,
                        opt => opt.MapFrom(src => src.Category.ToString()));

@@ -43,6 +43,7 @@ namespace TaskManagement.Application.Features.Tasks.Commands
                 throw new NotFoundException($"Category '{task.Category}' not found.");
 
             UpdateCategoryLevel(category, task.EXPValue);
+            await categoryRepo.SaveChangesAsync();
 
             //Update user main level
 
@@ -56,9 +57,10 @@ namespace TaskManagement.Application.Features.Tasks.Commands
                 user.MainLevel = calculatedMainLevel;
 
             await taskLogRepo.AddTaskLogAsync(taskLog);
-            await taskRepo.Delete(task);
+            task.Status = Domain.Enums.TaskStatus.Completed; 
             await taskLogRepo.SaveChangesAsync();
             await taskRepo.SaveChangesAsync();
+            await userRepo.SaveChangesAsync();
 
             await cache.RemoveAsync("tasks_list", token);
             await cache.RemoveAsync($"task_{task.Id}", token);
@@ -82,7 +84,7 @@ namespace TaskManagement.Application.Features.Tasks.Commands
             // Step 2: Define all 20 achievements
             var achievementRules = new List<(int Id, Func<bool> Condition)>
             {
-                (1, () => totalTasks == 1),                               // First Task
+                (1, () => totalTasks == 1),
                 (2, () => user.MainLevel >= 10),
                 (3, () => user.MainLevel >= 20),
                 (4, () => user.MainLevel >= 30),
@@ -109,8 +111,8 @@ namespace TaskManagement.Application.Features.Tasks.Commands
             {
                 (1, () => user.MainLevel >= 5),                       // Disciplined Soul
                 (2, () => user.MainLevel >= 10),                      // Awakened One
-                (3, () => user.MainLevel >= 20 && totalTasks >= 20),  // Shadow Walker
-                (4, () => user.MainLevel >= 30 && categoryLevel >= 10), // Skill Reaper
+                (3, () => user.MainLevel >= 20),  // Shadow Walker
+                (4, () => user.MainLevel >= 30), // Skill Reaper
                 (5, () => allCategories5Plus),                        // Master of Balance
                 (6, () => totalTasks >= 100 && user.MainLevel >= 40), // Relentless Mind
                 (7, () => completedToday >= 20),                      // Grinder
@@ -162,6 +164,7 @@ namespace TaskManagement.Application.Features.Tasks.Commands
                 category.NeededEXP += 10;
                 category.EXPToNextLevel += category.NeededEXP;
             }
+
         }
     }
 

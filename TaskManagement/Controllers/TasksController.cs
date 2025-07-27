@@ -63,6 +63,13 @@ namespace TaskManagement.Controllers
             return Ok(result);
         }
 
+        [HttpPost("save/{id}")]
+        public async Task<IActionResult> Save([FromRoute] int id)
+        {
+            var result = await mediator.Send(new SaveTaskCommand(id));
+            return Ok(result);
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {

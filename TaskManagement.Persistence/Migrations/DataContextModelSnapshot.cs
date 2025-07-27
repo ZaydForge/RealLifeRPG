@@ -338,7 +338,7 @@ namespace TaskManagement.Persistence.Migrations
                             PhoneNumber = "+998901234567",
                             ProfileId = 1,
                             Salt = "9f7d6dc5-34b4-4b66-a65e-0dc2fc17c0db",
-                            UpdatedAt = new DateTime(2025, 7, 24, 17, 25, 57, 289, DateTimeKind.Utc).AddTicks(3458),
+                            UpdatedAt = new DateTime(2025, 7, 27, 14, 38, 42, 115, DateTimeKind.Utc).AddTicks(6639),
                             Username = "superadmin"
                         });
                 });
@@ -517,6 +517,10 @@ namespace TaskManagement.Persistence.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("exp_value");
 
+                    b.Property<DateTime>("ExpiredAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("expired_at");
+
                     b.Property<string>("Title")
                         .HasColumnType("text")
                         .HasColumnName("title");
@@ -637,6 +641,22 @@ namespace TaskManagement.Persistence.Migrations
                     b.Property<int>("EXPValue")
                         .HasColumnType("integer")
                         .HasColumnName("exp_value");
+
+                    b.Property<int>("ExpirationType")
+                        .HasColumnType("integer")
+                        .HasColumnName("expiration_type");
+
+                    b.Property<DateTime>("ExpiresAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("expires_at");
+
+                    b.Property<bool>("IsSaved")
+                        .HasColumnType("boolean")
+                        .HasColumnName("is_saved");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("integer")
+                        .HasColumnName("status");
 
                     b.Property<string>("Title")
                         .IsRequired()

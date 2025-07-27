@@ -9,4 +9,5 @@ public interface ITaskRepository
     void Update(TaskItem task);
     Task Delete(TaskItem task);
     Task SaveChangesAsync();
+    Task<IEnumerable<TaskItem>> GetAllActiveAsync();
 }

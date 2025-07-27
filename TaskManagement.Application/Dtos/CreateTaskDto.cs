@@ -12,6 +12,10 @@ public class CreateTaskDto
 
     public Category Category { get; set; }
 
+    public ExpirationType ExpirationType { get; set; } = ExpirationType.Urgent;
+
+    public DateTime CustomExpirationDate { get; set; }
+
     public int UserId { get; set; } = 1;
 
 }

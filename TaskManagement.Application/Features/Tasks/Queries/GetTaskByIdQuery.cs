@@ -35,14 +35,15 @@ namespace TaskManagement.Application.Features.Tasks.Queries
                     throw new NotFoundException("Task not found");
                 }
 
-                if (deserialized.CreatedDate.Date == DateTime.Today)
-                {
-                    return deserialized;
-                }
+                return deserialized;
             }
 
             var task = await taskRepo.GetByIdAsync(query.Id);
-            if (task.CreatedDate.Day < DateTime.UtcNow.Day)
+            if (task == null)
+            {
+                throw new NotFoundException("Task not found");
+            } 
+            if (task.CreatedDate.Date > DateTime.UtcNow.Date)
             {
                 var archive = new Archive
                 {
@@ -53,18 +54,16 @@ namespace TaskManagement.Application.Features.Tasks.Queries
                     Category = task.Category
                 };
                 await archiveRepo.AddAsync(archive);
-                await taskRepo.Delete(task);
+                task.Status = Domain.Enums.TaskStatus.Expired;
 
                 await archiveRepo.SaveChangesAsync();
                 await taskRepo.SaveChangesAsync();
 
                 await cache.RemoveAsync("archives_list", token);
+                await cache.RemoveAsync("tasks_list", token);
+                await cache.RemoveAsync(cacheKey, token);
                 throw new Exception("Task has expired and has been moved to archive.");
             }
-            if (task == null)
-            {
-                throw new NotFoundException("Task not found");
-            } 
 
             var taskDto = mapper.Map<TaskDto>(task);
             var serialized = JsonSerializer.Serialize(taskDto);

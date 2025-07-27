@@ -19,6 +19,13 @@ public class TaskRepository : ITaskRepository
             .ToListAsync();
     }
 
+    public async Task<IEnumerable<TaskItem>> GetAllActiveAsync()
+    {
+        return await _context.Tasks
+            .Where(r => r.Status == Domain.Enums.TaskStatus.Active)
+            .ToListAsync();
+    }
+
     public async Task<TaskItem> GetByIdAsync(int id) =>
       await _context.Tasks.FirstOrDefaultAsync(r => r.Id == id);
 
