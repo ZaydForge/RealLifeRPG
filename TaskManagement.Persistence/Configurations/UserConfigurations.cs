@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 using System.Text;
 using TaskManagement.Domain.Entities;
 
-namespace SecureLoginApp.DataAccess.Persistence.Configurations
+namespace TaskManagement.DataAccess.Persistence.Configurations
 {
     public class UserConfigurations : IEntityTypeConfiguration<User>
     {

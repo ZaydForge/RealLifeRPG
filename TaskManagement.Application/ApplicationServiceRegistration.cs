@@ -1,19 +1,14 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using SecureLoginApp.Application.Services.Impl;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using TaskManagement.Application.Helpers.GenerateJwt;
-using TaskManagement.Application.Services.Impl;
-using TaskManagement.Application.Services;
-using TaskManagement.Rules;
-using TaskManagement.Application.Helpers.PasswordHashers;
 using TaskManagement.Application.Common;
+using TaskManagement.Application.Helpers.GenerateJwt;
+using TaskManagement.Application.Helpers.PasswordHashers;
+using TaskManagement.Application.Services;
+using TaskManagement.Application.Services.Impl;
+using TaskManagement.Rules;
+using TaskManagements.Application.Services.Impl;
 
 namespace TaskManagement.Application
 {

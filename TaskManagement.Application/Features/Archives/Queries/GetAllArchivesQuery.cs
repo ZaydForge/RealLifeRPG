@@ -37,16 +37,13 @@ namespace TaskManagement.Application.Features.Archives.Queries
                     throw new NotFoundException("Archive is empty");
                 }
 
-                if (!deserialized.Any(r => r.CreatedDate.Date != DateTime.Today))
-                {
-                    return deserialized;
-                }
+                return deserialized;
             }
 
             var tasks = (await taskRepo.GetAllAsync()).ToList();
 
             var expiredTasks = tasks
-                    .Where(r => r.CreatedDate.Date != DateTime.Today)
+                    .Where(r => r.CreatedDate.Date > r.ExpiresAt.Date)
                     .ToList();
 
             if (expiredTasks.Any())
@@ -62,12 +59,15 @@ namespace TaskManagement.Application.Features.Archives.Queries
                         Category = task.Category,
                     };
                     await archiveRepo.AddAsync(archive);
-                    await taskRepo.Delete(task);
+                    task.Status = Domain.Enums.TaskStatus.Expired;
                 }
                 await archiveRepo.SaveChangesAsync();
                 await taskRepo.SaveChangesAsync();
 
                 tasks.RemoveAll(t => expiredTasks.Contains(t));
+
+                await cache.RemoveAsync("tasks_list", cancellationToken);
+                await cache.RemoveAsync(_cacheKey, cancellationToken);
             }
 
             var archives = mapper.Map<IEnumerable<ArchiveDto>>(await archiveRepo.GetAllAsync());

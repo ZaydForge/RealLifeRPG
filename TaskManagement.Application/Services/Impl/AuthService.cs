@@ -5,7 +5,7 @@ using TaskManagement.Application.Services;
 using TaskManagement.DataAccess;
 using TaskManagement.Domain.Entities;
 
-namespace SecureLoginApp.Application.Services.Impl;
+namespace TaskManagements.Application.Services.Impl;
 
 public class AuthService : IAuthService
 {

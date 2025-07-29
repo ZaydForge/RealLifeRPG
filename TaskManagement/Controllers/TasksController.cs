@@ -15,10 +15,10 @@ namespace TaskManagement.Controllers
     {
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAllActive()
         {
-            var tasks = await mediator.Send(new GetAllTasksQuery());
-            return Ok(tasks);
+            var activeTasks = await mediator.Send(new GetAllTasksQuery());
+            return Ok(activeTasks);
         }
 
         [HttpGet("{id}")]

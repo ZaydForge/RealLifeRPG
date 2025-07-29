@@ -13,7 +13,7 @@ namespace TaskManagement.API
                 {
                     Title = "Secure Login API",
                     Version = "v1",
-                    Description = "SecureLoginApp uchun API hujjatlari",
+                    Description = "Real life RPG uchun API hujjatlari",
                     Contact = new OpenApiContact
                     {
                         Name = "Zayd",
