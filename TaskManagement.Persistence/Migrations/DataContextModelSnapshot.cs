@@ -338,7 +338,7 @@ namespace TaskManagement.Persistence.Migrations
                             PhoneNumber = "+998901234567",
                             ProfileId = 1,
                             Salt = "9f7d6dc5-34b4-4b66-a65e-0dc2fc17c0db",
-                            UpdatedAt = new DateTime(2025, 7, 27, 14, 38, 42, 115, DateTimeKind.Utc).AddTicks(6639),
+                            UpdatedAt = new DateTime(2025, 7, 29, 5, 15, 42, 375, DateTimeKind.Utc).AddTicks(8579),
                             Username = "superadmin"
                         });
                 });
@@ -697,6 +697,11 @@ namespace TaskManagement.Persistence.Migrations
                     b.Property<int>("EXP_Gained")
                         .HasColumnType("integer")
                         .HasColumnName("exp_gained");
+
+                    b.Property<string>("TaskDescription")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("task_description");
 
                     b.Property<int>("TaskId")
                         .HasColumnType("integer")

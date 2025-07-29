@@ -41,7 +41,7 @@ namespace TaskManagement.Application.Features.Tasks.Queries
                 return deserialized;
             }
 
-            var tasks = (await taskRepo.GetAllActiveAsync()).ToList();
+            var tasks = (await taskRepo.GetAllAsync()).ToList();
 
             var expiredTasks = tasks
                     .Where(r => r.CreatedDate.Date > r.ExpiresAt.Date)
