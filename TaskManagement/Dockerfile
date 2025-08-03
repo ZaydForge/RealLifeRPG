@@ -20,7 +20,7 @@ RUN dotnet restore "TaskManagement/TaskManagement.API.csproj"
 
 # Copy all other files and build
 COPY . .
-WORKDIR "/TaskManagement"
+WORKDIR "/src/TaskManagement"
 RUN dotnet build "TaskManagement.API.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # Publish
