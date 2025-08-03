@@ -9,7 +9,8 @@ namespace TaskManagement.Persistence.RepositoryInterfaces;
 
 public interface IUserProfileRepository
 {
-    Task<UserProfile> GetUserByIdAsync(int userId);
+    Task<UserProfile> GetByUserIdAsync(int? userId);
+    Task<UserProfile> GetProfileByIdAsync(int profileId);
     Task<IEnumerable<UserProfile>> GetAllUsersAsync();
     Task AddUserAsync(UserProfile user);
     void UpdateUser(UserProfile user);

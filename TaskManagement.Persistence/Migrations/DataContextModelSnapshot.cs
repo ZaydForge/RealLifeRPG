@@ -52,30 +52,6 @@ namespace TaskManagement.Persistence.Migrations
                     b.ToTable("achievements", (string)null);
                 });
 
-            modelBuilder.Entity("TaskManagement.Domain.Entities.Order", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("id");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone")
-                        .HasColumnName("created_at");
-
-                    b.Property<string>("ProductName")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("product_name");
-
-                    b.HasKey("Id")
-                        .HasName("pk_orders");
-
-                    b.ToTable("orders", (string)null);
-                });
-
             modelBuilder.Entity("TaskManagement.Domain.Entities.Permission", b =>
                 {
                     b.Property<int>("Id")
@@ -338,7 +314,7 @@ namespace TaskManagement.Persistence.Migrations
                             PhoneNumber = "+998901234567",
                             ProfileId = 1,
                             Salt = "9f7d6dc5-34b4-4b66-a65e-0dc2fc17c0db",
-                            UpdatedAt = new DateTime(2025, 7, 29, 5, 15, 42, 375, DateTimeKind.Utc).AddTicks(8579),
+                            UpdatedAt = new DateTime(2025, 8, 3, 4, 47, 11, 637, DateTimeKind.Utc).AddTicks(8383),
                             Username = "superadmin"
                         });
                 });
@@ -374,6 +350,63 @@ namespace TaskManagement.Persistence.Migrations
                         .HasDatabaseName("ix_user_achievements_user_id");
 
                     b.ToTable("user_achievements", (string)null);
+                });
+
+            modelBuilder.Entity("TaskManagement.Domain.Entities.UserCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("integer")
+                        .HasColumnName("category_id");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("created_date");
+
+                    b.Property<int>("CurrentEXP")
+                        .HasColumnType("integer")
+                        .HasColumnName("current_exp");
+
+                    b.Property<int>("EXPToNextLevel")
+                        .HasColumnType("integer")
+                        .HasColumnName("exp_to_next_level");
+
+                    b.Property<DateTime>("LastLevelUp")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("last_level_up");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer")
+                        .HasColumnName("level");
+
+                    b.Property<int>("NeededEXP")
+                        .HasColumnType("integer")
+                        .HasColumnName("needed_exp");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("updated_date");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer")
+                        .HasColumnName("user_id");
+
+                    b.HasKey("Id")
+                        .HasName("pk_user_categories");
+
+                    b.HasIndex("CategoryId")
+                        .HasDatabaseName("ix_user_categories_category_id");
+
+                    b.HasIndex("UserId")
+                        .HasDatabaseName("ix_user_categories_user_id");
+
+                    b.ToTable("user_categories", (string)null);
                 });
 
             modelBuilder.Entity("TaskManagement.Domain.Entities.UserOTPs", b =>
@@ -525,13 +558,20 @@ namespace TaskManagement.Persistence.Migrations
                         .HasColumnType("text")
                         .HasColumnName("title");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer")
+                        .HasColumnName("user_id");
+
                     b.HasKey("Id")
                         .HasName("pk_archives");
+
+                    b.HasIndex("UserId")
+                        .HasDatabaseName("ix_archives_user_id");
 
                     b.ToTable("archives", (string)null);
                 });
 
-            modelBuilder.Entity("TaskManagement.Entities.CategoryLevel", b =>
+            modelBuilder.Entity("TaskManagement.Entities.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -540,35 +580,12 @@ namespace TaskManagement.Persistence.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Category")
+                    b.Property<int>("CategoryName")
                         .HasColumnType("integer")
-                        .HasColumnName("category");
-
-                    b.Property<int>("CurrentEXP")
-                        .HasColumnType("integer")
-                        .HasColumnName("current_exp");
-
-                    b.Property<int>("EXPToNextLevel")
-                        .HasColumnType("integer")
-                        .HasColumnName("exp_to_next_level");
-
-                    b.Property<int>("Level")
-                        .HasColumnType("integer")
-                        .HasColumnName("level");
-
-                    b.Property<int>("NeededEXP")
-                        .HasColumnType("integer")
-                        .HasColumnName("needed_exp");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("integer")
-                        .HasColumnName("user_id");
+                        .HasColumnName("category_name");
 
                     b.HasKey("Id")
                         .HasName("pk_category_levels");
-
-                    b.HasIndex("UserId")
-                        .HasDatabaseName("ix_category_levels_user_id");
 
                     b.ToTable("category_levels", (string)null);
 
@@ -576,42 +593,22 @@ namespace TaskManagement.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            Category = 2,
-                            CurrentEXP = 0,
-                            EXPToNextLevel = 100,
-                            Level = 1,
-                            NeededEXP = 100,
-                            UserId = 1
+                            CategoryName = 2
                         },
                         new
                         {
                             Id = 2,
-                            Category = 3,
-                            CurrentEXP = 0,
-                            EXPToNextLevel = 100,
-                            Level = 1,
-                            NeededEXP = 100,
-                            UserId = 1
+                            CategoryName = 3
                         },
                         new
                         {
                             Id = 3,
-                            Category = 1,
-                            CurrentEXP = 0,
-                            EXPToNextLevel = 100,
-                            Level = 1,
-                            NeededEXP = 100,
-                            UserId = 1
+                            CategoryName = 1
                         },
                         new
                         {
                             Id = 4,
-                            Category = 0,
-                            CurrentEXP = 0,
-                            EXPToNextLevel = 100,
-                            Level = 1,
-                            NeededEXP = 100,
-                            UserId = 1
+                            CategoryName = 0
                         });
                 });
 
@@ -871,6 +868,27 @@ namespace TaskManagement.Persistence.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("TaskManagement.Domain.Entities.UserCategory", b =>
+                {
+                    b.HasOne("TaskManagement.Entities.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_user_categories_category_levels_category_id");
+
+                    b.HasOne("TaskManagement.Entities.UserProfile", "User")
+                        .WithMany("CategoryLevels")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_user_categories_user_profiles_user_id");
+
+                    b.Navigation("Category");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("TaskManagement.Domain.Entities.UserOTPs", b =>
                 {
                     b.HasOne("TaskManagement.Domain.Entities.User", "User")
@@ -930,14 +948,14 @@ namespace TaskManagement.Persistence.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("TaskManagement.Entities.CategoryLevel", b =>
+            modelBuilder.Entity("TaskManagement.Entities.Archive", b =>
                 {
                     b.HasOne("TaskManagement.Entities.UserProfile", "User")
-                        .WithMany("CategoryLevels")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("fk_category_levels_user_profiles_user_id");
+                        .HasConstraintName("fk_archives_user_profiles_user_id");
 
                     b.Navigation("User");
                 });

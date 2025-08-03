@@ -61,15 +61,14 @@ public class UserConfiguration : IEntityTypeConfiguration<UserProfile>
 
 }
 
-public class CategoryConfiguration : IEntityTypeConfiguration<CategoryLevel>
+public class CategoryConfiguration : IEntityTypeConfiguration<Category>
 {
-    public void Configure(EntityTypeBuilder<CategoryLevel> builder)
+    public void Configure(EntityTypeBuilder<Category> builder)
     {
         builder.HasData(
-            new CategoryLevel { Id = 1, Category = Domain.Enums.Category.Intelligence, Level = 1, CurrentEXP = 0, EXPToNextLevel = 100, NeededEXP = 100, UserId = 1 },
-            new CategoryLevel { Id = 2, Category = Domain.Enums.Category.Strength, Level = 1, CurrentEXP = 0, EXPToNextLevel = 100, NeededEXP = 100, UserId = 1 },
-            new CategoryLevel { Id = 3, Category = Domain.Enums.Category.Wisdom, Level = 1, CurrentEXP = 0, EXPToNextLevel = 100, NeededEXP = 100, UserId = 1 },
-            new CategoryLevel { Id = 4, Category = Domain.Enums.Category.Soul, Level = 1, CurrentEXP = 0, EXPToNextLevel = 100, NeededEXP = 100, UserId = 1 });
-
+            new Category {Id = 1, CategoryName = Domain.Enums.CategoryName.Intelligence },
+            new Category {Id = 2, CategoryName = Domain.Enums.CategoryName.Strength },
+            new Category {Id = 3, CategoryName = Domain.Enums.CategoryName.Wisdom },
+            new Category { Id = 4, CategoryName = Domain.Enums.CategoryName.Soul});
     }
 }

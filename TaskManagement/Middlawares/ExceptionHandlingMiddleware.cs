@@ -19,6 +19,12 @@ namespace TaskManagement.API.Middlawares
             {
                 await _next(context);
             }
+            catch (UnauthorizedAccessException ex)
+            {
+                _logger.LogWarning(ex, "Unauthorized Access Exception: {Message}", ex.Message);
+                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                await context.Response.WriteAsJsonAsync(new { error = ex.Message });
+            }
             catch (NotFoundException ex)
             {
                 _logger.LogWarning(ex, "Not Found Exception: {Message}", ex.Message);

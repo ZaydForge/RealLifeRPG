@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TaskManagement.Application.Features.Tasks.Commands;
 using TaskManagement.Application.Features.Tasks.Queries;
@@ -11,6 +12,7 @@ namespace TaskManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class TasksController(IMediator mediator) : ControllerBase
     {
 

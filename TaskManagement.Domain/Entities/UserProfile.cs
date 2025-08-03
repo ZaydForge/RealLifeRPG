@@ -29,7 +29,7 @@ public class UserProfile
 
 
     public ICollection<TaskItem> Tasks { get; set; } = new List<TaskItem>();
-    public ICollection<CategoryLevel> CategoryLevels { get; set; } = new List<CategoryLevel>();
+    public ICollection<UserCategory> CategoryLevels { get; set; } = new List<UserCategory>();
     public ICollection<TaskLog> TaskLogs { get; set; } = new List<TaskLog>();
 
     public DateTime CreatedDate { get; set; } = DateTime.UtcNow;

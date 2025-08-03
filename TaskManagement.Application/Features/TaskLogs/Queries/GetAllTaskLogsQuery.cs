@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TaskManagement.Application.Exceptions;
 using TaskManagement.Persistence.RepositoryInterfaces;
 using TaskManagement.Dtos;
+using TaskManagement.Application.Services;
 
 namespace TaskManagement.Application.Features.TaskLogs.Queries
 {
@@ -16,13 +17,22 @@ namespace TaskManagement.Application.Features.TaskLogs.Queries
     public class GetAllTaskLogsQueryHandler(
         ITaskLogRepository taskLogRepo,
         IMapper mapper,
-        IDistributedCache cache) :
+        IDistributedCache cache,
+        ICurrentUserService currentUserService,
+        IUserProfileRepository profileRepo) :
         IRequestHandler<GetAllTaskLogsQuery, IEnumerable<TaskLogDto>>
     {
-        public readonly string _cacheKey = "task_logs_list";
         public async Task<IEnumerable<TaskLogDto>> Handle(GetAllTaskLogsQuery query, CancellationToken cancellationToken)
         {
-            var cachedTaskLogs = await cache.GetStringAsync(_cacheKey);
+            var userId = currentUserService.UserId;
+            if (userId == null)
+                throw new UnauthorizedAccessException("User not authenticated");
+
+            var userProfile = await profileRepo.GetByUserIdAsync(userId);
+            var profileId = userProfile.Id;
+
+            var userCacheKey = $"task_logs_list_user_{profileId}";
+            var cachedTaskLogs = await cache.GetStringAsync(userCacheKey);
             if (!string.IsNullOrEmpty(cachedTaskLogs))
             {
                 var deserialized = JsonSerializer.Deserialize<IEnumerable<TaskLogDto>>(cachedTaskLogs , new JsonSerializerOptions
@@ -36,7 +46,7 @@ namespace TaskManagement.Application.Features.TaskLogs.Queries
 
                 return deserialized;
             }
-            var taskLogs = mapper.Map<IEnumerable<TaskLogDto>>(await taskLogRepo.GetTaskLogsAsync());
+            var taskLogs = mapper.Map<IEnumerable<TaskLogDto>>(await taskLogRepo.GetTaskLogsAsync(profileId));
             if(taskLogs == null || !taskLogs.Any())
             {
                 throw new NotFoundException("There are no completed tasks yet");
@@ -49,7 +59,7 @@ namespace TaskManagement.Application.Features.TaskLogs.Queries
                 AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10),
             };
 
-            await cache.SetStringAsync(_cacheKey, serialized, options);
+            await cache.SetStringAsync(userCacheKey, serialized, options);
 
             return taskLogs;
         }

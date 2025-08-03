@@ -12,7 +12,7 @@ public class TaskItem
 
     public int EXPValue { get; set; } = 10;
 
-    public Category Category { get; set; }
+    public CategoryName Category { get; set; }
 
     public int UserId { get; set; }
     public UserProfile User { get; set; } = null!;

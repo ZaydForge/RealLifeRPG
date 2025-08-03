@@ -9,4 +9,5 @@ public class CategoryLevelDto
     public int CurrentEXP { get; set; }
     public int EXPToNextLevel { get; set; }
     public int NeededEXP { get; set; }
+    public DateTime LastLevelUp { get; set; }
 }

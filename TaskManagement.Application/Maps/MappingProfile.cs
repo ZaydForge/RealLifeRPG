@@ -30,7 +30,9 @@ public class MappingProfile : Profile
             .ForMember(dest => dest.Category,
                        opt => opt.MapFrom(src => src.Category.ToString()));
         CreateMap<TaskLogDto, TaskLog>();
-        CreateMap<CategoryLevel, CategoryLevelDto>();
+        CreateMap<UserCategory, CategoryLevelDto>()
+                        .ForMember(dest => dest.Category,
+                       opt => opt.MapFrom(src => src.Category.CategoryName.ToString()));
         CreateMap<Archive, ArchiveDto>()
             .ForMember(dest => dest.Category,
                        opt => opt.MapFrom(src => src.Category.ToString()));

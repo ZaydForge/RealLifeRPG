@@ -10,7 +10,7 @@ public class CreateTaskDto
     
     public int EXPValue { get; set; }
 
-    public Category Category { get; set; }
+    public CategoryName Category { get; set; }
 
     public ExpirationType ExpirationType { get; set; } = ExpirationType.Urgent;
 

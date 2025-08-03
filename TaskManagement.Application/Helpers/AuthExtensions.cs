@@ -35,7 +35,24 @@ namespace TaskManagement.Application.Helpers
                         ClockSkew = TimeSpan.Zero,
                         ValidIssuer = jwtOptions.Issuer,
                         ValidAudience = jwtOptions.Audience,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.SecretKey))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.SecretKey)),
+                        RequireExpirationTime = true,
+                        SaveSigninToken = false,
+                        RequireSignedTokens = true
+                    };
+
+                    o.Events = new JwtBearerEvents
+                    {
+                        OnAuthenticationFailed = context =>
+                        {
+                            Console.WriteLine($"Authentication failed: {context.Exception}");
+                            return Task.CompletedTask;
+                        },
+                        OnTokenValidated = context =>
+                        {
+                            Console.WriteLine($"Token validated for user: {context.Principal?.Identity?.Name}");
+                            return Task.CompletedTask;
+                        }
                     };
                 });
 

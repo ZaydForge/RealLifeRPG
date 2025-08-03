@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TaskManagement.DataAccess;
+using TaskManagement.Domain.Entities;
 using TaskManagement.Entities;
 using TaskManagement.Persistence.RepositoryInterfaces;
 
@@ -12,11 +13,15 @@ namespace TaskManagement.Persistence.Repositories
         {
             _context = context;
         }
-        public async Task<UserProfile> GetUserByIdAsync(int userId)
+        public async Task<UserProfile> GetByUserIdAsync(int? userId)
         {
-            return await _context.UserProfiles.FirstOrDefaultAsync(u => u.Id == userId);
+            return await _context.UserProfiles.FirstOrDefaultAsync(u => u.UserId == userId);
         }
 
+        public async Task<UserProfile> GetProfileByIdAsync(int profileId)
+        {
+            return await _context.UserProfiles.FirstOrDefaultAsync(u => u.Id == profileId);
+        }
         public async Task<IEnumerable<UserProfile>> GetAllUsersAsync()
         {
             return await _context.UserProfiles.ToListAsync();

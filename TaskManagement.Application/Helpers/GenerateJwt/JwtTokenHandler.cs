@@ -23,13 +23,24 @@ public class JwtTokenHandler : IJwtTokenHandler
     {
         var claims = new List<Claim>()
         {
-            new Claim(CustomClaimNames.Id, user.Id.ToString()),
-            new Claim(CustomClaimNames.Email, user.Email), 
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new Claim(ClaimTypes.Email, user.Email),
+            new Claim(ClaimTypes.Name, user.Fullname),
+            new Claim("isVerified", user.IsVerified.ToString()),
             new Claim(CustomClaimNames.Token, token)
         };
 
+        Console.WriteLine($"JWT Generation - Adding claims for user {user.Id}:");
+        foreach (var claim in claims)
+        {
+            Console.WriteLine($"JWT Generation - Claim: Type='{claim.Type}', Value='{claim.Value}'");
+        }
+
         if (user.UserRoles != null && user.UserRoles.Any())
         {
+            var isAdmin = user.UserRoles.Any(ur => ur.Role.Name.Equals("Admin", StringComparison.OrdinalIgnoreCase));
+            claims.Add(new Claim("isAdmin", isAdmin.ToString()));
+
             foreach (var userRole in user.UserRoles)
             {
                 claims.Add(new Claim(ClaimTypes.Role, userRole.Role.Name));
@@ -38,15 +49,23 @@ public class JwtTokenHandler : IJwtTokenHandler
                 {
                     foreach (var rolePermission in userRole.Role.RolePermissions)
                     {
-                        // CustomClaimNames.Permission nomli claim turini ishlatish
-                        claims.Add(new Claim(CustomClaimNames.Permissions, rolePermission.Permission.ShortName));
+                        claims.Add(new Claim("permission", rolePermission.Permission.ShortName));
                     }
                 }
             }
-
-
+        }
+        else
+        {
+            claims.Add(new Claim("isAdmin", "false"));
         }
 
+
+        Console.WriteLine($"JWT Generation - Final claims count: {claims.Count}");
+        Console.WriteLine("JWT Generation - All final claims:");
+        foreach (var claim in claims)
+        {
+            Console.WriteLine($"JWT Generation - Final Claim: Type='{claim.Type}', Value='{claim.Value}'");
+        }
 
         var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtOption.SecretKey));
 
@@ -58,7 +77,10 @@ public class JwtTokenHandler : IJwtTokenHandler
             signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
         );
 
-        return new JwtSecurityTokenHandler().WriteToken(jwtToken);
+        var tokenString = new JwtSecurityTokenHandler().WriteToken(jwtToken);
+        Console.WriteLine($"JWT Generation - Generated token: {tokenString.Substring(0, Math.Min(50, tokenString.Length))}...");
+        
+        return tokenString;
     }
 
     public string GenerateRefreshToken()

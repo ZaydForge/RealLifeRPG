@@ -17,6 +17,7 @@ public class UserService : IUserService
     private readonly IEmailService _emailService;
     private readonly IJwtTokenHandler _jwtTokenHandler;
     private readonly IAuthService _authService;
+    public readonly IUserProfileService _userProfileService;
 
     public UserService(
         DataContext context,
@@ -24,7 +25,8 @@ public class UserService : IUserService
         IOtpService otpService,
         IEmailService emailService,
         IJwtTokenHandler jwtTokenHandler,
-        IAuthService authService)
+        IAuthService authService,
+        IUserProfileService userProfile)
     {
         _context = context;
         _passwordHasher = passwordHasher;
@@ -32,13 +34,19 @@ public class UserService : IUserService
         _emailService = emailService;
         _jwtTokenHandler = jwtTokenHandler;
         _authService = authService;
+        _userProfileService = userProfile;
     }
 
     public async Task<ApiResult<string>> RegisterAsync(RegisterUserModel model)
     {
         var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == model.Email);
-        if (existingUser != null)
+        if (existingUser != null && existingUser.IsVerified)
             return ApiResult<string>.Failure(new[] { "Email already exists" }, "Email already exists");
+
+        if(existingUser != null)
+        {
+            _context.Users.Remove(existingUser);
+        }
 
         var salt = Guid.NewGuid().ToString();
         var hash = _passwordHasher.Encrypt(model.Password, salt);
@@ -57,6 +65,10 @@ public class UserService : IUserService
         };
 
         await _context.Users.AddAsync(user);
+
+        await _context.SaveChangesAsync();
+
+        await _userProfileService.CreateUserProfileAsync(user.Id);
         await _context.SaveChangesAsync();
 
         // --- Rolni isAdminSite ga qarab belgilash ---
@@ -88,7 +100,11 @@ public class UserService : IUserService
         var user = await _context.Users
             .Include(u => u.UserRoles)
                 .ThenInclude(ur => ur.Role)
+                    .ThenInclude(r => r.RolePermissions)
+                        .ThenInclude(rp => rp.Permission)
             .FirstOrDefaultAsync(u => u.Email == model.Email);
+
+        Console.WriteLine($"Login - Found user: {user?.Email}, UserRoles count: {user?.UserRoles?.Count ?? 0}");
 
         if (user is null)
             return ApiResult<LoginResponseModel>.Failure(new[] { "User not found" }, "User not found");
@@ -99,8 +115,10 @@ public class UserService : IUserService
         if (!user.IsVerified)
             return ApiResult<LoginResponseModel>.Failure(new[] { "Email is not verified" }, "Email is not verified");
 
+        Console.WriteLine($"Login - Generating JWT token for user {user.Id}");
         var accessToken = _jwtTokenHandler.GenerateAccessToken(user, Guid.NewGuid().ToString());
         var refreshToken = _jwtTokenHandler.GenerateRefreshToken();
+        Console.WriteLine($"Login - JWT token generated successfully");
 
         return ApiResult<LoginResponseModel>.Success(new LoginResponseModel
         {

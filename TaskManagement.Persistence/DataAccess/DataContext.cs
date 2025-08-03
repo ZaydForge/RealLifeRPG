@@ -13,9 +13,11 @@ public class DataContext(DbContextOptions options) : DbContext(options)
 
     public DbSet<TaskLog> TaskLogs { get; set; }
 
-    public DbSet<CategoryLevel> CategoryLevels { get; set; }
+    public DbSet<Category> CategoryLevels { get; set; }
 
     public DbSet<Archive> Archives { get; set; }
+
+    public DbSet<UserCategory> UserCategories { get; set; }
 
     public DbSet<Achievement> Achievements { get; set; }
 
@@ -32,7 +34,6 @@ public class DataContext(DbContextOptions options) : DbContext(options)
     public DbSet<PermissionGroup> PermissionGroups { get; set; }
     public DbSet<RolePermission> RolePermissions { get; set; }
     public DbSet<UserRole> UserRoles { get; set; }
-    public DbSet<Order> Orders { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -40,10 +41,6 @@ public class DataContext(DbContextOptions options) : DbContext(options)
         // ⚠️ Agar kerakli `OnDelete` yoki `HasKey`, `HasIndex` lar bo‘lsa, shu yerga yoziladi
 
         builder.ApplyConfigurationsFromAssembly(typeof(DataContext).Assembly);
-
-        builder.Entity<Order>()
-            .Property(o => o.Id)
-            .ValueGeneratedOnAdd();
 
         // RolePermission - ko‘p-ko‘p
         builder.Entity<RolePermission>()
@@ -78,11 +75,18 @@ public class DataContext(DbContextOptions options) : DbContext(options)
             .HasForeignKey(p => p.PermissionGroupId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        // UserOTPs - User bilan 1-ko‘p
+        // UserOTPs - User bilan 1-ko'p
         builder.Entity<UserOTPs>()
             .HasOne(uo => uo.User)
-            .WithMany() // yoki .WithMany(u => u.OtpCodes) agar navigation bo‘lsa
+            .WithMany() // yoki .WithMany(u => u.OtpCodes) agar navigation bo'lsa
             .HasForeignKey(uo => uo.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        // Archive - UserProfile bilan 1-ko'p
+        builder.Entity<Archive>()
+            .HasOne(a => a.User)
+            .WithMany()
+            .HasForeignKey(a => a.UserId)
             .OnDelete(DeleteBehavior.Cascade);
     }
 

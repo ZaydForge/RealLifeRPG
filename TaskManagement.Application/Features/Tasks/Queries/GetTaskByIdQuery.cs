@@ -3,9 +3,11 @@ using MediatR;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
 using TaskManagement.Application.Exceptions;
+using TaskManagement.Domain.Enums;
 using TaskManagement.Dtos;
 using TaskManagement.Entities;
 using TaskManagement.Persistence.RepositoryInterfaces;
+using TaskManagement.Application.Services;
 
 namespace TaskManagement.Application.Features.Tasks.Queries
 {
@@ -18,11 +20,20 @@ namespace TaskManagement.Application.Features.Tasks.Queries
         ITaskRepository taskRepo,
         IArchiveRepository archiveRepo,
         IMapper mapper,
-        IDistributedCache cache) : IRequestHandler<GetTaskByIdQuery, TaskDto>
+        IDistributedCache cache,
+        ICurrentUserService currentUserService,
+        IUserProfileRepository profileRepo) : IRequestHandler<GetTaskByIdQuery, TaskDto>
     {
         public async Task<TaskDto> Handle(GetTaskByIdQuery query, CancellationToken token)
         {
-            var cacheKey = $"task_{query.Id}";
+            var userId = currentUserService.UserId;
+            if (userId == null)
+                throw new UnauthorizedAccessException("User not authenticated");
+
+            var userProfile = await profileRepo.GetByUserIdAsync(userId);
+            var profileId = userProfile.Id;
+
+            var cacheKey = $"task_{query.Id}_user_{profileId}";
             var cached = await cache.GetStringAsync(cacheKey, token);
             if (!string.IsNullOrEmpty(cached))
             {
@@ -35,15 +46,20 @@ namespace TaskManagement.Application.Features.Tasks.Queries
                     throw new NotFoundException("Task not found");
                 }
 
-                return deserialized;
+                if(!(deserialized.ExpiresAt.Date < DateTime.UtcNow))
+                {
+                    return deserialized;
+
+                }
+
             }
 
             var task = await taskRepo.GetByIdAsync(query.Id);
-            if (task == null)
+            if (task == null || task.UserId != profileId)
             {
                 throw new NotFoundException("Task not found");
             } 
-            if (task.CreatedDate.Date > DateTime.UtcNow.Date)
+            if (task.ExpiresAt.Date < DateTime.UtcNow && task.Status == Domain.Enums.TaskStatus.Active)
             {
                 var archive = new Archive
                 {
@@ -51,7 +67,8 @@ namespace TaskManagement.Application.Features.Tasks.Queries
                     Description = task.Description,
                     CreatedDate = task.CreatedDate,
                     EXPValue = task.EXPValue,
-                    Category = task.Category
+                    Category = task.Category,
+                    UserId = profileId
                 };
                 await archiveRepo.AddAsync(archive);
                 task.Status = Domain.Enums.TaskStatus.Expired;
@@ -59,8 +76,8 @@ namespace TaskManagement.Application.Features.Tasks.Queries
                 await archiveRepo.SaveChangesAsync();
                 await taskRepo.SaveChangesAsync();
 
-                await cache.RemoveAsync("archives_list", token);
-                await cache.RemoveAsync("tasks_list", token);
+                await cache.RemoveAsync($"archives_list_user_{profileId}", token);
+                await cache.RemoveAsync($"tasks_list_user_{profileId}", token);
                 await cache.RemoveAsync(cacheKey, token);
                 throw new Exception("Task has expired and has been moved to archive.");
             }

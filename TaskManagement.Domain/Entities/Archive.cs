@@ -15,7 +15,10 @@ public class Archive
 
     public int EXPValue { get; set; }
 
-    public Category Category { get; set; }
+    public CategoryName Category { get; set; }
+
+    public int UserId { get; set; }
+    public UserProfile User { get; set; } = null!;
 
     public DateTime ExpiredAt { get; set; } = DateTime.UtcNow;
 }

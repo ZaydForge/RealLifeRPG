@@ -1,13 +1,14 @@
-﻿using TaskManagement.Domain.Enums;
-using TaskManagement.Entities;
+﻿using TaskManagement.Domain.Entities;
+using TaskManagement.Domain.Enums;
 
 namespace TaskManagement.Persistence.RepositoryInterfaces;
 
 public interface ICategoryLevelRepository
 {
-    Task<IEnumerable<CategoryLevel>> GetAllAsync();
-    Task<CategoryLevel> GetByIdAsync(int id);
-    Task<CategoryLevel> GetByCategoryAsync(Category category);
-    void Update(CategoryLevel level);
+    Task<IEnumerable<UserCategory>> GetAllAsync();
+    Task<UserCategory> GetByIdAsync(int id);
+    Task<UserCategory> GetByCategoryAsync(CategoryName category);
+    Task<UserCategory> GetByCategoryAsync(CategoryName category, int userId);
+    void Update(UserCategory level);
     Task SaveChangesAsync();
 }

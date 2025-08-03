@@ -5,6 +5,7 @@ public interface ITaskLogRepository
 {
     Task AddTaskLogAsync(TaskLog task);
     Task<IEnumerable<TaskLog>> GetTaskLogsAsync();
+    Task<IEnumerable<TaskLog>> GetTaskLogsAsync(int userId);
     Task<TaskLog> GetTaskLogByIdAsync(int id);
     Task DeleteTaskLog(TaskLog taskLog);
     Task SaveChangesAsync();

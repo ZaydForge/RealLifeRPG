@@ -40,7 +40,7 @@ namespace TaskManagement.Application.Features.Users.Commands
 
         public async Task<string> Handle(UpdateUserProfileCommand command, CancellationToken token)
         {
-            var user = await _userRepo.GetUserByIdAsync(command.Id);
+            var user = await _userRepo.GetProfileByIdAsync(command.Id);
             if (user == null)
                 throw new Exception("Profile not found");
 

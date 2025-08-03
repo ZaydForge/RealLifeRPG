@@ -7,6 +7,7 @@ using TaskManagement.Application.Exceptions;
 using TaskManagement.Persistence.RepositoryInterfaces;
 using TaskManagement.Dtos;
 using TaskManagement.Entities;
+using TaskManagement.Application.Services;
 
 namespace TaskManagement.Application.Features.Tasks.Queries
 {
@@ -18,14 +19,22 @@ namespace TaskManagement.Application.Features.Tasks.Queries
         ITaskRepository taskRepo,
         IArchiveRepository archiveRepo,
         IMapper mapper,
-        IDistributedCache cache)
+        IDistributedCache cache,
+        ICurrentUserService currentUserService,
+        IUserProfileRepository profileRepo)
         : IRequestHandler<GetAllTasksQuery, IEnumerable<TaskDto>>
     {
-        public readonly string _cacheKey = "tasks_list";
         public async Task<IEnumerable<TaskDto>> Handle(
             GetAllTasksQuery query, CancellationToken cancellationToken)
         {
-            var cachedTasks = await cache.GetStringAsync(_cacheKey);
+            var userId = currentUserService.UserId;
+            if (userId == null)
+                throw new UnauthorizedAccessException("User not authenticated");
+
+            var userProfile = await profileRepo.GetByUserIdAsync(userId);
+
+            var userCacheKey = $"tasks_list_user_{userProfile.Id}";
+            var cachedTasks = await cache.GetStringAsync(userCacheKey);
 
             if (!string.IsNullOrEmpty(cachedTasks))
             {
@@ -38,13 +47,18 @@ namespace TaskManagement.Application.Features.Tasks.Queries
                     throw new NotFoundException("There are no tasks yet");
                 }
 
-                return deserialized;
+                if(!deserialized.Any(t => t.ExpiresAt.Date < DateTime.UtcNow))
+                {
+                    return deserialized;
+
+                }
+
             }
 
-            var tasks = (await taskRepo.GetAllAsync()).ToList();
+            var oldTasks = (await taskRepo.GetAllAsync()).Where(t => t.UserId == userProfile.Id).ToList();
 
-            var expiredTasks = tasks
-                    .Where(r => r.CreatedDate.Date > r.ExpiresAt.Date)
+            var expiredTasks = oldTasks
+                    .Where(r => r.ExpiresAt.Date < DateTime.UtcNow && r.Status == Domain.Enums.TaskStatus.Active)
                     .ToList();
 
             if (expiredTasks.Any())
@@ -57,7 +71,8 @@ namespace TaskManagement.Application.Features.Tasks.Queries
                         Description = task.Description,
                         CreatedDate = task.CreatedDate,
                         EXPValue = task.EXPValue,
-                        Category = task.Category
+                        Category = task.Category,
+                        UserId = userProfile.Id,
                     };
                     await archiveRepo.AddAsync(archive);
                     task.Status = Domain.Enums.TaskStatus.Expired;
@@ -65,12 +80,11 @@ namespace TaskManagement.Application.Features.Tasks.Queries
                 await archiveRepo.SaveChangesAsync();
                 await taskRepo.SaveChangesAsync();
 
-                tasks.RemoveAll(t => expiredTasks.Contains(t));
-                await cache.RemoveAsync("archives_list", cancellationToken);
-                await cache.RemoveAsync(_cacheKey, cancellationToken);
+                await cache.RemoveAsync($"archives_list_user_{userId}", cancellationToken);
+                await cache.RemoveAsync(userCacheKey, cancellationToken);
             }
 
-            var taskDtos = mapper.Map<IEnumerable<TaskDto>>(tasks);
+            var taskDtos = mapper.Map<IEnumerable<TaskDto>>((await taskRepo.GetAllAsync()).Where(t => t.UserId == userProfile.Id));
 
             var serialized = JsonSerializer.Serialize(taskDtos);
             var options = new DistributedCacheEntryOptions
@@ -79,7 +93,7 @@ namespace TaskManagement.Application.Features.Tasks.Queries
                 AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10),
             };
 
-            await cache.SetStringAsync(_cacheKey, serialized, options);
+            await cache.SetStringAsync(userCacheKey, serialized, options);
 
             return taskDtos;
         }

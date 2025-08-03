@@ -5,6 +5,7 @@ using TaskManagement.Persistence.RepositoryInterfaces;
 using TaskManagement.Dtos;
 using TaskManagement.Entities;
 using TaskManagement.Domain.Enums;
+using TaskManagement.Application.Services;
 
 namespace TaskManagement.Application.Features.Tasks.Commands
 {
@@ -16,12 +17,21 @@ namespace TaskManagement.Application.Features.Tasks.Commands
     public class CreateTaskCommandHanlder(
         ITaskRepository taskRepo,
         IMapper mapper,
-        IDistributedCache cache) : IRequestHandler<CreateTaskCommand, string>
+        IDistributedCache cache,
+        ICurrentUserService currentUserService,
+        IUserProfileRepository profileRepo) : IRequestHandler<CreateTaskCommand, string>
     {
         public async Task<string> Handle(CreateTaskCommand createTaskCommand, CancellationToken token)
         {
+            var userId = currentUserService.UserId;
+            if (userId == null)
+                throw new UnauthorizedAccessException("User not authenticated");
+
+            var userProfile = await profileRepo.GetByUserIdAsync(userId);
+
             var request = createTaskCommand.Request;
             var task = mapper.Map<TaskItem>(request);
+            task.UserId = userProfile.Id;
             task.ExpiresAt = request.ExpirationType switch
             {
                 ExpirationType.Urgent => DateTime.UtcNow.AddDays(1),
@@ -33,7 +43,7 @@ namespace TaskManagement.Application.Features.Tasks.Commands
             await taskRepo.AddAsync(task);
             await taskRepo.SaveChangesAsync();
 
-            await cache.RemoveAsync("tasks_list", token);
+            await cache.RemoveAsync($"tasks_list_user_{userId}", token);
 
             return "Task created successfully!";
         }

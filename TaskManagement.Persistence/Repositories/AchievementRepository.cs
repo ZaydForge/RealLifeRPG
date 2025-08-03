@@ -22,9 +22,19 @@ namespace TaskManagement.Persistence.Repositories
             return await context.UserAchievements.ToListAsync();
         }
 
+        public async Task<IEnumerable<UserAchievement>> GetUserAchievementsAsync(int userId)
+        {
+            return await context.UserAchievements.Where(ua => ua.UserId == userId).ToListAsync();
+        }
+
         public async Task<IEnumerable<UserTitle>> GetUserTitlesAsync()
         {
             return await context.UserTitles.ToListAsync();
+        }
+
+        public async Task<IEnumerable<UserTitle>> GetUserTitlesAsync(int userId)
+        {
+            return await context.UserTitles.Where(ut => ut.UserId == userId).ToListAsync();
         }
 
         public async Task<bool> UnlockAchievementAsync(int achievementId)
@@ -47,6 +57,26 @@ namespace TaskManagement.Persistence.Repositories
             return true; // Achievement unlocked successfully
         }
 
+        public async Task<bool> UnlockAchievementAsync(int achievementId, int userId)
+        {
+            var achievement = await context.Achievements.FirstOrDefaultAsync(r => r.Id == achievementId);
+            if (achievement == null)
+            {
+                return false; // Achievement not found
+            }
+
+            var userAchievement = new UserAchievement
+            {
+                UserId = userId,
+                AchievementId = achievementId,
+                UnlockedAt = DateTime.UtcNow
+            };
+
+            await context.UserAchievements.AddAsync(userAchievement);
+            await context.SaveChangesAsync();
+            return true; // Achievement unlocked successfully
+        }
+
         public async Task<bool> UnlockTitleAsync(int titleId)
         {
             var title = await context.Titles.FirstOrDefaultAsync(r => r.Id == titleId);
@@ -58,6 +88,26 @@ namespace TaskManagement.Persistence.Repositories
             var userTitle = new UserTitle
             {
                 UserId = 1,
+                TitleId = titleId,
+                UnlockedAt = DateTime.UtcNow
+            };
+
+            await context.UserTitles.AddAsync(userTitle);
+            await context.SaveChangesAsync();
+            return true; // Title unlocked successfully
+        }
+
+        public async Task<bool> UnlockTitleAsync(int titleId, int userId)
+        {
+            var title = await context.Titles.FirstOrDefaultAsync(r => r.Id == titleId);
+            if (title == null)
+            {
+                return false; // Title not found
+            }
+
+            var userTitle = new UserTitle
+            {
+                UserId = userId,
                 TitleId = titleId,
                 UnlockedAt = DateTime.UtcNow
             };

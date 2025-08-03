@@ -39,6 +39,8 @@ namespace TaskManagement.Application
             services.AddScoped<IPasswordHasher, PasswordHasher>();
             services.AddScoped<IPermissionService, PermissionService>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IUserProfileService, UserProfileService>();
+            services.AddScoped<ICurrentUserService, CurrentUserService>();
         }
 
         public static void AddEmailConfiguration(this IServiceCollection services, IConfiguration configuration)

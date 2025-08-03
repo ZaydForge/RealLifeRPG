@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity.Data;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
-using TaskManagement.API.Attributes;
 using TaskManagement.Application.Models;
 using TaskManagement.Application.Models.Users;
 using TaskManagement.Application.Services;
@@ -12,10 +12,12 @@ namespace TaskManagement.API.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly IUserProfileService _userProfileService;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, IUserProfileService userProfile)
         {
             _userService = userService;
+            _userProfileService = userProfile;
         }
 
         [HttpPost("register")]
@@ -50,6 +52,46 @@ namespace TaskManagement.API.Controllers
                 return Ok(result);
             }
             return BadRequest(result);
+        }
+
+        [Authorize]
+        [HttpGet("test-auth")]
+        public IActionResult TestAuth()
+        {
+            var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            var userName = User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value;
+            var email = User.FindFirst(System.Security.Claims.ClaimTypes.Email)?.Value;
+            
+            Console.WriteLine("TestAuth endpoint called - User authenticated!");
+            Console.WriteLine($"User.Identity.IsAuthenticated: {User.Identity?.IsAuthenticated}");
+            Console.WriteLine($"Claims count: {User.Claims.Count()}");
+            
+            return Ok(new
+            {
+                Message = "Authentication successful",
+                UserId = userId,
+                UserName = userName,
+                Email = email,
+                IsAuthenticated = User.Identity?.IsAuthenticated,
+                Claims = User.Claims.Select(c => new { Type = c.Type, Value = c.Value })
+            });
+        }
+
+        [HttpGet("debug-auth")]
+        public IActionResult DebugAuth()
+        {
+            var authHeader = Request.Headers["Authorization"].FirstOrDefault();
+            
+            return Ok(new
+            {
+                Message = "Debug endpoint (no auth required)",
+                HasAuthHeader = !string.IsNullOrEmpty(authHeader),
+                AuthHeader = authHeader?.Substring(0, Math.Min(50, authHeader?.Length ?? 0)) + "...",
+                IsAuthenticated = User.Identity?.IsAuthenticated,
+                UserIdentityName = User.Identity?.Name,
+                ClaimsCount = User.Claims.Count(),
+                Claims = User.Claims.Select(c => new { Type = c.Type, Value = c.Value }).ToList()
+            });
         }
 
         [HttpPost("forgot-password")]

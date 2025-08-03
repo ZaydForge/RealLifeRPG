@@ -22,6 +22,9 @@ namespace TaskManagement.Persistence.Repositories
         public async Task<IEnumerable<TaskLog>> GetTaskLogsAsync() =>
             await context.TaskLogs.ToListAsync();
 
+        public async Task<IEnumerable<TaskLog>> GetTaskLogsAsync(int userId) =>
+            await context.TaskLogs.Where(tl => tl.UserId == userId).ToListAsync();
+
         public async Task SaveChangesAsync()
         {
             await context.SaveChangesAsync();
