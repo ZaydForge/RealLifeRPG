@@ -13,8 +13,11 @@ namespace TaskManagement.Persistence
     {
         public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
+            var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL") 
+                ?? configuration.GetConnectionString("DefaultConnection");
+
             services.AddDbContext<DataContext>(options =>
-                options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
+                options.UseNpgsql(connectionString)
                 .UseSnakeCaseNamingConvention()
                 .LogTo(Console.Write, Microsoft.Extensions.Logging.LogLevel.Information));
 
