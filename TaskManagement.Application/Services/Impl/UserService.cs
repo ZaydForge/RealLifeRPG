@@ -68,7 +68,8 @@ public class UserService : IUserService
 
         await _context.SaveChangesAsync();
 
-        await _userProfileService.CreateUserProfileAsync(user.Id);
+        var profile = await _userProfileService.CreateUserProfileAsync(user.Id);
+        user.ProfileId = profile.Id;
         await _context.SaveChangesAsync();
 
         // --- Rolni isAdminSite ga qarab belgilash ---

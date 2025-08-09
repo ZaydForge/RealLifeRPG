@@ -13,11 +13,13 @@ namespace TaskManagement.API.Controllers
     {
         private readonly IUserService _userService;
         private readonly IUserProfileService _userProfileService;
+        private readonly IConfiguration _configuration;
 
-        public UserController(IUserService userService, IUserProfileService userProfile)
+        public UserController(IUserService userService, IUserProfileService userProfile, IConfiguration configuration)
         {
             _userService = userService;
             _userProfileService = userProfile;
+            _configuration = configuration;
         }
 
         [HttpPost("register")]

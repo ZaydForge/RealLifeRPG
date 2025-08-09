@@ -1,3 +1,4 @@
+using DotNetEnv;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Minio;
@@ -13,7 +14,13 @@ using TaskManagement.Application.Services.Impl;
 using TaskManagement.Application.Services;
 using TaskManagement.Persistence;
 
+// Load environment variables from .env file
+Env.Load();
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Add environment variables to configuration
+builder.Configuration.AddEnvironmentVariables();
 
 // Add services to the container.
 

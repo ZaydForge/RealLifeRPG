@@ -1,7 +1,9 @@
-﻿namespace TaskManagement.Application.Services
+﻿using TaskManagement.Entities;
+
+namespace TaskManagement.Application.Services
 {
     public interface IUserProfileService
     {
-        Task CreateUserProfileAsync(int userId);
+        Task<UserProfile> CreateUserProfileAsync(int userId);
     }
 }

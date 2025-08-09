@@ -27,3 +27,21 @@ obj/
 .DS_Store
 Thumbs.db
 ehthumbs.db
+
+# Environment Variables and Secrets
+.env
+.env.local
+.env.production
+.env.staging
+*.env
+
+# User Secrets (ASP.NET Core)
+secrets.json
+
+# Azure Key Vault
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+
+# Database Connection Files
+connectionstring.config

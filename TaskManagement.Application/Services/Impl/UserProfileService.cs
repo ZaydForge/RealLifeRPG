@@ -14,7 +14,7 @@ namespace TaskManagement.Application.Services.Impl
             _context = context;
         }
 
-        public async Task CreateUserProfileAsync(int userId)
+        public async Task<UserProfile> CreateUserProfileAsync(int userId)
         {
             var user = await _context.Users.FirstOrDefaultAsync(r => r.Id == userId);
             if(user is null)
@@ -69,6 +69,7 @@ namespace TaskManagement.Application.Services.Impl
             await _context.UserProfiles.AddAsync(userProfile);
 
             await _context.SaveChangesAsync();
+            return userProfile;
         }
     }
 }

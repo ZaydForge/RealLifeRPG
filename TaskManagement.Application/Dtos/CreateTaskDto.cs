@@ -16,6 +16,5 @@ public class CreateTaskDto
 
     public DateTime CustomExpirationDate { get; set; }
 
-    public int UserId { get; set; } = 1;
 
 }
