@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using TaskManagement.Domain.Entities;
 using TaskManagement.Entities;
 
 namespace TaskManagement.Rules;
@@ -60,6 +61,17 @@ public class UserConfiguration : IEntityTypeConfiguration<UserProfile>
     }
 
 }
+
+//public class UserAchievementConfiguration : IEntityTypeConfiguration<UserAchievement>
+//{
+//    public void Configure(EntityTypeBuilder<UserAchievement> builder)
+//    {
+
+//        builder.HasOne(r => r.User)
+//            .WithMany(r => r.Achievements);
+//    }
+
+//}
 
 public class CategoryConfiguration : IEntityTypeConfiguration<Category>
 {

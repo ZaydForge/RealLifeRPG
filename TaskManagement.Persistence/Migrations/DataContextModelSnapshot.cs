@@ -314,7 +314,7 @@ namespace TaskManagement.Persistence.Migrations
                             PhoneNumber = "+998901234567",
                             ProfileId = 1,
                             Salt = "9f7d6dc5-34b4-4b66-a65e-0dc2fc17c0db",
-                            UpdatedAt = new DateTime(2025, 8, 3, 4, 47, 11, 637, DateTimeKind.Utc).AddTicks(8383),
+                            UpdatedAt = new DateTime(2025, 8, 18, 10, 35, 31, 971, DateTimeKind.Utc).AddTicks(3428),
                             Username = "superadmin"
                         });
                 });

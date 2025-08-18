@@ -13,7 +13,7 @@ namespace TaskManagement.Domain.Entities
 
         public DateTime UnlockedAt { get; set; } = DateTime.UtcNow;
 
-        public UserProfile User { get; set; }
-        public Title Title { get; set; }
+        public UserProfile User { get; set; } = null!;
+        public Title Title { get; set; } = null!;
     }
 }

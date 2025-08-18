@@ -37,25 +37,6 @@ namespace TaskManagement.Persistence.Repositories
             return await context.UserTitles.Where(ut => ut.UserId == userId).ToListAsync();
         }
 
-        public async Task<bool> UnlockAchievementAsync(int achievementId)
-        {
-            var achievement = await context.Achievements.FirstOrDefaultAsync(r => r.Id == achievementId);
-            if (achievement == null)
-            {
-                return false; // Achievement not found
-            }
-
-            var userAchievement = new UserAchievement
-            {
-                UserId = 1,
-                AchievementId = achievementId,
-                UnlockedAt = DateTime.UtcNow
-            };
-
-            await context.UserAchievements.AddAsync(userAchievement);
-            await context.SaveChangesAsync();
-            return true; // Achievement unlocked successfully
-        }
 
         public async Task<bool> UnlockAchievementAsync(int achievementId, int userId)
         {
@@ -77,25 +58,6 @@ namespace TaskManagement.Persistence.Repositories
             return true; // Achievement unlocked successfully
         }
 
-        public async Task<bool> UnlockTitleAsync(int titleId)
-        {
-            var title = await context.Titles.FirstOrDefaultAsync(r => r.Id == titleId);
-            if (title == null)
-            {
-                return false; // Title not found
-            }
-
-            var userTitle = new UserTitle
-            {
-                UserId = 1,
-                TitleId = titleId,
-                UnlockedAt = DateTime.UtcNow
-            };
-
-            await context.UserTitles.AddAsync(userTitle);
-            await context.SaveChangesAsync();
-            return true; // Title unlocked successfully
-        }
 
         public async Task<bool> UnlockTitleAsync(int titleId, int userId)
         {

@@ -14,10 +14,8 @@ namespace TaskManagement.Persistence.RepositoryInterfaces
 
         Task<IEnumerable<Title>> GetTitlesAsync();
 
-        Task<bool> UnlockAchievementAsync(int achievementId);
         Task<bool> UnlockAchievementAsync(int achievementId, int userId);
 
-        Task<bool> UnlockTitleAsync(int titleId);
         Task<bool> UnlockTitleAsync(int titleId, int userId);
     }
 }

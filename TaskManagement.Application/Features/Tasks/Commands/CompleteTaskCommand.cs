@@ -90,6 +90,8 @@ namespace TaskManagement.Application.Features.Tasks.Commands
             await cache.RemoveAsync($"users_list_user_{profileId}", token);
 
             // Step 1: Fetch necessary data
+            var achievemets = await achievementRepo.GetAchievementsAsync();
+            var titles = await achievementRepo.GetTitlesAsync();
             var userAchievements = await achievementRepo.GetUserAchievementsAsync(profileId);
             var userTitles = await achievementRepo.GetUserTitlesAsync(profileId);
             var taskLogs = await taskLogRepo.GetTaskLogsAsync(profileId);
@@ -130,46 +132,66 @@ namespace TaskManagement.Application.Features.Tasks.Commands
             // Step 3: Define all 10 titles
             var titleRules = new List<(int Id, Func<bool> Condition)>
             {
-                (1, () => user.MainLevel >= 5),                       // Disciplined Soul
-                (2, () => user.MainLevel >= 10),                      // Awakened One
-                (3, () => user.MainLevel >= 20),  // Shadow Walker
-                (4, () => user.MainLevel >= 30), // Skill Reaper
-                (5, () => allCategories5Plus),                        // Master of Balance
-                (6, () => totalTasks >= 100 && user.MainLevel >= 40), // Relentless Mind
-                (7, () => completedToday >= 20),                      // Grinder
-                (8, () => task.EXPValue >= 100),                      // Titan of Focus
-                (9, () => allCategories15Plus),                       // Sage of Mastery
-                (10, () => user.MainLevel >= 100),                    // The One Who Made Impossible
+                (1, () => user.MainLevel == 1 && totalTasks >= 1),
+                (2, () => user.MainLevel >= 5), 
+                (3, () => user.MainLevel >= 10),
+                (4, () => user.MainLevel >= 20),
+                (5, () => user.MainLevel >= 30),
+                (6, () => user.MainLevel >= 40),
+                (7, () => user.MainLevel >= 50),
+                (8, () => user.MainLevel >= 100),
+                (9, () => task.EXPValue >= 1000), 
+                (10, () => totalTasks >= 1000),    
             };
 
             // Step 4: Evaluate and insert unlocked ones
             var newAchievements = achievementRules
-                .Where(rule => rule.Condition() && !userAchievements.Any(x => x.AchievementId == rule.Id))
+                .Where(rule => rule.Condition())
                 .Select(rule => new UserAchievement
                 {
-                    UserId = user.Id,
+                    UserId = profileId,
                     AchievementId = rule.Id,
-                    UnlockedAt = DateTime.UtcNow // if this property exists
+                    UnlockedAt = DateTime.UtcNow
                 })
                 .ToList();
 
             var newTitles = titleRules
-                .Where(rule => rule.Condition() && !userTitles.Any(x => x.TitleId == rule.Id))
+                .Where(rule => rule.Condition())
                 .Select(rule => new UserTitle
                 {
-                    UserId = user.Id,
+                    UserId = profileId,
                     TitleId = rule.Id,
-                    UnlockedAt = DateTime.UtcNow // if this property exists
+                    UnlockedAt = DateTime.UtcNow
                 })
                 .ToList();
 
             if (newAchievements.Any())
+            {
                 foreach (var achievement in newAchievements)
-                    await achievementRepo.UnlockAchievementAsync(achievement.AchievementId, profileId);
+                {
+                    var exists = userAchievements.Any(x => x.AchievementId == achievement.AchievementId);
+                    if (!exists)
+                        await achievementRepo.UnlockAchievementAsync(achievement.AchievementId, profileId);
+                }
+                
+                // Invalidate achievements cache
+                await cache.RemoveAsync($"user_achievements_list_user_{profileId}", token);
+                await cache.RemoveAsync($"achievements_list_user_{profileId}", token);
+            }
 
             if (newTitles.Any())
+            {
                 foreach (var title in newTitles)
-                    await achievementRepo.UnlockTitleAsync(title.TitleId, profileId);
+                {
+                    var exists = userTitles.Any(x => x.TitleId == title.TitleId);
+                    if (!exists)
+                        await achievementRepo.UnlockTitleAsync(title.TitleId, profileId);
+                }
+                
+                // Invalidate titles cache
+                await cache.RemoveAsync($"user_titles_list_user_{profileId}", token);
+                await cache.RemoveAsync($"titles_list_user_{profileId}", token);
+            }
 
             return "Task completed successfully!";
         }

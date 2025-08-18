@@ -12,7 +12,6 @@ namespace TaskManagement.Application.Dtos
 
         public string Description { get; set; } = string.Empty;
 
-
         public string UnlockRule { get; set; } = string.Empty;
     }
 }

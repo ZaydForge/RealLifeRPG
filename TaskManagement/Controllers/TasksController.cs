@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TaskManagement.Application.Features.Tasks.Commands;
+using TaskManagement.Application.Features.Tasks.Commands.TaskManagement.Application.Features.Tasks.Commands;
 using TaskManagement.Application.Features.Tasks.Queries;
 using TaskManagement.Application.Validations;
 using TaskManagement.Dtos;
@@ -133,6 +134,20 @@ namespace TaskManagement.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, new { message = "Failed to save task", error = ex.Message });
+            }
+        }
+
+        [HttpPost("unsave/{id}")]
+        public async Task<IActionResult> Unsave([FromRoute] int id)
+        {
+            try
+            {
+                var result = await mediator.Send(new UnsaveTaskCommand(id));
+                return Ok(new { message = "Task unsaved", data = result });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Failed to unsave task", error = ex.Message });
             }
         }
 

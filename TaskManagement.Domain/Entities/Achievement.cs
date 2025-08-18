@@ -12,5 +12,6 @@ namespace TaskManagement.Domain.Entities
         public string Description { get; set; } = string.Empty;
         
         public string UnlockRule { get; set; } = string.Empty;
+
     }
 }
