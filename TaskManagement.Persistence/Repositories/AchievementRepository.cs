@@ -24,7 +24,11 @@ namespace TaskManagement.Persistence.Repositories
 
         public async Task<IEnumerable<UserAchievement>> GetUserAchievementsAsync(int userId)
         {
-            return await context.UserAchievements.Where(ua => ua.UserId == userId).ToListAsync();
+            return await context.UserAchievements
+                .Include(ua => ua.Achievement)
+                .Include(ua => ua.User)
+                .Where(ua => ua.UserId == userId)
+                .ToListAsync();
         }
 
         public async Task<IEnumerable<UserTitle>> GetUserTitlesAsync()
@@ -34,7 +38,11 @@ namespace TaskManagement.Persistence.Repositories
 
         public async Task<IEnumerable<UserTitle>> GetUserTitlesAsync(int userId)
         {
-            return await context.UserTitles.Where(ut => ut.UserId == userId).ToListAsync();
+            return await context.UserTitles
+                .Include(ut => ut.Title)
+                .Include(ut => ut.User)
+                .Where(ut => ut.UserId == userId)
+                .ToListAsync();
         }
 
 
@@ -50,7 +58,8 @@ namespace TaskManagement.Persistence.Repositories
             {
                 UserId = userId,
                 AchievementId = achievementId,
-                UnlockedAt = DateTime.UtcNow
+                UnlockedAt = DateTime.UtcNow,
+                Achievement = achievement
             };
 
             await context.UserAchievements.AddAsync(userAchievement);
@@ -71,7 +80,8 @@ namespace TaskManagement.Persistence.Repositories
             {
                 UserId = userId,
                 TitleId = titleId,
-                UnlockedAt = DateTime.UtcNow
+                UnlockedAt = DateTime.UtcNow,
+                Title = title
             };
 
             await context.UserTitles.AddAsync(userTitle);

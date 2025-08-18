@@ -107,7 +107,7 @@ namespace TaskManagement.Application.Features.Tasks.Commands
             // Step 2: Define all 20 achievements
             var achievementRules = new List<(int Id, Func<bool> Condition)>
             {
-                (1, () => totalTasks == 1),
+                (1, () => totalTasks >= 1),
                 (2, () => user.MainLevel >= 10),
                 (3, () => user.MainLevel >= 20),
                 (4, () => user.MainLevel >= 30),

@@ -52,10 +52,12 @@ namespace TaskManagement.Application.Features.Achievements.Queries
                 return deserialized;
             }
 
-            var userAchievements = mapper
-                .Map<IEnumerable<UserAchievementDto>>(await achievementRepo.GetUserAchievementsAsync(profileId));
+            var userAchievements = await achievementRepo.GetUserAchievementsAsync(profileId);
 
-            var serialized = JsonSerializer.Serialize(userAchievements);
+            var userAchievementDtos = mapper
+                .Map<IEnumerable<UserAchievementDto>>(userAchievements);
+
+            var serialized = JsonSerializer.Serialize(userAchievementDtos);
             var options = new DistributedCacheEntryOptions
             {
                 SlidingExpiration = TimeSpan.FromMinutes(1),
@@ -64,7 +66,7 @@ namespace TaskManagement.Application.Features.Achievements.Queries
             await cache.SetStringAsync(userCacheKey, serialized, options);
 
 
-            return userAchievements;
+            return userAchievementDtos;
         }
     }
 }
