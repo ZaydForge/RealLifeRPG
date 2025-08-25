@@ -98,11 +98,10 @@ namespace TaskManagement.Application.Features.Tasks.Commands
             var completedToday = taskLogs.Count(x => x.CompletedAt.Date == DateTime.UtcNow.Date);
             var totalTasks = taskLogs.Count();
             var hour = DateTime.UtcNow.Hour;
-            var allCategories = (await categoryRepo.GetAllAsync()).Where(c => c.UserId == profileId);
             var categoryLevel = category.Level;
-            var allCategories5Plus = allCategories.All(c => c.Level >= 5);
-            var allCategories10Plus = allCategories.All(c => c.Level >= 10);
-            var allCategories15Plus = allCategories.All(c => c.Level >= 15);
+            var allCategories5Plus = categories.All(c => c.Level >= 5);
+            var allCategories10Plus = categories.All(c => c.Level >= 10);
+            var allCategories15Plus = categories.All(c => c.Level >= 15);
 
             // Step 2: Define all 20 achievements
             var achievementRules = new List<(int Id, Func<bool> Condition)>

@@ -53,6 +53,9 @@ builder.Services.AddMediatR(cfg =>
 builder.Services.AddApplicationServices(config);
 builder.Services.AddPersistenceServices(config);
 
+// Register HttpClient for ExpEstimatorService
+builder.Services.AddHttpClient<ExpEstimatorService>();
+
 builder.Services.AddSingleton<IFileStorageService, MinioFileStorageService>();
 builder.Services.Configure<MinioSettings>(config.GetSection("MinioSettings"));
 

@@ -314,7 +314,7 @@ namespace TaskManagement.Persistence.Migrations
                             PhoneNumber = "+998901234567",
                             ProfileId = 1,
                             Salt = "9f7d6dc5-34b4-4b66-a65e-0dc2fc17c0db",
-                            UpdatedAt = new DateTime(2025, 8, 18, 11, 47, 36, 182, DateTimeKind.Utc).AddTicks(3886),
+                            UpdatedAt = new DateTime(2025, 8, 20, 6, 31, 32, 995, DateTimeKind.Utc).AddTicks(1302),
                             Username = "superadmin"
                         });
                 });
@@ -418,6 +418,10 @@ namespace TaskManagement.Persistence.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("AttemptCount")
+                        .HasColumnType("integer")
+                        .HasColumnName("attempt_count");
+
                     b.Property<string>("Code")
                         .IsRequired()
                         .HasColumnType("text")
@@ -431,22 +435,28 @@ namespace TaskManagement.Persistence.Migrations
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("expired_at");
 
+                    b.Property<bool>("IsUsed")
+                        .HasColumnType("boolean")
+                        .HasColumnName("is_used");
+
+                    b.Property<DateTime?>("LastAttemptAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("last_attempt_at");
+
+                    b.Property<string>("Purpose")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("purpose");
+
                     b.Property<int>("UserId")
                         .HasColumnType("integer")
                         .HasColumnName("user_id");
-
-                    b.Property<int?>("UserOTPsId")
-                        .HasColumnType("integer")
-                        .HasColumnName("user_ot_ps_id");
 
                     b.HasKey("Id")
                         .HasName("pk_user_ot_ps");
 
                     b.HasIndex("UserId")
                         .HasDatabaseName("ix_user_ot_ps_user_id");
-
-                    b.HasIndex("UserOTPsId")
-                        .HasDatabaseName("ix_user_ot_ps_user_ot_ps_id");
 
                     b.ToTable("user_ot_ps", (string)null);
                 });
@@ -898,11 +908,6 @@ namespace TaskManagement.Persistence.Migrations
                         .IsRequired()
                         .HasConstraintName("fk_user_ot_ps_users_user_id");
 
-                    b.HasOne("TaskManagement.Domain.Entities.UserOTPs", null)
-                        .WithMany("OtpCodes")
-                        .HasForeignKey("UserOTPsId")
-                        .HasConstraintName("fk_user_ot_ps_user_ot_ps_user_ot_ps_id");
-
                     b.Navigation("User");
                 });
 
@@ -1024,11 +1029,6 @@ namespace TaskManagement.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("UserRoles");
-                });
-
-            modelBuilder.Entity("TaskManagement.Domain.Entities.UserOTPs", b =>
-                {
-                    b.Navigation("OtpCodes");
                 });
 
             modelBuilder.Entity("TaskManagement.Entities.UserProfile", b =>

@@ -90,8 +90,14 @@ public class UserService : IUserService
         await _context.SaveChangesAsync();
         // --- Rolni belgilash qismi tugadi ---
 
-        var otp = await _otpService.GenerateAndSaveOtpAsync(user.Id);
-        await _emailService.SendOtpAsync(model.Email, otp);
+        try
+        {
+            await _otpService.GenerateAndSaveOtpAsync(user.Id, "EmailVerification");
+        }
+        catch (Exception ex)
+        {
+            return ApiResult<string>.Failure(new[] { ex.Message }, ex.Message);
+        }
 
         return ApiResult<string>.Success("You have registered. Please verify via email", "You have registered. Please verify via email");
     }
@@ -145,9 +151,9 @@ public class UserService : IUserService
         if (user is null)
             return ApiResult<string>.Failure(new[] { "User not found" }, "User not found");   
 
-        var otp = await _otpService.GetLatestOtpAsync(user.Id, model.Code);
-        if (otp is null)
-            return ApiResult<string>.Failure(new[] { "The code is incorrect or has expired" }, "The code is incorrect or has expired");
+        var (isValid, errorMessage) = await _otpService.VerifyOtpAsync(user.Id, model.Code, "EmailVerification");
+        if (!isValid)
+            return ApiResult<string>.Failure(new[] { errorMessage ?? "Invalid OTP" }, errorMessage ?? "Invalid OTP");
 
         user.IsVerified = true;
         await _context.SaveChangesAsync();
@@ -178,8 +184,14 @@ public class UserService : IUserService
         if (user is null)
             return ApiResult<string>.Failure(["User not found"], "User not found");
 
-        var otp = await _otpService.GenerateAndSaveOtpAsync(user.Id);
-        await _emailService.SendOtpAsync(email, otp);
+        try
+        {
+            await _otpService.GenerateAndSaveOtpAsync(user.Id, "PasswordReset");
+        }
+        catch (Exception ex)
+        {
+            return ApiResult<string>.Failure(new[] { ex.Message }, ex.Message);
+        }
 
         return ApiResult<string>.Success("OTP has been sent to your email.", "OTP has been sent to your email.");
     }
@@ -190,9 +202,9 @@ public class UserService : IUserService
         if (user is null)
             return ApiResult<string>.Failure(["User not found"], "User not found");
 
-        var otp = await _otpService.GetLatestOtpAsync(user.Id, code);
-        if (otp == null || otp.ExpiredAt < DateTime.UtcNow)
-            return ApiResult<string>.Failure(["Invalid or expired code"], "Invalid or expired code");
+        var (isValid, errorMessage) = await _otpService.VerifyOtpAsync(user.Id, code, "PasswordReset");
+        if (!isValid)
+            return ApiResult<string>.Failure(new[] { errorMessage ?? "Invalid or expired code" }, errorMessage ?? "Invalid or expired code");
 
         var salt = Guid.NewGuid().ToString();
         var hashedPassword = _passwordHasher.Encrypt(newPassword, salt);
@@ -213,8 +225,14 @@ public class UserService : IUserService
         if (user.IsVerified)
             return ApiResult<string>.Failure(new[] { "This email is already verified" }, "This email is already verified");
 
-        var otp = await _otpService.GenerateAndSaveOtpAsync(user.Id); // generate new OTP
-        await _emailService.SendOtpAsync(email, otp); // send it again
+        try
+        {
+            await _otpService.GenerateAndSaveOtpAsync(user.Id, "EmailVerification");
+        }
+        catch (Exception ex)
+        {
+            return ApiResult<string>.Failure(new[] { ex.Message }, ex.Message);
+        }
 
         return ApiResult<string>.Success("OTP has been resent to your email", "OTP has been resent to your email");
     }

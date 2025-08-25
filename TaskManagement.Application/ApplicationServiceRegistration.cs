@@ -41,6 +41,7 @@ namespace TaskManagement.Application
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IUserProfileService, UserProfileService>();
             services.AddScoped<ICurrentUserService, CurrentUserService>();
+            services.AddScoped<IExpEstimatorService, ExpEstimatorService>();
         }
 
         public static void AddEmailConfiguration(this IServiceCollection services, IConfiguration configuration)

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using TaskManagement.Application.Features.Tasks.Commands;
 using TaskManagement.Application.Features.Tasks.Commands.TaskManagement.Application.Features.Tasks.Commands;
 using TaskManagement.Application.Features.Tasks.Queries;
+using TaskManagement.Application.Services;
 using TaskManagement.Application.Validations;
 using TaskManagement.Dtos;
 using TaskManagement.Rules;
@@ -14,7 +15,7 @@ namespace TaskManagement.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class TasksController(IMediator mediator) : ControllerBase
+    public class TasksController(IMediator mediator, IExpEstimatorService expEstimatorService) : ControllerBase
     {
 
         [HttpGet]
@@ -162,6 +163,33 @@ namespace TaskManagement.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, new { message = "Failed to delete task", error = ex.Message });
+            }
+        }
+
+        [HttpPost("estimate-exp")]
+        public async Task<IActionResult> EstimateExp([FromBody] EstimateExpDto estimateDto)
+        {
+            try
+            {
+                if (estimateDto == null)
+                {
+                    return BadRequest(new { message = "Request data is required" });
+                }
+
+                var result = await expEstimatorService.EstimateExpAsync(estimateDto.TaskName, estimateDto.Description);
+                
+                if (result.IsSuccess)
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return BadRequest(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Failed to estimate EXP", error = ex.Message });
             }
         }
     }

@@ -1,0 +1,52 @@
+2025-08-21 11:53:10.844 +05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-08-21 11:53:11.239 +05:00 [DBG] Hosting starting
+2025-08-21 11:53:11.282 +05:00 [INF] User profile is available. Using 'C:\Users\ZAYD\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-21 11:53:11.299 +05:00 [DBG] Reading data from file 'C:\Users\ZAYD\AppData\Local\ASP.NET\DataProtection-Keys\key-249f50e9-edb9-45e8-8b8d-02561637eeff.xml'.
+2025-08-21 11:53:11.334 +05:00 [DBG] Reading data from file 'C:\Users\ZAYD\AppData\Local\ASP.NET\DataProtection-Keys\key-4f99b4d6-feb9-43a5-a4ed-6bb4fa969a9e.xml'.
+2025-08-21 11:53:11.358 +05:00 [DBG] Found key {249f50e9-edb9-45e8-8b8d-02561637eeff}.
+2025-08-21 11:53:11.368 +05:00 [DBG] Found key {4f99b4d6-feb9-43a5-a4ed-6bb4fa969a9e}.
+2025-08-21 11:53:11.378 +05:00 [DBG] Considering key {249f50e9-edb9-45e8-8b8d-02561637eeff} with expiration date 2025-10-17 10:57:00Z as default key.
+2025-08-21 11:53:11.386 +05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-08-21 11:53:11.392 +05:00 [DBG] Decrypting secret element using Windows DPAPI.
+2025-08-21 11:53:11.395 +05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-08-21 11:53:11.402 +05:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2025-08-21 11:53:11.409 +05:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2025-08-21 11:53:11.420 +05:00 [DBG] Using key {249f50e9-edb9-45e8-8b8d-02561637eeff} as the default key.
+2025-08-21 11:53:11.427 +05:00 [DBG] Key ring with default key {249f50e9-edb9-45e8-8b8d-02561637eeff} was loaded during application startup.
+2025-08-21 11:53:11.760 +05:00 [INF] Now listening on: https://localhost:7249
+2025-08-21 11:53:11.769 +05:00 [INF] Now listening on: http://localhost:5151
+2025-08-21 11:53:11.777 +05:00 [DBG] Loaded hosting startup assembly TaskManagement.API
+2025-08-21 11:53:11.783 +05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-08-21 11:53:11.786 +05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-08-21 11:53:11.790 +05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-08-21 11:53:12.004 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-21 11:53:12.011 +05:00 [INF] Hosting environment: Development
+2025-08-21 11:53:12.020 +05:00 [INF] Content root path: E:\c# .net\TaskManagement\TaskManagement
+2025-08-21 11:53:12.054 +05:00 [DBG] Hosting started
+2025-08-21 12:14:44.935 +05:00 [DBG] Connection id "0HNF0G9JTOQ9D" accepted.
+2025-08-21 12:14:44.949 +05:00 [DBG] Connection id "0HNF0G9JTOQ9D" started.
+2025-08-21 12:14:45.017 +05:00 [DBG] Connection 0HNF0G9JTOQ9D established using the following protocol: "Tls13"
+2025-08-21 12:14:45.096 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/User/check-username/ProstaZayd - null null
+2025-08-21 12:14:45.134 +05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-08-21 12:14:45.165 +05:00 [DBG] No candidates found for the request path '/api/User/check-username/ProstaZayd'
+2025-08-21 12:14:45.176 +05:00 [DBG] Request did not match any endpoints
+2025-08-21 12:14:45.206 +05:00 [DBG] The request path  does not match the path filter
+2025-08-21 12:14:45.215 +05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2025-08-21 12:14:45.220 +05:00 [INF] CORS policy execution successful.
+2025-08-21 12:14:46.518 +05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-08-21 12:14:46.529 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/User/check-username/ProstaZayd - 404 0 null 1443.7738ms
+2025-08-21 12:14:46.542 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7249/api/User/check-username/ProstaZayd, Response status code: 404
+2025-08-21 12:14:54.356 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7249/api/User/check-username/ZaydEditor - null null
+2025-08-21 12:14:54.367 +05:00 [DBG] No candidates found for the request path '/api/User/check-username/ZaydEditor'
+2025-08-21 12:14:54.371 +05:00 [DBG] Request did not match any endpoints
+2025-08-21 12:14:54.375 +05:00 [DBG] The request path  does not match the path filter
+2025-08-21 12:14:54.380 +05:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2025-08-21 12:14:54.383 +05:00 [INF] CORS policy execution successful.
+2025-08-21 12:14:54.387 +05:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-08-21 12:14:54.391 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7249/api/User/check-username/ZaydEditor - 404 0 null 35.5318ms
+2025-08-21 12:14:54.405 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7249/api/User/check-username/ZaydEditor, Response status code: 404
+2025-08-21 12:19:21.456 +05:00 [DBG] Connection id "0HNF0G9JTOQ9D" received FIN.
+2025-08-21 12:19:21.469 +05:00 [DBG] The connection queue processing loop for 0HNF0G9JTOQ9D completed.
+2025-08-21 12:19:21.472 +05:00 [DBG] Connection id "0HNF0G9JTOQ9D" is closed. The last processed stream ID was 3.
+2025-08-21 12:19:21.479 +05:00 [DBG] Connection id "0HNF0G9JTOQ9D" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-08-21 12:19:21.503 +05:00 [DBG] Connection id "0HNF0G9JTOQ9D" stopped.

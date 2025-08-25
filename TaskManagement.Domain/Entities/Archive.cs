@@ -20,5 +20,5 @@ public class Archive
     public int UserId { get; set; }
     public UserProfile User { get; set; } = null!;
 
-    public DateTime ExpiredAt { get; set; } = DateTime.UtcNow;
+    public DateTime ExpiredAt { get; set; } = DateTime.UtcNow.Date;
 }
